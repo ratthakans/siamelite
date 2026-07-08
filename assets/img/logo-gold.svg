@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Siam Elite Consulting">
+  <defs>
+    <path id="topArcG" d="M 62 200 A 138 138 0 0 1 338 200" />
+    <path id="botArcG" d="M 66 200 A 134 134 0 0 0 334 200" />
+    <linearGradient id="goldG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5D98C"/>
+      <stop offset="0.5" stop-color="#D4A63C"/>
+      <stop offset="1" stop-color="#A87A1C"/>
+    </linearGradient>
+  </defs>
+  <circle cx="200" cy="200" r="190" fill="none" stroke="url(#goldG)" stroke-width="2.5"/>
+  <circle cx="200" cy="200" r="150" fill="none" stroke="url(#goldG)" stroke-width="1.5"/>
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="3" fill="#EBD9A6">
+    <textPath href="#topArcG" startOffset="50%" text-anchor="middle">SIAM ELITE CONSULTING CO., LTD.</textPath>
+  </text>
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="20" letter-spacing="2" fill="#EBD9A6">
+    <textPath href="#botArcG" startOffset="50%" text-anchor="middle">บริษัท สยาม อีลิต คอนซัลติ้ง จำกัด</textPath>
+  </text>
+  <g fill="#D4A63C">
+    <circle cx="72" cy="200" r="3"/>
+    <circle cx="328" cy="200" r="3"/>
+  </g>
+  <text x="200" y="258" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="150" letter-spacing="-6" text-anchor="middle" fill="url(#goldG)">SE</text>
+</svg>

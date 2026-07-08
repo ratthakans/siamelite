@@ -1,0 +1,7 @@
+{
+  "version": "0.0.1",
+  "autoPort": true,
+  "configurations": [
+    { "name": "siam-elite", "runtimeExecutable": "node", "runtimeArgs": ["/Users/ratthakan/Desktop/Siam Elite/.claude/server.js"], "port": 4612 }
+  ]
+}

@@ -6,14 +6,9 @@
 (function () {
   "use strict";
 
-  /* ---------- Lead storage (Supabase) ----------
-     1. Create a free project at https://supabase.com
-     2. Run the SQL in supabase/schema.sql (SQL Editor → New query → paste → Run)
-     3. Project Settings → API → paste the Project URL and anon public key below
-     Until both are filled in, submissions are just logged to the console
-     so the form still works end-to-end during development. */
-  var SUPABASE_URL = "YOUR_SUPABASE_URL"; // e.g. "https://xxxxxxxx.supabase.co"
-  var SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+  /* ---------- Lead storage (Supabase) ---------- */
+  var SUPABASE_URL = "https://loanbvamjfdlmyhstaby.supabase.co";
+  var SUPABASE_ANON_KEY = "sb_publishable_woZnz99Lnciyotx1wl2rUQ_qAYoD9Kl";
 
   function saveLeadToSupabase(payload) {
     if (SUPABASE_URL.indexOf("YOUR_SUPABASE") === 0) {

@@ -2,8 +2,16 @@
 # Docs: https://decapcms.org/docs/configuration-options/
 
 backend:
-  name: git-gateway
+  name: github
+  repo: ratthakans/siamelite
   branch: main
+  # Hosted on Vercel (not Netlify), so we use Netlify's free OAuth proxy
+  # instead of Netlify Identity/Git Gateway. Setup steps are in README.md
+  # under "ใช้งานจริงบน Vercel". Requires a GitHub OAuth App you create
+  # yourself (callback URL: https://api.netlify.com/auth/done) plus a
+  # free throwaway Netlify site where you paste that app's Client ID/Secret
+  # (Site settings → Access control → OAuth).
+  base_url: https://api.netlify.com
 
 # Lets you test this admin panel on your own computer (see README.md)
 # by running `npx decap-server` alongside the site. Remove this line

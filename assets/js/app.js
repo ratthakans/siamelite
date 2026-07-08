@@ -6,6 +6,41 @@
 (function () {
   "use strict";
 
+  /* ---------- Lead storage (Supabase) ----------
+     1. Create a free project at https://supabase.com
+     2. Run the SQL in supabase/schema.sql (SQL Editor → New query → paste → Run)
+     3. Project Settings → API → paste the Project URL and anon public key below
+     Until both are filled in, submissions are just logged to the console
+     so the form still works end-to-end during development. */
+  var SUPABASE_URL = "YOUR_SUPABASE_URL"; // e.g. "https://xxxxxxxx.supabase.co"
+  var SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+
+  function saveLeadToSupabase(payload) {
+    if (SUPABASE_URL.indexOf("YOUR_SUPABASE") === 0) {
+      console.log("New Siam Elite lead (Supabase not configured yet) →", payload);
+      return;
+    }
+    fetch(SUPABASE_URL + "/rest/v1/leads", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "apikey": SUPABASE_ANON_KEY,
+        "Authorization": "Bearer " + SUPABASE_ANON_KEY,
+        "Prefer": "return=minimal"
+      },
+      body: JSON.stringify({
+        service: payload.service,
+        budget: payload.budget,
+        name: payload.name,
+        contact: payload.contact,
+        channel: payload.channel,
+        source_page: location.pathname
+      })
+    }).catch(function (err) {
+      console.error("Failed to save lead to Supabase", err);
+    });
+  }
+
   /* ---------- Language toggle (EN / TH) ---------- */
   var body = document.body;
   var langButtons = document.querySelectorAll("#langSwitch button");
@@ -105,15 +140,7 @@
       };
       if (!payload.name || !payload.contact) return;
 
-      /* TODO: wire to your backend / n8n webhook / ClickUp.
-         Example:
-         fetch("https://YOUR-N8N-WEBHOOK", {
-           method:"POST",
-           headers:{"Content-Type":"application/json"},
-           body: JSON.stringify(payload)
-         });
-      */
-      console.log("New Siam Elite lead →", payload);
+      saveLeadToSupabase(payload);
 
       form.style.display = "none";
       var ok = document.getElementById("formSuccess");

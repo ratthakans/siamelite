@@ -15,12 +15,14 @@ const TYPES = {
   ".jpeg": "image/jpeg",
   ".ico": "image/x-icon",
   ".json": "application/json",
+  ".yml": "text/yaml; charset=utf-8",
+  ".yaml": "text/yaml; charset=utf-8",
 };
 
 http
   .createServer((req, res) => {
     let urlPath = decodeURIComponent(req.url.split("?")[0]);
-    if (urlPath === "/") urlPath = "/index.html";
+    if (urlPath.endsWith("/")) urlPath += "index.html";
     const filePath = path.join(ROOT, path.normalize(urlPath));
     if (!filePath.startsWith(ROOT)) {
       res.writeHead(403);

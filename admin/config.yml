@@ -1,0 +1,101 @@
+# Decap CMS configuration for Siam Elite Consulting
+# Docs: https://decapcms.org/docs/configuration-options/
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Lets you test this admin panel on your own computer (see README.md)
+# by running `npx decap-server` alongside the site. Remove this line
+# if you don't want local editing enabled once the site is deployed.
+# Port 8478 here avoids a conflict on this machine — the default
+# (no url override) is port 8081 if you run decap-server elsewhere.
+local_backend:
+  url: http://localhost:8478/api/v1
+
+media_folder: "assets/img/properties"
+public_folder: "assets/img/properties"
+
+collections:
+  - name: "properties"
+    label: "อสังหาริมทรัพย์ (Properties)"
+    files:
+      - name: "listings"
+        label: "รายการทรัพย์ทั้งหมด (All Listings)"
+        file: "assets/data/properties.json"
+        fields:
+          - label: "รายการทรัพย์ (Listings)"
+            name: "listings"
+            widget: "list"
+            label_singular: "ทรัพย์ 1 รายการ"
+            summary: "{{title_th}} — {{price_th}}"
+            fields:
+              - label: "แสดงในหน้าแรก (Featured on homepage)"
+                name: "featured"
+                widget: "boolean"
+                default: true
+                hint: "ติ๊กไว้ถ้าอยากให้ทรัพย์นี้ขึ้นในหน้าแรกด้วย (นอกเหนือจากหน้าอสังหาฯ ทั้งหมด)"
+              - label: "สถานะ (Status)"
+                name: "status"
+                widget: "select"
+                options:
+                  - { label: "ขาย (For Sale)", value: "sale" }
+                  - { label: "เช่า (For Rent)", value: "rent" }
+              - label: "ชนิดทรัพย์ (Property Type)"
+                name: "type"
+                widget: "select"
+                options:
+                  - { label: "วิลล่า (Villa)", value: "villa" }
+                  - { label: "คอนโด (Condo)", value: "condo" }
+                  - { label: "บ้าน (House)", value: "house" }
+              - label: "ทำเล — รหัสสำหรับกรอง (Location code)"
+                name: "location"
+                widget: "select"
+                hint: "ใช้สำหรับระบบ filter เท่านั้น ไม่แสดงผลตรงๆ"
+                options:
+                  - { label: "นิมมาน", value: "nimman" }
+                  - { label: "หางดง", value: "hangdong" }
+                  - { label: "แม่ริม", value: "maerim" }
+                  - { label: "เมืองเก่า", value: "oldcity" }
+                  - { label: "สันกำแพง", value: "sankamphaeng" }
+              - label: "ทำเล ภาษาไทย (Location, Thai)"
+                name: "location_th"
+                widget: "string"
+              - label: "Location, English"
+                name: "location_en"
+                widget: "string"
+              - label: "ชื่อทรัพย์ ภาษาไทย (Title, Thai)"
+                name: "title_th"
+                widget: "string"
+              - label: "Title, English"
+                name: "title_en"
+                widget: "string"
+              - label: "ห้องนอน (Bedrooms)"
+                name: "beds"
+                widget: "number"
+                value_type: "int"
+              - label: "ห้องน้ำ (Bathrooms)"
+                name: "baths"
+                widget: "number"
+                value_type: "int"
+              - label: "พื้นที่ ตร.ม. (Size, m²)"
+                name: "sqm"
+                widget: "number"
+                value_type: "int"
+              - label: "ราคา ภาษาไทย (Price, Thai — e.g. ฿ 12.5M or ฿ 45k/ด.)"
+                name: "price_th"
+                widget: "string"
+              - label: "Price, English (e.g. ฿ 12.5M or ฿ 45k/mo.)"
+                name: "price_en"
+                widget: "string"
+              - label: "งบประมาณระดับ — สำหรับกรอง (Budget tier)"
+                name: "tier"
+                widget: "select"
+                hint: "เริ่มต้น = ต่ำกว่า 8M/40k · กลาง = 8-15M/40-50k · สูง = 15M+"
+                options:
+                  - { label: "เริ่มต้น (Entry)", value: "a" }
+                  - { label: "ระดับกลาง (Mid)", value: "b" }
+                  - { label: "ระดับสูง (High)", value: "c" }
+              - label: "รูปภาพ (Photo)"
+                name: "image"
+                widget: "image"

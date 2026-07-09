@@ -147,21 +147,20 @@ body.en .lang-th{display:none}
   .burger{display:flex}
 }
 
-/* ---------- Hero ---------- */
+/* ---------- Hero — clean navy canvas, no photo (crisp at any resolution) ---------- */
 .hero{
   background:
-    linear-gradient(100deg,var(--navy-900) 8%,rgba(11,24,54,.86) 42%,rgba(11,24,54,.35) 72%,rgba(11,24,54,.55)),
-    url("../img/hero-bg.jpg");
-  background-size:cover;background-position:center right;
-  padding:92px 0 84px;position:relative;overflow:hidden;color:#fff}
+    radial-gradient(1100px 720px at 84% 8%, rgba(195,154,63,.16), transparent 58%),
+    radial-gradient(900px 640px at 6% 116%, rgba(33,58,114,.55), transparent 56%),
+    linear-gradient(120deg, var(--navy-900) 0%, var(--navy-800) 58%, #17306b 100%);
+  padding:96px 0 88px;position:relative;overflow:hidden;color:#fff}
 .hero .container{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative;z-index:2}
 .hero .eyebrow{color:var(--gold-400)}
 .hero .eyebrow::before{background:var(--gold-400)}
 .hero h1{font-size:var(--fs-display);color:#fff;font-weight:700}
 .hero h1 em{font-style:normal;color:var(--gold-400)}
 .hero .lead{color:#cdd7ea;font-size:var(--fs-lede);margin:22px 0 32px;max-width:500px;line-height:1.8}
-.hero-cta{display:flex;gap:16px;flex-wrap:wrap}
-@media(max-width:640px){.hero{background:linear-gradient(160deg,var(--navy-800),var(--navy-900))}}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 .hero-card{
   background:var(--glass-light-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);
   border:1px solid var(--glass-light-border);border-radius:20px;padding:30px;
@@ -177,7 +176,7 @@ body.en .lang-th{display:none}
 }
 .pillrow .pill:hover{border-color:var(--gold);background:rgba(255,255,255,.8)}
 .pillrow .pill .ic{width:40px;height:40px;border-radius:11px;background:var(--gold-soft);display:grid;place-items:center;color:var(--gold-600);flex:none}
-@media(max-width:960px){.hero .container{grid-template-columns:1fr;gap:48px}.hero-card{max-width:520px}}
+@media(max-width:960px){.hero{padding:56px 0 64px}.hero .container{grid-template-columns:1fr;gap:36px;align-items:start}.hero-card{max-width:520px}}
 
 /* ---------- Page intro band (dedicated sub-pages, e.g. properties.html) ---------- */
 .page-hero{

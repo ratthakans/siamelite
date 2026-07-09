@@ -1286,6 +1286,800 @@
         "assets/img/properties/r28-5.jpg"
       ],
       "features": []
+    },
+    {
+      "code": "SE-C01",
+      "featured": true,
+      "status": "rent",
+      "type": "condo",
+      "location": "mueang",
+      "location_th": "ช้างคลาน / ในเมือง",
+      "location_en": "Chang Klan / City",
+      "title_th": "ASTRA Condo1",
+      "title_en": "ASTRA Condo1",
+      "desc_th": "🏢 ให้เช่า ASTRA Condo Shangri-La pool view ช้างคลาน 📍ห้องสตูดิโอ ขนาด 46 ตรม ตึก B ชั้น9 💰 ราคาเช่า 22,000 / เดือน สัญญา1ปี สัญญา 6เดือน 24,000 บาท สัญญา 3เดือน 28,000 บาท 🛋️ เฟอร์นิเจอร์ เครื่องใช้ไฟฟ้าต่างๆครบ 🏊 สิ่งอำนวยความสะดวก • สระว่ายน้ำ • ฟิตเนส ห้องสวยสะอาดพร้อมเข้าอยู่ 🏢 ASTRA Condo Shangri-La（长康路 Chang Klan）出租 📍泳池景观公寓• 单间（Studio）• 面积 46 平方米• B栋 9楼 💰租金：• 一年合同：22,000 泰铢/月• 六个月合同：24,000 泰铢/月• 三个月合同：28,000 泰铢/月",
+      "desc_en": "Condo Shangri-La for Rent – Chang Klan 📍Pool View Unit• Studio Room• 46 sq.m.• Building B, 9th Floor 💰Rental Rates:• 1-year contract: THB 22,000/month• 6-month contract: THB 24,000/month• 3-month contract: THB 28,000/month 🛋️ Fully furnished with complete electrical appliances. Move in with your luggage. 🏊 Facilities:• Swimming Pool• Fitness Center ✨ Clean and beautiful unit, ready to move in. สนใจติดต่อ /",
+      "beds": 1,
+      "baths": 1,
+      "sqm": 46,
+      "land_sqm": null,
+      "parking": 1,
+      "floor": 9,
+      "furnished": "full",
+      "ownership": "rental",
+      "price_th": "฿ 22,000 / เดือน",
+      "price_en": "฿ 22,000 / mo",
+      "tier": "b",
+      "image": "assets/img/properties/c01-1.jpg",
+      "gallery": [
+        "assets/img/properties/c01-1.jpg",
+        "assets/img/properties/c01-2.jpg",
+        "assets/img/properties/c01-3.jpg",
+        "assets/img/properties/c01-4.jpg",
+        "assets/img/properties/c01-5.jpg"
+      ],
+      "features": [
+        {
+          "th": "สระว่ายน้ำ",
+          "en": "Swimming pool"
+        },
+        {
+          "th": "ฟิตเนส",
+          "en": "Fitness centre"
+        },
+        {
+          "th": "รปภ. 24 ชม.",
+          "en": "24h security"
+        }
+      ]
+    },
+    {
+      "code": "SE-C02",
+      "featured": true,
+      "status": "rent",
+      "type": "condo",
+      "location": "mueang",
+      "location_th": "ในเมือง / รอบเมือง",
+      "location_en": "Mueang (city area)",
+      "title_th": "Arise Condo 1",
+      "title_en": "Arise Condo 1",
+      "desc_th": "ห้องว่าง 1 กค. 2026 เป็นต้นไป เข้าดูได้ ตั้งแต่ 22 มิถุนา เป็นต้นไป Arise condo mahidol รายละเอียดห้อง • ค่าเช่า 12500/เดือน.สำหรับสัญญา1ปี (ประกัน2 ล่วงหน้า1) • ราคานี้รวมค่าส่วนกลางแล้ว • เนื้อที่ 27ตร.ม. • ชั้น5 ตึก E • เฟอร์นิเจอร์ครบพร้อมเข้าอยู่ทันที smart TV, ตู้เย็น , ไมโครเวฟ, เตาดูดควัน, เครื่องซักผ้า เครื่องทำน้ำอุ่น,ผ้าม่าน, แอร์ 2 ตัว, แถม เครื่องดูดฝุ่น • Digital door lock • สระว่ายน้ำ, ฟิตเนส, steam-sauna และ co-working space",
+      "desc_en": "A 1-bedroom condo for rent in Mueang (city area), Chiang Mai. Fully furnished and ready to move in.",
+      "beds": 1,
+      "baths": 1,
+      "sqm": 27,
+      "land_sqm": null,
+      "parking": 1,
+      "floor": 5,
+      "furnished": "full",
+      "ownership": "rental",
+      "price_th": "฿ 12,500 / เดือน",
+      "price_en": "฿ 12,500 / mo",
+      "tier": "a",
+      "image": "assets/img/properties/c02-1.jpg",
+      "gallery": [
+        "assets/img/properties/c02-1.jpg",
+        "assets/img/properties/c02-2.jpg",
+        "assets/img/properties/c02-3.jpg",
+        "assets/img/properties/c02-4.jpg",
+        "assets/img/properties/c02-5.jpg"
+      ],
+      "features": [
+        {
+          "th": "สระว่ายน้ำ",
+          "en": "Swimming pool"
+        },
+        {
+          "th": "ฟิตเนส",
+          "en": "Fitness centre"
+        },
+        {
+          "th": "Co-working space",
+          "en": "Co-working space"
+        },
+        {
+          "th": "รปภ. 24 ชม.",
+          "en": "24h security"
+        },
+        {
+          "th": "ใกล้ ม.เชียงใหม่",
+          "en": "Near CMU"
+        }
+      ]
+    },
+    {
+      "code": "SE-C03",
+      "featured": true,
+      "status": "rent",
+      "type": "condo",
+      "location": "mueang",
+      "location_th": "ในเมือง / รอบเมือง",
+      "location_en": "Mueang (city area)",
+      "title_th": "Arise Condo 2",
+      "title_en": "Arise Condo 2",
+      "desc_th": "🏢 ให้เช่าคอนโด 𝐀𝐫𝐢𝐬𝐞 𝐂𝐨𝐧𝐝𝐨 𝐀𝐭 𝐌𝐚𝐡𝐢𝐝𝐨𝐥 📐 ขนาดห้อง 43.62 ตรม. อาคาร G ชั้น 1 🛏️1 ห้องนอน 1 ห้องน้ำ 🛋️เฟอร์นิเจอร์ เครื่องใช้ไฟฟ้าตามรูป 💰 16,000 บาท/เดือน สัญญา 1 ปี 🌟 สิ่งอำนวยความสะดวก • สระว่ายน้ำ • ฟิตเนส • คลับเฮ้าส์ • เจ้าหน้าที่รักษาความปลอดภัย 🏢 清迈 Arise Condo at Mahidol 公寓出租 📐 房间面积：43.62 平方米🏢 楼栋：G栋，1楼 🛏️ 户型： 1 间卧室 1 间浴室 🛋️ 家具及家电：按图片配置（家具与电器齐全） 💰 租金：16,000 泰铢/月📄 合同：1 年租期 🌟 公共设施：• 游泳池• 健身房• 会所（Clubhouse）• 24小时保安",
+      "desc_en": "Condo for Rent – Arise Condo at Mahidol, Chiang Mai 📐 Size: 43.62 sq.m.🏢 Building: G, 1st Floor 🛏️ Room Type: 1 Bedroom 1 Bathroom 🛋️ Furniture & Appliances:Fully furnished as shown in the pictures 💰 Rental Price: THB 16,000/month📄 Contract: 1-year lease 🌟 Facilities:• Swimming pool• Fitness room• Clubhouse• 24-hour security สนใจติดต่อ /",
+      "beds": 1,
+      "baths": 1,
+      "sqm": 62,
+      "land_sqm": null,
+      "parking": 1,
+      "floor": 1,
+      "furnished": "full",
+      "ownership": "rental",
+      "price_th": "฿ 16,000 / เดือน",
+      "price_en": "฿ 16,000 / mo",
+      "tier": "a",
+      "image": "assets/img/properties/c03-1.jpg",
+      "gallery": [
+        "assets/img/properties/c03-1.jpg",
+        "assets/img/properties/c03-2.jpg",
+        "assets/img/properties/c03-3.jpg",
+        "assets/img/properties/c03-4.jpg",
+        "assets/img/properties/c03-5.jpg"
+      ],
+      "features": [
+        {
+          "th": "สระว่ายน้ำ",
+          "en": "Swimming pool"
+        },
+        {
+          "th": "ฟิตเนส",
+          "en": "Fitness centre"
+        },
+        {
+          "th": "รปภ. 24 ชม.",
+          "en": "24h security"
+        }
+      ]
+    },
+    {
+      "code": "SE-C04",
+      "featured": false,
+      "status": "rent",
+      "type": "house",
+      "location": "mueang",
+      "location_th": "ในเมือง / รอบเมือง",
+      "location_en": "Mueang (city area)",
+      "title_th": "B HOME",
+      "title_en": "B Home Townhome",
+      "desc_th": "บ้านให้เช่า ทำเลดี วงแหวนรอบ2 โครงการ B Homeเชียงใหม่-ม.พายัพ ไม่รับสัตว์เลี้ยง ทาวน์โฮมตกแต่งน่ารักสไตล์มินิมอลล์ อยู่ในโซนทำเลดีมาก เดินทางสะดวก 3 ห้องนอน 2 ห้องน้ำ จอดรถได้1คัน ค่าเช่าต่อเดือน 19,000บาท สัญญา 1 ปี มัดจำ 2 เดือน + ค่าเช่าล่วงหน้า 1 เดือน เฟอร์นิเจอร์ครบทั้งหลัง - ชุดโซฟา - ชุดโต๊ะทานอาหาร - ชั้นวางทีวี - เคาท์เตอร์ครัวพร้อมตู้เก็บของ - ห้องนอนใหญ่ เฟอร์ครบชุด -ผ้าม่านบังแสงทั้งหลัง เครื่องใช้ไฟฟ้า ครัวไทยจัดเต็ม",
+      "desc_en": "A 3-bedroom condo for rent in Mueang (city area), Chiang Mai. Fully furnished and ready to move in.",
+      "beds": 3,
+      "baths": 2,
+      "sqm": 100,
+      "land_sqm": null,
+      "parking": 1,
+      "floor": null,
+      "furnished": "full",
+      "ownership": "rental",
+      "price_th": "฿ 19,000 / เดือน",
+      "price_en": "฿ 19,000 / mo",
+      "tier": "a",
+      "image": "assets/img/properties/c04-1.jpg",
+      "gallery": [
+        "assets/img/properties/c04-1.jpg",
+        "assets/img/properties/c04-2.jpg",
+        "assets/img/properties/c04-3.jpg",
+        "assets/img/properties/c04-4.jpg",
+        "assets/img/properties/c04-5.jpg"
+      ],
+      "features": [
+        {
+          "th": "ฟิตเนส",
+          "en": "Fitness centre"
+        },
+        {
+          "th": "รปภ. 24 ชม.",
+          "en": "24h security"
+        }
+      ]
+    },
+    {
+      "code": "SE-C05",
+      "featured": false,
+      "status": "rent",
+      "type": "condo",
+      "location": "mueang",
+      "location_th": "ในเมือง / รอบเมือง",
+      "location_en": "Mueang (city area)",
+      "title_th": "Diamant Condominium",
+      "title_en": "Diamant Condominium",
+      "desc_th": "For Rent ค่าเช่า 11,000 บาท/เดือน สัญญา 1 ปี ประกัน 2 เดือน ล่วงหน้า 1 เดือน Diamant Condominium (แยกฟ้าฮ่าม) อยู่ชั้น 5 ห้องมุม มีความเป็นส่วนตัว ห้องพร้อมอยู่ 1 Bedroom ห้องกั้นเป็นสัดส่วน 1 Bathroom ขนาด 35 ตร.ม. มีพื้นที่ทำงาน มีระเบียงหลังห้อง ติดวอเปเปอร์ทั้งห้อง เฟอร์นิเจอร์ครบ เครื่องซักผ้า เครื่องปรับอากาศ 2 ตัว เครื่องทำน้ำอุ่น ตู้เย็น Smart TV เตาไฟฟ้า สิ่งอำนวยความสะดวกภายในโครงการ Free Wifi ระบบลิฟต์ล็อกชั้น",
+      "desc_en": "A 1-bedroom condo for rent in Mueang (city area), Chiang Mai. Fully furnished and ready to move in.",
+      "beds": 1,
+      "baths": 1,
+      "sqm": 35,
+      "land_sqm": null,
+      "parking": 24,
+      "floor": 5,
+      "furnished": "full",
+      "ownership": "rental",
+      "price_th": "฿ 11,000 / เดือน",
+      "price_en": "฿ 11,000 / mo",
+      "tier": "a",
+      "image": "assets/img/properties/c05-1.jpg",
+      "gallery": [
+        "assets/img/properties/c05-1.jpg",
+        "assets/img/properties/c05-2.jpg",
+        "assets/img/properties/c05-3.jpg",
+        "assets/img/properties/c05-4.jpg",
+        "assets/img/properties/c05-5.jpg"
+      ],
+      "features": [
+        {
+          "th": "สระว่ายน้ำ",
+          "en": "Swimming pool"
+        },
+        {
+          "th": "ฟิตเนส",
+          "en": "Fitness centre"
+        },
+        {
+          "th": "รปภ. 24 ชม.",
+          "en": "24h security"
+        }
+      ]
+    },
+    {
+      "code": "SE-C06",
+      "featured": false,
+      "status": "rent",
+      "type": "condo",
+      "location": "nimman",
+      "location_th": "นิมมาน",
+      "location_en": "Nimman",
+      "title_th": "Kanava Condo แยกตลาดรวมโชค",
+      "title_en": "Kanava Condo แยกตลาดรวมโชค",
+      "desc_th": "รายละเอียด ให้เช่า Kanava Condo แยกตลาดรวมโชค 15,000 บาท / เดือน ( สัญญา 1 ปี ) ประกัน 2 เดือน + ล่วงหน้า 1 เดือน ไม่รับสัตว์เลี้ยง ชั้น 7 วิวเมือง เห็นดอยสุเทพ 38 ตร.ม. | 1 นอน 1 น้ำ | มีครัว + ระเบียง เฟอร์ + เครื่องใช้ไฟฟ้าครบ พร้อมอยู่ TV 43” แอร์ 2 ตู้เย็น เครื่องซักผ้า ไมโครเวฟ สิ่งอำนวยความสะดวก ฟิตเนส สระว่ายน้ำ รปภ. 24 ชม. ที่จอดรถ ใกล้ Central Festival / นิมมาน / รพ.กรุงเทพ / Big C เดินทางสะดวกมาก ห้องพร้อมอยู่ สนใจนัดชมได้เลยค่ะ",
+      "desc_en": "Condo for Rent – Kanava Condo (Ruamchok Market Intersection, Chiang Mai) 💰 Rent: 15,000 THB/month (1-year contract) 🔹 Security deposit: 2 months + 1 month advance rent🔹 No pets allowed 🏙️ 7th floor, city view with Doi Suthep view 📐 38 sq.m. | 1 Bedroom | 1 Bathroom🍳 Fully equipped kitchen + private balcony ✅ Fully furnished and ready to move in Electrical Appliances Included: 43” TV 2 Air conditioners Refrigerator Washing machine Microwave Facilities: Fitn",
+      "beds": 1,
+      "baths": 1,
+      "sqm": 38,
+      "land_sqm": null,
+      "parking": 15,
+      "floor": 7,
+      "furnished": "full",
+      "ownership": "rental",
+      "price_th": "฿ 15,000 / เดือน",
+      "price_en": "฿ 15,000 / mo",
+      "tier": "a",
+      "image": "assets/img/properties/c06-1.jpg",
+      "gallery": [
+        "assets/img/properties/c06-1.jpg",
+        "assets/img/properties/c06-2.jpg",
+        "assets/img/properties/c06-3.jpg",
+        "assets/img/properties/c06-4.jpg",
+        "assets/img/properties/c06-5.jpg"
+      ],
+      "features": [
+        {
+          "th": "สระว่ายน้ำ",
+          "en": "Swimming pool"
+        },
+        {
+          "th": "ฟิตเนส",
+          "en": "Fitness centre"
+        },
+        {
+          "th": "รปภ. 24 ชม.",
+          "en": "24h security"
+        },
+        {
+          "th": "ใจกลางย่านนิมมาน",
+          "en": "Heart of Nimman"
+        }
+      ]
+    },
+    {
+      "code": "SE-C07",
+      "featured": false,
+      "status": "rent",
+      "type": "condo",
+      "location": "mueang",
+      "location_th": "ในเมือง / รอบเมือง",
+      "location_en": "Mueang (city area)",
+      "title_th": "Mekin Haus",
+      "title_en": "Mekin Haus",
+      "desc_th": "🏡 Mekin Haus 📍ทำเล: ติดห้างเซ็นทรัลเฟสติวัลเชียงใหม่ เดินทางสะดวก ติดถนนซุปเปอร์ไฮเวย์ 🌿 (วิวสระว่ายน้ำ และ สวนภายในโครงการ พร้อมเฟอร์นิเจอร์ เข้าพักได้เลย) 📍 ตั้งอยู่ชั้น : ชั้น 4 ตึก A ขนาด: 42.5 ตรม ราคาเช่า : 28,000 บาท/เดือน เลี้ยงสัตว์ 35,000 บาท/เดือน (ต่อรองได้) 1 ห้องน้ำ 1 ห้องนอน 1 ห้องนั่งเล่น 1 ห้องครัว ที่จอดรถ : 1 คัน มีระเบียง 🛋️เครื่องใช้ไฟฟ้า, เฟอร์นิเจอร์ แอร์ 2 ตัว ชุดโซฟา 1 ชุด ทีวี 1 เครื่อง เตียง 1 พร้อมชุดเครื่องนอน",
+      "desc_en": "Condominium for Rent (Pet Friendly) 📍Location: Next to Central Festival Chiang Mai and directly connected to the Super Highway for easy access.🌿 Enjoy beautiful pool and garden views with fully furnished interiors, ready for immediate move-in. 📍 Property Details Building A, 4th Floor Size: 42.5 sq.m. Rental Price: THB 28,000/month THB 35,000/month with pets (Negotiable) 🏠 Layout 1 Bedroom 1 Bathroom 1 Living Room 1 Kitchen Private Balcony 🛋️ Furniture & Ap",
+      "beds": 1,
+      "baths": 1,
+      "sqm": 43,
+      "land_sqm": null,
+      "parking": 1,
+      "floor": 4,
+      "furnished": "full",
+      "ownership": "rental",
+      "price_th": "฿ 28,000 / เดือน",
+      "price_en": "฿ 28,000 / mo",
+      "tier": "b",
+      "image": "assets/img/properties/c07-1.jpg",
+      "gallery": [
+        "assets/img/properties/c07-1.jpg",
+        "assets/img/properties/c07-2.jpg",
+        "assets/img/properties/c07-3.jpg",
+        "assets/img/properties/c07-4.jpg",
+        "assets/img/properties/c07-5.jpg"
+      ],
+      "features": [
+        {
+          "th": "สระว่ายน้ำ",
+          "en": "Swimming pool"
+        },
+        {
+          "th": "ฟิตเนส",
+          "en": "Fitness centre"
+        },
+        {
+          "th": "Co-working space",
+          "en": "Co-working space"
+        },
+        {
+          "th": "รปภ. 24 ชม.",
+          "en": "24h security"
+        }
+      ]
+    },
+    {
+      "code": "SE-C08",
+      "featured": false,
+      "status": "rent",
+      "type": "condo",
+      "location": "mueang",
+      "location_th": "ในเมือง / รอบเมือง",
+      "location_en": "Mueang (city area)",
+      "title_th": "The Base Height เชียงใหม่",
+      "title_en": "The Base Height Chiangmai",
+      "desc_th": "🏙️ Condo for Rent | The Base Height Chiangmai✨ ห้องใหม่เอี่ยม ชั้น 12 วิวดอยสุเทพ พร้อมเข้าอยู่! 📍 The Base Height Chiangmaiทำเลดี ใกล้เซ็นทรัลเฟสติวัล เชียงใหม่ เพียง 3 นาที 🛏️ รายละเอียดห้อง• ขนาด 29.22 ตร.ม.• 1 ห้องนอน | 1 ห้องนั่งเล่น• 1 ห้องน้ำ | ครัวแยก• ชั้น 12 วิวดอยสุเทพ• เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ• หิ้วกระเป๋าเข้าอยู่ได้เลย• ❌ ไม่อนุญาตให้เลี้ยงสัตว์ 💰 ราคาเช่า• 12,000 บาท/เดือน (สัญญา 1 ปี)• 13,000 บาท/เดือน (สัญญา 6 เดือน)",
+      "desc_en": "Condo for Rent | The Base Height Chiangmai✨ ห้องใหม่เอี่ยม ชั้น 12 วิวดอยสุเทพ พร้อมเข้าอยู่! 📍 The Base Height Chiangmaiทำเลดี ใกล้เซ็นทรัลเฟสติวัล เชียงใหม่ เพียง 3 นาที 🛏️ รายละเอียดห้อง• ขนาด 29.22 ตร.ม.• 1 ห้องนอน | 1 ห้องนั่งเล่น• 1 ห้องน้ำ | ครัวแยก• ชั้น 12 วิวดอยสุเทพ• เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ• หิ้วกระเป๋าเข้าอยู่ได้เลย• ❌ ไม่อนุญาตให้เลี้ยงสัตว์ 💰 ราคาเช่า• 12,000 บาท/เดือน (สัญญา 1 ปี)• 13,000 บาท/เดือน (สัญญา 6 เดือน) 🔸 มัดจำ 2 เดือน🔸 ",
+      "beds": 1,
+      "baths": 1,
+      "sqm": 29,
+      "land_sqm": null,
+      "parking": 1,
+      "floor": 12,
+      "furnished": "full",
+      "ownership": "rental",
+      "price_th": "฿ 12,000 / เดือน",
+      "price_en": "฿ 12,000 / mo",
+      "tier": "a",
+      "image": "assets/img/properties/c08-1.jpg",
+      "gallery": [
+        "assets/img/properties/c08-1.jpg",
+        "assets/img/properties/c08-2.jpg",
+        "assets/img/properties/c08-3.jpg",
+        "assets/img/properties/c08-4.jpg",
+        "assets/img/properties/c08-5.jpg"
+      ],
+      "features": [
+        {
+          "th": "สระว่ายน้ำ",
+          "en": "Swimming pool"
+        },
+        {
+          "th": "ฟิตเนส",
+          "en": "Fitness centre"
+        },
+        {
+          "th": "Co-working space",
+          "en": "Co-working space"
+        },
+        {
+          "th": "รปภ. 24 ชม.",
+          "en": "24h security"
+        }
+      ]
+    },
+    {
+      "code": "SE-C09",
+      "featured": false,
+      "status": "rent",
+      "type": "condo",
+      "location": "nimman",
+      "location_th": "นิมมาน",
+      "location_en": "Nimman",
+      "title_th": "One plus คลองชล 2",
+      "title_en": "One plus คลองชล 2",
+      "desc_th": "One plus คลองชล 2 For rent One plus คลองชล 2 คอนโดโซนใกล้ มช. – นิมมาน พร้อมเข้าอยู่ ให้เช่า 15,000 บาท / เดือน (สัญญาขั้นต่ำ 1 ปี) 1 bedroom 1 bathroom 1 kitchen ชั้น 4 | ขนาด 38 ตร.ม. เฟอร์นิเจอร์ครบ เครื่องใช้ไฟฟ้าครบ ส่วนกลางของโครงการมีระบบรักษาความปลอดภัย • สระว่ายน้ำ | ฟิตเนส ทำเลดี เดินทางสะดวกมาก ใกล้ถนนใหญ่ • Maya / One Nimman / Think Park • ถนนนิมมาน • มหาวิทยาลัยเชียงใหม่ สนใจรายละเอียด",
+      "desc_en": "A 1-bedroom condo for rent in Nimman, Chiang Mai. Fully furnished and ready to move in.",
+      "beds": 1,
+      "baths": 1,
+      "sqm": 38,
+      "land_sqm": null,
+      "parking": 1,
+      "floor": 4,
+      "furnished": "full",
+      "ownership": "rental",
+      "price_th": "฿ 15,000 / เดือน",
+      "price_en": "฿ 15,000 / mo",
+      "tier": "a",
+      "image": "assets/img/properties/c09-1.jpg",
+      "gallery": [
+        "assets/img/properties/c09-1.jpg",
+        "assets/img/properties/c09-2.jpg",
+        "assets/img/properties/c09-3.jpg",
+        "assets/img/properties/c09-4.jpg",
+        "assets/img/properties/c09-5.jpg"
+      ],
+      "features": [
+        {
+          "th": "สระว่ายน้ำ",
+          "en": "Swimming pool"
+        },
+        {
+          "th": "ฟิตเนส",
+          "en": "Fitness centre"
+        },
+        {
+          "th": "รปภ. 24 ชม.",
+          "en": "24h security"
+        },
+        {
+          "th": "ใจกลางย่านนิมมาน",
+          "en": "Heart of Nimman"
+        },
+        {
+          "th": "ใกล้ ม.เชียงใหม่",
+          "en": "Near CMU"
+        }
+      ]
+    },
+    {
+      "code": "SE-C10",
+      "featured": false,
+      "status": "rent",
+      "type": "condo",
+      "location": "mueang",
+      "location_th": "ในเมือง / รอบเมือง",
+      "location_en": "Mueang (city area)",
+      "title_th": "Supalai monte2",
+      "title_en": "Supalai monte2",
+      "desc_th": "คอนโดให้เช่า 2ห้องนอน ค่าเช่า 22,000 บาท ต่อเดือน Supalai monte2",
+      "desc_en": "A 2-bedroom condo for rent in Mueang (city area), Chiang Mai. Fully furnished and ready to move in.",
+      "beds": 2,
+      "baths": 1,
+      "sqm": 62,
+      "land_sqm": null,
+      "parking": 22,
+      "floor": 8,
+      "furnished": "full",
+      "ownership": "rental",
+      "price_th": "฿ 22,000 / เดือน",
+      "price_en": "฿ 22,000 / mo",
+      "tier": "b",
+      "image": "assets/img/properties/c10-1.jpg",
+      "gallery": [
+        "assets/img/properties/c10-1.jpg",
+        "assets/img/properties/c10-2.jpg",
+        "assets/img/properties/c10-3.jpg",
+        "assets/img/properties/c10-4.jpg",
+        "assets/img/properties/c10-5.jpg"
+      ],
+      "features": [
+        {
+          "th": "สระว่ายน้ำ",
+          "en": "Swimming pool"
+        },
+        {
+          "th": "ฟิตเนส",
+          "en": "Fitness centre"
+        },
+        {
+          "th": "รปภ. 24 ชม.",
+          "en": "24h security"
+        }
+      ]
+    },
+    {
+      "code": "SE-C11",
+      "featured": false,
+      "status": "rent",
+      "type": "condo",
+      "location": "nimman",
+      "location_th": "นิมมาน",
+      "location_en": "Nimman",
+      "title_th": "The nimmana condo",
+      "title_en": "The nimmana condo",
+      "desc_th": "🏡✨ Condo for Rent in Nimman – Prime Location, Walk Everywhere! 📍 The Nimmana Condo (Nimmanhaemin Soi) หนึ่งในทำเลที่ดีที่สุดของเชียงใหม่ อยู่ใจกลางย่านนิมมาน รายล้อมด้วยคาเฟ่ ร้านอาหาร ห้างสรรพสินค้า และ Co-working Space 🌿 ห้องขนาด 40 ตร.ม. 🌳 ชั้น 1 วิวสวน ร่มรื่น เป็นส่วนตัว 🛋️ พร้อมเข้าอยู่ 💰 ค่าเช่า ▪️ 17,000 บาท/เดือน (สัญญา 1 ปี) ▪️ 18,000 บาท/เดือน (สัญญา 6 เดือน) ✨ ราคาต่อรองได้ 📍 สถานที่ใกล้เคียง • One Nimman • MAYA Lifestyle Shopping Center",
+      "desc_en": "Condo for Rent in Nimman – Prime Location, Walk Everywhere! 📍 The Nimmana Condo (Nimmanhaemin Soi) หนึ่งในทำเลที่ดีที่สุดของเชียงใหม่ อยู่ใจกลางย่านนิมมาน รายล้อมด้วยคาเฟ่ ร้านอาหาร ห้างสรรพสินค้า และ Co-working Space 🌿 ห้องขนาด 40 ตร.ม. 🌳 ชั้น 1 วิวสวน ร่มรื่น เป็นส่วนตัว 🛋️ พร้อมเข้าอยู่ 💰 ค่าเช่า ▪️ 17,000 บาท/เดือน (สัญญา 1 ปี) ▪️ 18,000 บาท/เดือน (สัญญา 6 เดือน) ✨ ราคาต่อรองได้ 📍 สถานที่ใกล้เคียง • One Nimman • MAYA Lifestyle Shopping Center • มหาวิทย",
+      "beds": 1,
+      "baths": 1,
+      "sqm": 40,
+      "land_sqm": null,
+      "parking": 1,
+      "floor": 1,
+      "furnished": "full",
+      "ownership": "rental",
+      "price_th": "฿ 17,000 / เดือน",
+      "price_en": "฿ 17,000 / mo",
+      "tier": "a",
+      "image": "assets/img/properties/c11-1.jpg",
+      "gallery": [
+        "assets/img/properties/c11-1.jpg",
+        "assets/img/properties/c11-2.jpg",
+        "assets/img/properties/c11-3.jpg",
+        "assets/img/properties/c11-4.jpg",
+        "assets/img/properties/c11-5.jpg"
+      ],
+      "features": [
+        {
+          "th": "Co-working space",
+          "en": "Co-working space"
+        },
+        {
+          "th": "ใจกลางย่านนิมมาน",
+          "en": "Heart of Nimman"
+        },
+        {
+          "th": "ใกล้ ม.เชียงใหม่",
+          "en": "Near CMU"
+        },
+        {
+          "th": "เหมาะกับชาวต่างชาติ / Digital Nomad",
+          "en": "Great for expats & nomads"
+        }
+      ]
+    },
+    {
+      "code": "SE-C12",
+      "featured": false,
+      "status": "rent",
+      "type": "condo",
+      "location": "mueang",
+      "location_th": "ในเมือง / รอบเมือง",
+      "location_en": "Mueang (city area)",
+      "title_th": "คอนโดดีริน ติดเซนเฟส",
+      "title_en": "คอนโดดีริน ติดเซนเฟส",
+      "desc_th": "ให้เช่าคอนโดดีริน ติดเซนเฟส ขนาด30ตรม. ตึกA ชั้น7 วิวเซนเฟส ปล่อยเช่าเดือนละ 11,500บาท สัญญา 1ปี จ่ายล่วงหน้า 1เดือน ประกัน 2เดือน เครื่องใช้ไฟฟ้ามี... -เครื่องซักผ้า -แอร์ -ตู้เย็น -ทีวี -ไมโครเวฟ -กาน้ำร้อน สำหรับผู้เช่าคนใหม่จะได้รับ ชุดเครื่องนอนชุดใหม่1ชุดเลยคะ -มีหมอนหนุน2ใบ -ผ้าปู -ผ้าห่ม -ผ้ารองกันเปื้อนที่นอน Condo for Rent – DCondo Rin, Next to Central Festival Chiang Mai 📍 Located right next to Central Festival Chiang Mai",
+      "desc_en": "Condo for Rent – DCondo Rin, Next to Central Festival Chiang Mai 📍 Located right next to Central Festival Chiang Mai Size: 30 sq.m. Building A, 7th Floor Central Festival view 💰 Rent: 11,500 THB/month Rental Terms Minimum lease: 1 year 1-month advance rent 2-month security deposit Electrical Appliances Included Washing machine Air conditioner Refrigerator TV Microwave oven Electric kettle 🎁 Special for New TenantsA brand-new bedding set will be provided, i",
+      "beds": 1,
+      "baths": 1,
+      "sqm": 30,
+      "land_sqm": null,
+      "parking": 1,
+      "floor": 7,
+      "furnished": "full",
+      "ownership": "rental",
+      "price_th": "฿ 11,500 / เดือน",
+      "price_en": "฿ 11,500 / mo",
+      "tier": "a",
+      "image": "assets/img/properties/c12-1.jpg",
+      "gallery": [
+        "assets/img/properties/c12-1.jpg",
+        "assets/img/properties/c12-2.jpg",
+        "assets/img/properties/c12-3.jpg",
+        "assets/img/properties/c12-4.jpg",
+        "assets/img/properties/c12-5.jpg"
+      ],
+      "features": [
+        {
+          "th": "รปภ. 24 ชม.",
+          "en": "24h security"
+        }
+      ]
+    },
+    {
+      "code": "SE-C13",
+      "featured": false,
+      "status": "rent",
+      "type": "condo",
+      "location": "nimman",
+      "location_th": "นิมมาน",
+      "location_en": "Nimman",
+      "title_th": "คอนโดดีเวียง สันติธรรม",
+      "title_en": "คอนโดดีเวียง สันติธรรม",
+      "desc_th": "🔥ให้เช่าคอนโดดีเวียง สันติธรรม🌟ขนาด30ตรม. ตึกA ชั้น2 💰ปล่อยเช่าเดือนละ 12,000บาท⚡️สัญญา1ปี⚡️จ่ายล่วงหน้า1เดือน⚡️ประกัน2เดือน🔥เครื่องใช้ไฟฟ้ามี...-เครื่องซักผ้า-แอร์-ตู้เย็น-ทีวี-ไมโครเวฟ-กาน้ำร้อน🌟สำหรับผู้เช่าคนใหม่จะได้รับชุดเครื่องนอนใหม่1ชุด มี....-ผ้าห่ม -ผ้าปูที่นอน -ผ้ากันเปื้อนที่นอน-หมอนหนุน2ใบ🌟🔥 D Vieng Condominium Santitham 出租 🌟 面积：30平方米 | A栋 2楼 💰 租金：12,000泰铢/月⚡️ 合同：1年⚡️ 预付：1个月租金⚡️ 押金：2个月 🔥 家电配置： 洗衣机 空调 冰箱 电视",
+      "desc_en": "Condominium, Santitham for Rent 🌟 Size: 30 sq.m. | Building A, 2nd Floor 💰 Rent: 12,000 THB / month⚡️ 1-year contract⚡️ 1 month advance payment⚡️ 2 months security deposit 🔥 Electrical appliances included: Washing machine Air conditioner Refrigerator TV Microwave Electric kettle 🌟 Special for new tenants:Free new bedding set including: Blanket Bed sheet Mattress protector 2 pillows 💎สนใจติดต่อคุณแต๋ว0815689242⭐️ไอดีไลน์0815689242",
+      "beds": 1,
+      "baths": 1,
+      "sqm": 30,
+      "land_sqm": null,
+      "parking": 1,
+      "floor": 2,
+      "furnished": "full",
+      "ownership": "rental",
+      "price_th": "฿ 12,000 / เดือน",
+      "price_en": "฿ 12,000 / mo",
+      "tier": "a",
+      "image": "assets/img/properties/c13-1.jpg",
+      "gallery": [
+        "assets/img/properties/c13-1.jpg",
+        "assets/img/properties/c13-2.jpg",
+        "assets/img/properties/c13-3.jpg",
+        "assets/img/properties/c13-4.jpg",
+        "assets/img/properties/c13-5.jpg"
+      ],
+      "features": [
+        {
+          "th": "รปภ. 24 ชม.",
+          "en": "24h security"
+        }
+      ]
+    },
+    {
+      "code": "SE-C14",
+      "featured": false,
+      "status": "rent",
+      "type": "condo",
+      "location": "nimman",
+      "location_th": "นิมมาน",
+      "location_en": "Nimman",
+      "title_th": "คอนโดฮิลไซด์4.ชั้น3",
+      "title_en": "คอนโดฮิลไซด์4.ชั้น3",
+      "desc_th": "🫰ให้เช่าคอนโดฮิลไซด์4.ชั้น3-เดือนละ13,000บาท-ประกัน2ด.-ค่าเช่าเดือนแรก1ด.👍ชั้น3 วิวในเมือง💎ขนาด 35ตรม.🏞มีสระว่ายน้ำ ฟิตเนท 🔥มีที่จอดรถเยอะมาก*ไม่ต้องกังวลเรื่องที่จอดรถยนต์หรือมอเตอร์ไซด์*👨‍✈️มีรปภ.ดูแล24ชม.👍ใกล้นิมาน ใกล้เมญ่า ใกล้มช.🫰ใกล้โรงพยาบาลสวนดอก 🏢 Hillside 4 Condominium 3楼出租 💰 月租：13,000泰铢🔐 押金：2个月🏠 首月租金：1个月 🌆 位于3楼，城市景观房📏 面积：35平方米 🏊‍♀️ 配有游泳池、健身房🚗 超大停车位（无需担心汽车或摩托车停车问题）👮‍♂️ 24小时保安管理 📍 地理位置优越： 靠近宁曼路 靠近MAYA购物中心 靠近清迈大学",
+      "desc_en": "Condominium, 3rd Floor for Rent 💰 Rent: 13,000 THB / month🔐 Deposit: 2 months🏠 First month rent: 1 month in advance 🌆 Located on the 3rd floor with city view📏 Size: 35 sq.m. 🏊‍♀️ Facilities: swimming pool, fitness center🚗 Large parking area (no worries about car or motorcycle parking)👮‍♂️ 24-hour security guard 📍 Great location: Near Nimmanhaemin Road Near MAYA Lifestyle Shopping Center Near Chiang Mai University Near Suandok Hospital (Chiang Mai Universit",
+      "beds": 1,
+      "baths": 1,
+      "sqm": 35,
+      "land_sqm": null,
+      "parking": 24,
+      "floor": 3,
+      "furnished": "full",
+      "ownership": "rental",
+      "price_th": "฿ 13,000 / เดือน",
+      "price_en": "฿ 13,000 / mo",
+      "tier": "a",
+      "image": "assets/img/properties/c14-1.jpg",
+      "gallery": [
+        "assets/img/properties/c14-1.jpg",
+        "assets/img/properties/c14-2.jpg",
+        "assets/img/properties/c14-3.jpg",
+        "assets/img/properties/c14-4.jpg",
+        "assets/img/properties/c14-5.jpg"
+      ],
+      "features": [
+        {
+          "th": "สระว่ายน้ำ",
+          "en": "Swimming pool"
+        },
+        {
+          "th": "ฟิตเนส",
+          "en": "Fitness centre"
+        },
+        {
+          "th": "รปภ. 24 ชม.",
+          "en": "24h security"
+        },
+        {
+          "th": "ใจกลางย่านนิมมาน",
+          "en": "Heart of Nimman"
+        },
+        {
+          "th": "ใกล้ ม.เชียงใหม่",
+          "en": "Near CMU"
+        }
+      ]
+    },
+    {
+      "code": "SE-C15",
+      "featured": false,
+      "status": "rent",
+      "type": "condo",
+      "location": "mueang",
+      "location_th": "ในเมือง / รอบเมือง",
+      "location_en": "Mueang (city area)",
+      "title_th": "ดิ อิสสระ คอนโด",
+      "title_en": "ดิ อิสสระ คอนโด",
+      "desc_th": "พร้อมอยู่ ดิ อิสสระ คอนโด ใกล้รวมโชค / เซ็นทรัลเฟสติวัลเชียงใหม่ / สยามทีวีรวมโชค ค่าเช่า: 9,500 บาท สัญญาเช่า 1 ปี (รวมส่วนกลาง) ล่วงหน้า 1 เดือน + ประกัน 2 เดือน รายละเอียดห้อง 1 นอน 1 น้ำ ขนาด 35 ตร.ม. ชั้น 5 วิวเมือง เฟอร์นิเจอร์ + เครื่องใช้ไฟฟ้าครบ พร้อมอยู่ (แอร์ 2 ตัว / ทีวี / ตู้เย็น / ไมโครเวฟ / เครื่องซักผ้า / เตาไฟฟ้า) สิ่งอำนวยความสะดวก - สระว่ายน้ำ - ฟิตเนส - ระบบรักษาความปลอดภัย 24 ชม. - ที่จอดรถ งดเลี้ยงสัตว์ทุกชนิด",
+      "desc_en": "Condo for Rent – Ready to Move In📍Conveniently located near Ruamchok, Central Festival Chiang Mai, and Siam TV Ruamchok. 💰 Rental Price: THB 9,500/month (1-year lease, common area fee included) 📌 Rental Terms: 1 month's rent in advance 2 months' security deposit 🛏️ Property Details 1 Bedroom, 1 Bathroom 35 sq.m. 5th Floor City View 🛋️ Fully furnished with complete electrical appliances – Ready to move in! Included: 2 Air Conditioners TV Refrigerator Microw",
+      "beds": 1,
+      "baths": 1,
+      "sqm": 35,
+      "land_sqm": null,
+      "parking": 9,
+      "floor": 5,
+      "furnished": "full",
+      "ownership": "rental",
+      "price_th": "฿ 9,500 / เดือน",
+      "price_en": "฿ 9,500 / mo",
+      "tier": "a",
+      "image": "assets/img/properties/c15-1.jpg",
+      "gallery": [
+        "assets/img/properties/c15-1.jpg",
+        "assets/img/properties/c15-2.jpg",
+        "assets/img/properties/c15-3.jpg",
+        "assets/img/properties/c15-4.jpg",
+        "assets/img/properties/c15-5.jpg"
+      ],
+      "features": [
+        {
+          "th": "สระว่ายน้ำ",
+          "en": "Swimming pool"
+        },
+        {
+          "th": "ฟิตเนส",
+          "en": "Fitness centre"
+        },
+        {
+          "th": "รปภ. 24 ชม.",
+          "en": "24h security"
+        }
+      ]
+    },
+    {
+      "code": "SE-C16",
+      "featured": false,
+      "status": "rent",
+      "type": "condo",
+      "location": "mueang",
+      "location_th": "ในเมือง / รอบเมือง",
+      "location_en": "Mueang (city area)",
+      "title_th": "ทรัมส์คอนโดเจ็ดยอด",
+      "title_en": "ทรัมส์คอนโดเจ็ดยอด",
+      "desc_th": "🏢 ทรัมส์ คอนโดเจ็ดยอด 📐 ห้องขนาด 39 ตรม. อยู่ชั้น 4 💰 ราคา 12,000 บาท 📄 สัญญา 1 ปี (ประกัน 2 เดือน) ✅ เครื่องใช้ไฟฟ้ามีดังนี้ค่ะ -แอร์ 13,000 btu 2 ตัว -สมาร์ททีวี - พัดลม - ตู้เย็น -ไมโครเวฟ -เครื่องซักผ้า -เครื่องทำน้ำอุ่น ✅ เฟอร์นิเจอร์มีดังนี้ค่ะ -โซฟา -ชั้นวางทีวี -ชุดโต๊ะทานข้าว -เตียง5ฟุต -โต๊ะเขียนหนังสือ -โต๊ะเครื่องแป้ง -ตู้เสื้อผ้าบิ้วอิน -ตู้รองเท้า 🚫 ไม่อนุญาตให้เลี้ยงสัตว์ทุกชนิดค่ะ 🚫 Condo for Rent – Trams Condominium, Jed Yod, Chiang Mai",
+      "desc_en": "Condo for Rent – Trams Condominium, Jed Yod, Chiang Mai 📍 Trams Condominium, Jed Yod📐 Size: 39 sq.m.🏢 4th Floor 💰 Rent: 12,000 THB/month📄 1-Year Contract🔐 Security Deposit: 2 Months Electrical Appliances ✅ 2 Air Conditioners (13,000 BTU each)✅ Smart TV✅ Fan✅ Refrigerator✅ Microwave Oven✅ Washing Machine✅ Water Heater Furniture ✅ Sofa✅ TV Cabinet✅ Dining Table Set✅ 5-Foot Bed✅ Study Desk✅ Dressing Table✅ Built-in Wardrobe✅ Shoe Cabinet ✨ Fully Furnished and",
+      "beds": 1,
+      "baths": 1,
+      "sqm": 39,
+      "land_sqm": null,
+      "parking": 1,
+      "floor": 4,
+      "furnished": "full",
+      "ownership": "rental",
+      "price_th": "฿ 12,000 / เดือน",
+      "price_en": "฿ 12,000 / mo",
+      "tier": "a",
+      "image": "assets/img/properties/c16-1.jpg",
+      "gallery": [
+        "assets/img/properties/c16-1.jpg",
+        "assets/img/properties/c16-2.jpg",
+        "assets/img/properties/c16-3.jpg",
+        "assets/img/properties/c16-4.jpg",
+        "assets/img/properties/c16-5.jpg"
+      ],
+      "features": [
+        {
+          "th": "รปภ. 24 ชม.",
+          "en": "24h security"
+        }
+      ]
+    },
+    {
+      "code": "SE-C17",
+      "featured": false,
+      "status": "rent",
+      "type": "condo",
+      "location": "mueang",
+      "location_th": "ในเมือง / รอบเมือง",
+      "location_en": "Mueang (city area)",
+      "title_th": "ศุภาลัย มอนเต้2 ชั้น 14",
+      "title_en": "ศุภาลัย มอนเต้2 ชั้น 14",
+      "desc_th": "🏡 ขาย/เช่า ศุภาลัย มอนเต้2 เชียงใหม่ ศูนย์รวมแหล่งแฟชั่น อยู่ตรงข้ามห้างเซนทรัลเฟสติวัลเชียงใหม่ ที่ใหญ่ที่สุด ด้วยขนาดห้องที่กว้างขวาง พร้อมสิ่งอำนวยความสะดวกสบายมากมาย เดินทางสะดวก ใกล้สถานที่สำคัญหลากหลาย เช่นห้างสรรพสินค้า สถานทูต โรงพยาบาล ขนส่ง ⚡️ขนาด 41ตรม. ชั้น 14 ⚡️ขาย 3.2ล้านบาทโอน50:50 ⛳️เช่า 1-3ดือน = 17000฿ เช่า 6เดือน =16000฿ เช่า 1ปี= 15000฿ 🚩ค่าเช่า ฟรีสระว่ายน้ำ ฟรีฟิตเนส ฟรีซาวน่า 1ห้องนอน 1ห้องน้ำ",
+      "desc_en": "Rental Rates 1–3 months: THB 17,000/month 6 months: THB 16,000/month 1-year contract: THB 15,000/month ✅ Rental includes: Free swimming pool access Free fitness center Free sauna ✨ Room Features Brand-new furniture throughout Premium built-in Hi-Gloss interior Move-in ready 🏢 Facilities Lobby Wi-Fi Sky Lounge & Library Multi-Function Room Fitness Center Swimming Pool & Sauna CCTV Security System Easy Pass Ent",
+      "beds": 1,
+      "baths": 1,
+      "sqm": 41,
+      "land_sqm": null,
+      "parking": 1,
+      "floor": 14,
+      "furnished": "full",
+      "ownership": "rental",
+      "price_th": "฿ 17,000 / เดือน",
+      "price_en": "฿ 17,000 / mo",
+      "tier": "a",
+      "image": "assets/img/properties/c17-1.jpg",
+      "gallery": [
+        "assets/img/properties/c17-1.jpg",
+        "assets/img/properties/c17-2.jpg",
+        "assets/img/properties/c17-3.jpg",
+        "assets/img/properties/c17-4.jpg",
+        "assets/img/properties/c17-5.jpg"
+      ],
+      "features": [
+        {
+          "th": "สระว่ายน้ำ",
+          "en": "Swimming pool"
+        },
+        {
+          "th": "ฟิตเนส",
+          "en": "Fitness centre"
+        },
+        {
+          "th": "รปภ. 24 ชม.",
+          "en": "24h security"
+        }
+      ]
     }
   ]
 }

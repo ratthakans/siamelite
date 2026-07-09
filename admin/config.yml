@@ -63,11 +63,13 @@ collections:
                 widget: "select"
                 hint: "ใช้สำหรับระบบ filter เท่านั้น ไม่แสดงผลตรงๆ"
                 options:
-                  - { label: "นิมมาน", value: "nimman" }
+                  - { label: "สันทราย / แม่โจ้", value: "sansai" }
+                  - { label: "สารภี", value: "saraphi" }
                   - { label: "หางดง", value: "hangdong" }
-                  - { label: "แม่ริม", value: "maerim" }
-                  - { label: "เมืองเก่า", value: "oldcity" }
                   - { label: "สันกำแพง", value: "sankamphaeng" }
+                  - { label: "ในเมือง / รอบเมือง", value: "mueang" }
+                  - { label: "โซนสนามบิน", value: "airport" }
+                  - { label: "อื่นๆ", value: "other" }
               - label: "ทำเล ภาษาไทย (Location, Thai)"
                 name: "location_th"
                 widget: "string"
@@ -138,7 +140,7 @@ collections:
               - label: "งบประมาณระดับ — สำหรับกรอง (Budget tier)"
                 name: "tier"
                 widget: "select"
-                hint: "เริ่มต้น = ต่ำกว่า 8M/40k · กลาง = 8-15M/40-50k · สูง = 15M+"
+                hint: "สำหรับเช่า: เริ่มต้น = ต่ำกว่า ฿20,000 · กลาง = ฿20,000-30,000 · สูง = ฿30,000+"
                 options:
                   - { label: "เริ่มต้น (Entry)", value: "a" }
                   - { label: "ระดับกลาง (Mid)", value: "b" }

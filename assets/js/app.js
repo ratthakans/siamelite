@@ -6,6 +6,38 @@
 (function () {
   "use strict";
 
+  /* ---------- Analytics (optional) ----------
+     Paste your real IDs to switch these on. While they still contain "X",
+     nothing loads and no tracking happens. GA4: Admin → Data Streams.
+     Meta Pixel: Events Manager → Data Sources. */
+  var GA4_ID = "G-XXXXXXXXXX";
+  var META_PIXEL_ID = "XXXXXXXXXXXXXXX";
+  (function initAnalytics() {
+    if (GA4_ID.indexOf("X") === -1) {
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA4_ID;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag("js", new Date());
+      window.gtag("config", GA4_ID);
+    }
+    if (META_PIXEL_ID.indexOf("X") === -1) {
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = "2.0"; n.queue = [];
+        t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+      }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      window.fbq("init", META_PIXEL_ID);
+      window.fbq("track", "PageView");
+    }
+  })();
+  function trackLead() {
+    if (window.gtag) window.gtag("event", "generate_lead");
+    if (window.fbq) window.fbq("track", "Lead");
+  }
+
   /* ---------- Lead storage (Supabase) ---------- */
   var SUPABASE_URL = "https://loanbvamjfdlmyhstaby.supabase.co";
   var SUPABASE_ANON_KEY = "sb_publishable_woZnz99Lnciyotx1wl2rUQ_qAYoD9Kl";
@@ -135,7 +167,15 @@
       };
       if (!payload.name || !payload.contact) return;
 
+      var consent = form.querySelector('input[name="consent"]');
+      if (consent && !consent.checked) {
+        var cw = form.querySelector(".consent");
+        if (cw) { cw.classList.add("err"); cw.animate([{ transform: "translateX(0)" }, { transform: "translateX(-5px)" }, { transform: "translateX(5px)" }, { transform: "translateX(0)" }], { duration: 250 }); }
+        return;
+      }
+
       saveLeadToSupabase(payload);
+      trackLead();
 
       form.style.display = "none";
       var ok = document.getElementById("formSuccess");
@@ -313,6 +353,7 @@
 
   function renderPropertyDetail(item) {
     document.title = (document.body.classList.contains("en") ? item.title_en : item.title_th) + " — Siam Elite Consulting";
+    injectListingSchema(item);
     var st = labelBi("status", item.status);
     var ty = labelBi("type", item.type);
     var fu = labelBi("furnished", item.furnished);
@@ -409,6 +450,38 @@
       refSlot.hidden = false;
       refSlot.innerHTML = bi("สนใจทรัพย์: ", "Enquiring about: ") + "<b>" + esc(item.code) + " · " + (document.body.classList.contains("en") ? esc(item.title_en) : esc(item.title_th)) + "</b>";
     }
+  }
+
+  function injectListingSchema(item) {
+    var ORIGIN = "https://siamelite.vercel.app/";
+    var typeMap = { villa: "House", house: "House", condo: "Apartment" };
+    var gallery = (item.gallery && item.gallery.length ? item.gallery : [item.image]);
+    var schema = {
+      "@context": "https://schema.org",
+      "@type": typeMap[item.type] || "Residence",
+      "name": item.title_en,
+      "description": item.desc_en,
+      "image": gallery.map(function (g) { return ORIGIN + g; }),
+      "url": ORIGIN + "property.html?ref=" + encodeURIComponent(item.code),
+      "numberOfRooms": item.beds,
+      "numberOfBathroomsTotal": item.baths,
+      "floorSize": { "@type": "QuantitativeValue", "value": item.sqm, "unitCode": "MTK" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": item.location_en,
+        "addressRegion": "Chiang Mai",
+        "addressCountry": "TH"
+      }
+    };
+    var el = document.createElement("script");
+    el.type = "application/ld+json";
+    el.textContent = JSON.stringify(schema);
+    document.head.appendChild(el);
+    // update social meta for this property
+    var og = document.querySelector('meta[property="og:title"]');
+    if (og) og.setAttribute("content", item.title_en + " — Siam Elite Consulting");
+    var ogImg = document.querySelector('meta[property="og:image"]');
+    if (ogImg) ogImg.setAttribute("content", ORIGIN + gallery[0]);
   }
 
   function renderSimilar(item, listings) {

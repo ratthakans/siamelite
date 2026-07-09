@@ -143,13 +143,45 @@
     });
   }
 
+  /* ---------- Shared property label helpers (used by cards + detail page) ---------- */
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+  function bi(th, en) {
+    return '<span class="lang-th">' + esc(th) + '</span><span class="lang-en">' + esc(en) + '</span>';
+  }
+  var LABELS = {
+    status: { sale: { th: "ขาย", en: "For Sale" }, rent: { th: "เช่า", en: "For Rent" } },
+    type: {
+      villa: { th: "วิลล่า", en: "Villa" },
+      condo: { th: "คอนโด", en: "Condo" },
+      house: { th: "บ้าน", en: "House" }
+    },
+    furnished: {
+      full: { th: "ครบครัน", en: "Fully furnished" },
+      partial: { th: "บางส่วน", en: "Partly furnished" },
+      unfurnished: { th: "ไม่มีเฟอร์นิเจอร์", en: "Unfurnished" }
+    },
+    ownership: {
+      "freehold": { th: "กรรมสิทธิ์สมบูรณ์", en: "Freehold" },
+      "leasehold": { th: "สิทธิการเช่าระยะยาว", en: "Leasehold" },
+      "foreign-quota": { th: "โควตาต่างชาติ (ถือครองได้)", en: "Foreign freehold quota" },
+      "thai-company": { th: "ถือครองผ่านนิติบุคคล", en: "Thai company structure" },
+      "rental": { th: "สำหรับเช่า", en: "Rental only" }
+    }
+  };
+  function labelBi(group, key) {
+    var g = LABELS[group] || {};
+    return g[key] || { th: key || "-", en: key || "-" };
+  }
+
   /* ---------- Property listings — data-driven from assets/data/properties.json
      (edit that file directly, or via the /admin CMS, to add/change listings) ---------- */
   var propGrid = document.getElementById("propGrid");
   if (propGrid) {
     var scope = propGrid.dataset.scope || "all";
-    var ctaTh = propGrid.dataset.ctaTh || "ดูรายละเอียด";
-    var ctaEn = propGrid.dataset.ctaEn || "View details";
 
     fetch("assets/data/properties.json")
       .then(function (res) { return res.json(); })
@@ -159,7 +191,7 @@
           listings = listings.filter(function (item) { return item.featured; });
         }
         listings.forEach(function (item) {
-          propGrid.appendChild(renderPropertyCard(item, ctaTh, ctaEn));
+          propGrid.appendChild(renderPropertyCard(item));
         });
         initPropertyFilters();
       })
@@ -168,31 +200,43 @@
       });
   }
 
-  function renderPropertyCard(item, ctaTh, ctaEn) {
-    var article = document.createElement("article");
-    article.className = "prop-card";
-    article.dataset.status = item.status;
-    article.dataset.type = item.type;
-    article.dataset.location = item.location;
-    article.dataset.beds = item.beds;
-    article.dataset.tier = item.tier;
+  function renderPropertyCard(item) {
+    var a = document.createElement("a");
+    a.className = "prop-card";
+    a.href = "property.html?ref=" + encodeURIComponent(item.code || "");
+    a.dataset.status = item.status;
+    a.dataset.type = item.type;
+    a.dataset.location = item.location;
+    a.dataset.beds = item.beds;
+    a.dataset.tier = item.tier;
 
-    var statusThaiLabel = item.status === "sale" ? "ขาย" : "เช่า";
-    var statusEnLabel = item.status === "sale" ? "For Sale" : "For Rent";
+    var st = labelBi("status", item.status);
+    var ty = labelBi("type", item.type);
+    var areaUnit = item.type === "condo" ? "" : "";
 
-    article.innerHTML =
+    a.innerHTML =
       '<div class="prop-img">' +
-        '<img src="' + item.image + '" alt="' + item.title_en + '" loading="lazy">' +
-        '<span class="tag"><span class="lang-th">' + statusThaiLabel + '</span><span class="lang-en">' + statusEnLabel + '</span></span>' +
-        '<span class="price"><span class="lang-th">' + item.price_th + '</span><span class="lang-en">' + item.price_en + '</span></span>' +
+        '<img src="' + esc(item.image) + '" alt="' + esc(item.title_en) + '" loading="lazy">' +
+        '<span class="tag tag-' + esc(item.status) + '">' + bi(st.th, st.en) + '</span>' +
       '</div>' +
       '<div class="prop-body">' +
-        '<h4><span class="lang-th">' + item.title_th + '</span><span class="lang-en">' + item.title_en + '</span></h4>' +
-        '<div class="loc">📍 <span class="lang-th">' + item.location_th + '</span><span class="lang-en">' + item.location_en + '</span></div>' +
-        '<div class="prop-specs"><span>🛏 ' + item.beds + '</span><span>🛁 ' + item.baths + '</span><span>📐 ' + item.sqm + ' m²</span></div>' +
-        '<a href="#contact" class="link-gold prop-cta"><span class="lang-th">' + ctaTh + '</span><span class="lang-en">' + ctaEn + '</span> →</a>' +
+        '<div class="prop-top">' +
+          '<div class="prop-price">' + bi(item.price_th, item.price_en) + '</div>' +
+          '<span class="prop-code">' + esc(item.code || "") + '</span>' +
+        '</div>' +
+        '<h4>' + bi(item.title_th, item.title_en) + '</h4>' +
+        '<div class="loc">' +
+          '<svg viewBox="0 0 24 24" class="pin"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>' +
+          bi(item.location_th, item.location_en) + ' · ' + bi(ty.th, ty.en) +
+        '</div>' +
+        '<div class="prop-specs">' +
+          '<span><b>' + esc(item.beds) + '</b> ' + bi("นอน", "bed") + '</span>' +
+          '<span><b>' + esc(item.baths) + '</b> ' + bi("น้ำ", "bath") + '</span>' +
+          '<span><b>' + esc(item.sqm) + '</b> ' + bi("ตร.ม.", "m²") + '</span>' +
+        '</div>' +
+        '<div class="prop-view">' + bi("ดูรายละเอียด", "View details") + ' →</div>' +
       '</div>';
-    return article;
+    return a;
   }
 
   function initPropertyFilters() {
@@ -244,6 +288,154 @@
     });
     applyFilters();
   }
+
+  /* ---------- Property detail page (property.html?ref=CODE) ---------- */
+  var propDetail = document.getElementById("propDetail");
+  if (propDetail) {
+    var ref = new URLSearchParams(location.search).get("ref");
+    fetch("assets/data/properties.json")
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        var listings = data.listings || [];
+        var item = listings.filter(function (p) { return p.code === ref; })[0];
+        if (!item) {
+          propDetail.innerHTML =
+            '<div class="pd-missing">' + bi("ไม่พบทรัพย์ที่คุณเลือก", "Property not found") +
+            ' — <a href="properties.html">' + bi("ดูอสังหาฯ ทั้งหมด", "browse all properties") + '</a></div>';
+          return;
+        }
+        renderPropertyDetail(item);
+        renderSimilar(item, listings);
+        setLang(document.body.classList.contains("en") ? "en" : "th");
+      })
+      .catch(function (err) { console.error("Failed to load property", err); });
+  }
+
+  function renderPropertyDetail(item) {
+    document.title = (document.body.classList.contains("en") ? item.title_en : item.title_th) + " — Siam Elite Consulting";
+    var st = labelBi("status", item.status);
+    var ty = labelBi("type", item.type);
+    var fu = labelBi("furnished", item.furnished);
+    var ow = labelBi("ownership", item.ownership);
+    var gallery = (item.gallery && item.gallery.length ? item.gallery : [item.image]);
+
+    // breadcrumb
+    var crumb = document.getElementById("pdCrumb");
+    if (crumb) crumb.innerHTML = bi(item.title_th, item.title_en);
+
+    // gallery
+    var thumbs = gallery.map(function (src, i) {
+      return '<button class="pd-thumb' + (i === 0 ? " on" : "") + '" data-src="' + esc(src) + '" aria-label="photo ' + (i + 1) + '"><img src="' + esc(src) + '" alt="" loading="lazy"></button>';
+    }).join("");
+
+    // spec tiles
+    function tile(icon, val, th, en) {
+      return '<div class="pd-spec"><span class="pd-spec-ic">' + icon + '</span><b>' + esc(val) + '</b><span class="pd-lbl">' + bi(th, en) + '</span></div>';
+    }
+    function tileBi(icon, valTh, valEn, th, en) {
+      return '<div class="pd-spec"><span class="pd-spec-ic">' + icon + '</span><b class="pd-spec-bi">' + bi(valTh, valEn) + '</b><span class="pd-lbl">' + bi(th, en) + '</span></div>';
+    }
+    var specs = "";
+    specs += tile("🛏", item.beds, "ห้องนอน", "Bedrooms");
+    specs += tile("🛁", item.baths, "ห้องน้ำ", "Bathrooms");
+    specs += tileBi("📐", item.sqm + " ตร.ม.", item.sqm + " m²", "พื้นที่ใช้สอย", "Interior");
+    if (item.land_sqm) specs += tileBi("🌳", item.land_sqm + " ตร.ม.", item.land_sqm + " m²", "ที่ดิน", "Land");
+    if (item.floor) specs += tile("🏙", item.floor, "ชั้น", "Floor");
+    specs += tile("🚗", item.parking, "ที่จอดรถ", "Parking");
+    specs += tileBi("🛋", fu.th, fu.en, "เฟอร์นิเจอร์", "Furnishing");
+
+    var features = (item.features || []).map(function (f) {
+      return '<li>✦ ' + bi(f.th, f.en) + '</li>';
+    }).join("");
+
+    // ownership advisory (consulting differentiator)
+    var notes = {
+      "foreign-quota": { th: "คอนโดนี้อยู่ในโควตาต่างชาติ ชาวต่างชาติสามารถถือครองกรรมสิทธิ์ได้เต็มรูปแบบตามกฎหมาย — เราช่วยตรวจสอบเอกสารและดำเนินการโอนให้ถูกต้อง", en: "This unit sits within the foreign ownership quota, so foreigners may hold full freehold title. We verify the paperwork and handle the transfer correctly." },
+      "leasehold": { th: "ตามกฎหมายไทย ชาวต่างชาติถือครองที่ดินในนามตนเองไม่ได้ ทรัพย์นี้เสนอในรูปแบบสิทธิการเช่าระยะยาว (ปกติ 30 ปี ต่ออายุได้) — เราให้คำปรึกษาโครงสร้างที่ปลอดภัยและถูกกฎหมาย", en: "Under Thai law foreigners cannot own land in their own name. This property is offered on a long leasehold (typically 30 years, renewable). We advise on a safe, fully legal structure." },
+      "thai-company": { th: "ทรัพย์นี้ถือครองผ่านโครงสร้างนิติบุคคลไทย — เราช่วยตรวจสอบและวางโครงสร้างให้ถูกต้องตามกฎหมาย พร้อมทนายความประจำ", en: "Held through a Thai company structure. We review and set this up correctly and legally, with our in-house legal partners." },
+      "rental": { th: "สอบถามเงื่อนไขการเช่า ระยะสัญญา และเงินประกันได้กับทีมงาน เราช่วยตรวจสัญญาเช่าให้เป็นธรรมก่อนเซ็น", en: "Ask our team about lease terms, contract length and deposits. We review the tenancy agreement to keep it fair before you sign." }
+    };
+    var note = notes[item.ownership];
+    var noteHtml = note ? '<div class="pd-note"><span class="pd-note-ic">⚖️</span><div><b>' + bi("การถือครองสำหรับชาวต่างชาติ", "Ownership for foreigners") + '</b><p>' + bi(note.th, note.en) + '</p></div></div>' : "";
+
+    // WhatsApp deep link with property context
+    var waText = encodeURIComponent("สนใจทรัพย์ " + item.code + " — " + item.title_th + " (" + item.price_th + ")");
+
+    propDetail.innerHTML =
+      '<div class="pd-gallery reveal in">' +
+        '<div class="pd-main"><img id="pdMain" src="' + esc(gallery[0]) + '" alt="' + esc(item.title_en) + '"></div>' +
+        '<div class="pd-thumbs">' + thumbs + '</div>' +
+      '</div>' +
+      '<div class="pd-layout">' +
+        '<div class="pd-info">' +
+          '<div class="pd-badges"><span class="tag tag-' + esc(item.status) + '">' + bi(st.th, st.en) + '</span><span class="pd-type">' + bi(ty.th, ty.en) + '</span></div>' +
+          '<h1>' + bi(item.title_th, item.title_en) + '</h1>' +
+          '<div class="pd-loc"><svg viewBox="0 0 24 24" class="pin"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>' + bi(item.location_th, item.location_en) + ' · ' + esc(item.code) + '</div>' +
+          '<div class="pd-specs">' + specs + '</div>' +
+          '<div class="pd-section"><h3>' + bi("รายละเอียด", "Description") + '</h3><p>' + bi(item.desc_th, item.desc_en) + '</p></div>' +
+          (features ? '<div class="pd-section"><h3>' + bi("จุดเด่นของทรัพย์", "Property highlights") + '</h3><ul class="pd-features">' + features + '</ul></div>' : "") +
+          noteHtml +
+          '<p class="pd-disclaimer">' + bi("* ที่อยู่และพิกัดที่แน่นอนเปิดเผยเฉพาะผู้สนใจจริงหลังติดต่อทีมงาน", "* Exact address and location shared with serious enquiries after you contact our team.") + '</p>' +
+        '</div>' +
+        '<aside class="pd-enquire">' +
+          '<div class="pd-e-price">' + bi(item.price_th, item.price_en) + '</div>' +
+          '<div class="pd-e-own">' + bi(ow.th, ow.en) + '</div>' +
+          '<p>' + bi("สนใจทรัพย์นี้? ทีมงานพร้อมพาชมและให้คำปรึกษาฟรี ตอบกลับใน 30 นาที", "Interested? Our team arranges viewings and free advice — reply within 30 minutes.") + '</p>' +
+          '<a class="btn btn-gold" href="#contact" data-enquire>' + bi("ส่งความสนใจ", "Submit interest") + '</a>' +
+          '<a class="btn btn-outline" href="https://wa.me/66000000000?text=' + waText + '" target="_blank" rel="noopener">' + bi("แชท WhatsApp", "Chat on WhatsApp") + '</a>' +
+          '<div class="pd-e-meta">' + bi("รหัสทรัพย์", "Ref") + ': ' + esc(item.code) + '</div>' +
+        '</aside>' +
+      '</div>';
+
+    // gallery thumb swap
+    var main = document.getElementById("pdMain");
+    propDetail.querySelectorAll(".pd-thumb").forEach(function (t) {
+      t.addEventListener("click", function () {
+        main.src = t.dataset.src;
+        propDetail.querySelectorAll(".pd-thumb").forEach(function (x) { x.classList.remove("on"); });
+        t.classList.add("on");
+      });
+    });
+
+    // preselect Property in the lead form + show the property reference
+    var svcGrid = document.querySelector('.opt-grid[data-group="service"]');
+    if (svcGrid) {
+      svcGrid.querySelectorAll(".opt").forEach(function (o) {
+        o.classList.toggle("sel", o.dataset.val === "Property");
+      });
+    }
+    var refSlot = document.getElementById("leadPropRef");
+    if (refSlot) {
+      refSlot.hidden = false;
+      refSlot.innerHTML = bi("สนใจทรัพย์: ", "Enquiring about: ") + "<b>" + esc(item.code) + " · " + (document.body.classList.contains("en") ? esc(item.title_en) : esc(item.title_th)) + "</b>";
+    }
+  }
+
+  function renderSimilar(item, listings) {
+    var wrap = document.getElementById("propSimilar");
+    if (!wrap) return;
+    var sims = listings.filter(function (p) {
+      return p.code !== item.code && (p.type === item.type || p.location === item.location);
+    });
+    // top up to 3 with any other listings
+    if (sims.length < 3) {
+      listings.forEach(function (p) {
+        if (sims.length >= 3) return;
+        if (p.code !== item.code && sims.indexOf(p) === -1) sims.push(p);
+      });
+    }
+    sims.slice(0, 3).forEach(function (p) { wrap.appendChild(renderPropertyCard(p)); });
+  }
+
+  /* ---------- FAQ accordion ---------- */
+  document.querySelectorAll(".faq-item").forEach(function (row) {
+    var q = row.querySelector(".faq-q");
+    if (!q) return;
+    q.addEventListener("click", function () {
+      var open = row.classList.contains("open");
+      row.classList.toggle("open", !open);
+    });
+  });
 
   /* ---------- Scroll reveal ---------- */
   var reveals = document.querySelectorAll(".reveal");

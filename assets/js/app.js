@@ -192,6 +192,22 @@
   function bi(th, en) {
     return '<span class="lang-th">' + esc(th) + '</span><span class="lang-en">' + esc(en) + '</span>';
   }
+
+  /* ---------- Line-icon set (thin, monochrome — replaces emoji) ---------- */
+  var ICON_PATHS = {
+    bed: '<path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M2 18h20"/><path d="M12 4v6"/>',
+    bath: '<path d="M4 12V5a2 2 0 0 1 2-2 2 2 0 0 1 2 2"/><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3z"/><path d="M7 19l-1 2"/><path d="M18 19l1 2"/>',
+    area: '<path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/>',
+    land: '<path d="M12 13v9"/><path d="M12 3 7 11h10z"/><path d="M12 8 8.5 13h7z"/>',
+    floor: '<path d="M6 22V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v18"/><path d="M4 22h16"/><path d="M9 7h1"/><path d="M14 7h1"/><path d="M9 11h1"/><path d="M14 11h1"/><path d="M9 15h1"/><path d="M14 15h1"/>',
+    parking: '<path d="M5 13l1.6-4.5A2 2 0 0 1 8.5 7h7a2 2 0 0 1 1.9 1.5L19 13"/><path d="M5 13h14v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H8v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z"/><path d="M7.5 15h.01"/><path d="M16.5 15h.01"/>',
+    sofa: '<path d="M4 11V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M2 13a2 2 0 0 1 4 0v3h12v-3a2 2 0 0 1 4 0v5H2z"/><path d="M6 18v2"/><path d="M18 18v2"/>',
+    check: '<path d="M20 6 9 17l-5-5"/>',
+    shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>'
+  };
+  function svic(name, cls) {
+    return '<svg viewBox="0 0 24 24" class="svic' + (cls ? " " + cls : "") + '" aria-hidden="true">' + (ICON_PATHS[name] || "") + '</svg>';
+  }
   var LABELS = {
     status: { sale: { th: "ขาย", en: "For Sale" }, rent: { th: "เช่า", en: "For Rent" } },
     type: {
@@ -377,16 +393,16 @@
       return '<div class="pd-spec"><span class="pd-spec-ic">' + icon + '</span><b class="pd-spec-bi">' + bi(valTh, valEn) + '</b><span class="pd-lbl">' + bi(th, en) + '</span></div>';
     }
     var specs = "";
-    specs += tile("🛏", item.beds, "ห้องนอน", "Bedrooms");
-    specs += tile("🛁", item.baths, "ห้องน้ำ", "Bathrooms");
-    specs += tileBi("📐", item.sqm + " ตร.ม.", item.sqm + " m²", "พื้นที่ใช้สอย", "Interior");
-    if (item.land_sqm) specs += tileBi("🌳", item.land_sqm + " ตร.ม.", item.land_sqm + " m²", "ที่ดิน", "Land");
-    if (item.floor) specs += tile("🏙", item.floor, "ชั้น", "Floor");
-    specs += tile("🚗", item.parking, "ที่จอดรถ", "Parking");
-    specs += tileBi("🛋", fu.th, fu.en, "เฟอร์นิเจอร์", "Furnishing");
+    specs += tile(svic("bed"), item.beds, "ห้องนอน", "Bedrooms");
+    specs += tile(svic("bath"), item.baths, "ห้องน้ำ", "Bathrooms");
+    specs += tileBi(svic("area"), item.sqm + " ตร.ม.", item.sqm + " m²", "พื้นที่ใช้สอย", "Interior");
+    if (item.land_sqm) specs += tileBi(svic("land"), item.land_sqm + " ตร.ม.", item.land_sqm + " m²", "ที่ดิน", "Land");
+    if (item.floor) specs += tile(svic("floor"), item.floor, "ชั้น", "Floor");
+    specs += tile(svic("parking"), item.parking, "ที่จอดรถ", "Parking");
+    specs += tileBi(svic("sofa"), fu.th, fu.en, "เฟอร์นิเจอร์", "Furnishing");
 
     var features = (item.features || []).map(function (f) {
-      return '<li>✦ ' + bi(f.th, f.en) + '</li>';
+      return '<li>' + svic("check", "sm") + '<span>' + bi(f.th, f.en) + '</span></li>';
     }).join("");
 
     // ownership advisory (consulting differentiator)
@@ -397,7 +413,7 @@
       "rental": { th: "สอบถามเงื่อนไขการเช่า ระยะสัญญา และเงินประกันได้กับทีมงาน เราช่วยตรวจสัญญาเช่าให้เป็นธรรมก่อนเซ็น", en: "Ask our team about lease terms, contract length and deposits. We review the tenancy agreement to keep it fair before you sign." }
     };
     var note = notes[item.ownership];
-    var noteHtml = note ? '<div class="pd-note"><span class="pd-note-ic">⚖️</span><div><b>' + bi("การถือครองสำหรับชาวต่างชาติ", "Ownership for foreigners") + '</b><p>' + bi(note.th, note.en) + '</p></div></div>' : "";
+    var noteHtml = note ? '<div class="pd-note"><span class="pd-note-ic">' + svic("shield", "lg") + '</span><div><b>' + bi("การถือครองสำหรับชาวต่างชาติ", "Ownership for foreigners") + '</b><p>' + bi(note.th, note.en) + '</p></div></div>' : "";
 
     // WhatsApp deep link with property context
     var waText = encodeURIComponent("สนใจทรัพย์ " + item.code + " — " + item.title_th + " (" + item.price_th + ")");

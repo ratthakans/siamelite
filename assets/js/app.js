@@ -86,6 +86,26 @@
     if (h.indexOf("index.html") === 0) return "zh.html";
     return h;
   }
+  /* filter/sort <option> labels can't use language spans, so swap their text directly */
+  var OPT_ZH = {
+    fStatus: { all: "全部", rent: "出租", sale: "出售" },
+    fType: { all: "全部类型", villa: "别墅", condo: "公寓", house: "住宅" },
+    fLocation: { all: "全部地区", nimman: "宁曼路", sansai: "San Sai / Mae Jo", saraphi: "Saraphi", hangdong: "Hang Dong", sankamphaeng: "San Kamphaeng", mueang: "清迈市区", airport: "机场周边", other: "其他地区" },
+    fBeds: { "0": "不限" },
+    fTier: { all: "不限预算", a: "< ฿20,000/月", b: "฿20,000–30,000/月", c: "฿30,000+/月" },
+    fSort: { "default": "推荐", "price-asc": "价格：低 → 高", "price-desc": "价格：高 → 低" }
+  };
+  function localizeOptions(lang) {
+    Object.keys(OPT_ZH).forEach(function (selId) {
+      var sel = document.getElementById(selId);
+      if (!sel) return;
+      [].forEach.call(sel.options, function (o) {
+        if (o.dataset.orig === undefined) o.dataset.orig = o.textContent;
+        var zh = OPT_ZH[selId][o.value];
+        o.textContent = (lang === "zh" && zh) ? zh : o.dataset.orig;
+      });
+    });
+  }
   function setLang(lang, remember) {
     var requested = lang;
     if (supportedLangs.indexOf(lang) === -1) lang = supportedLangs.indexOf("en") !== -1 ? "en" : supportedLangs[0];
@@ -93,6 +113,7 @@
     body.classList.toggle("zh", lang === "zh");
     document.documentElement.lang = lang === "zh" ? "zh-Hans" : lang;
     langButtons.forEach(function (b) { b.classList.toggle("active", b.dataset.lang === lang); });
+    localizeOptions(lang);
     document.querySelectorAll('a[href^="index.html"]').forEach(function (a) {
       if (a.dataset.baseHref === undefined) a.dataset.baseHref = a.getAttribute("href");
       a.setAttribute("href", lang === "zh" ? zhHref(a.dataset.baseHref) : a.dataset.baseHref);

@@ -449,7 +449,7 @@
           '<div class="pd-e-own">' + bi(ow.th, ow.en) + '</div>' +
           '<p>' + bi("สนใจทรัพย์นี้? ทีมงานพร้อมพาชมและให้คำปรึกษาฟรี ตอบกลับใน 30 นาที", "Interested? Our team arranges viewings and free advice — reply within 30 minutes.") + '</p>' +
           '<a class="btn btn-gold" href="#contact" data-enquire>' + bi("ส่งความสนใจ", "Submit interest") + '</a>' +
-          '<a class="btn btn-outline" href="https://wa.me/66966973102?text=' + waText + '" target="_blank" rel="noopener">' + bi("แชท WhatsApp", "Chat on WhatsApp") + '</a>' +
+          '<a class="btn btn-outline" href="https://wa.me/66947755746?text=' + waText + '" target="_blank" rel="noopener">' + bi("แชท WhatsApp", "Chat on WhatsApp") + '</a>' +
           '<div class="pd-e-meta">' + bi("รหัสทรัพย์", "Ref") + ': ' + esc(item.code) + '</div>' +
         '</aside>' +
       '</div>';

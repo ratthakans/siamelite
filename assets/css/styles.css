@@ -214,6 +214,13 @@ body.en .lang-th{display:none}
 .split-text h2{font-size:var(--fs-h2)}
 @media(max-width:900px){.split{grid-template-columns:1fr;gap:44px}.split.rev .split-media{order:0}}
 
+/* ---------- Real-image visual used inside split media columns ---------- */
+.split-photo{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);margin-bottom:18px}
+.split-photo img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:16/10;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.split-photo:hover img{transform:scale(1.04)}
+.split-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 20px 14px;color:#fff;font-size:.82rem;font-weight:500;letter-spacing:.01em;background:linear-gradient(transparent,rgba(11,24,54,.72))}
+.split-photo figcaption .svic{width:15px;height:15px;margin-right:4px;vertical-align:-2px}
+
 /* ---------- Visa table ---------- */
 .visa-table{width:100%;border-collapse:separate;border-spacing:0;background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm)}
 .visa-table th,.visa-table td{padding:18px 20px;text-align:left;font-size:.96rem;border-bottom:1px solid var(--line)}
@@ -335,7 +342,7 @@ body.en .lang-th{display:none}
 }
 
 /* ---------- About map + Team ---------- */
-.about-media iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+.about-media iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
 .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .team-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 28px;text-align:center;box-shadow:var(--shadow-sm);transition:.3s}
 .team-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm);border-color:var(--line-navy)}
@@ -403,7 +410,7 @@ body.en .lang-th{display:none}
 @media(max-width:900px){.testi-grid{grid-template-columns:1fr;gap:22px}}
 
 /* ---------- About ---------- */
-.about-media{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);min-height:380px;background:
+.about-media{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--line);min-height:300px;background:
   linear-gradient(160deg,var(--navy-700),var(--navy-900));position:relative}
 .about-media .map-pin{position:absolute;inset:0;display:grid;place-items:center;color:#fff;text-align:center;padding:24px}
 .about-media .map-pin .p{font-size:2.8rem;margin-bottom:6px}

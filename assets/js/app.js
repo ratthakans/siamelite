@@ -158,6 +158,16 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var fd = new FormData(form);
+
+      /* honeypot: hidden field humans never see — bots that fill it get a
+         fake success and nothing is saved */
+      if (fd.get("website")) {
+        form.style.display = "none";
+        var okTrap = document.getElementById("formSuccess");
+        if (okTrap) okTrap.classList.add("show");
+        return;
+      }
+
       var payload = {
         service: data.service,
         budget: data.budget,

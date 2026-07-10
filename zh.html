@@ -54,8 +54,7 @@ h1,h2,h3,h4{font-family:"Noto Sans SC","Manrope",sans-serif;line-height:1.5;font
 .contact-card span{color:#cdd7ea;font-size:.92rem}
 @media(max-width:640px){.contact-grid{grid-template-columns:1fr}}
 .zh-note{text-align:center;color:#aeb9d0;font-size:.85rem;margin-top:26px}
-.lang-switch a{color:#e7ecf5;opacity:.7;font-size:.78rem;font-weight:700;padding:5px 12px;border-radius:999px;transition:.2s}
-.lang-switch a:hover{opacity:1}
+/* lang-switch styling comes from styles.css (unified button+link, compact on mobile) — no override here */
 </style>
 </head>
 <body>
@@ -66,7 +65,7 @@ h1,h2,h3,h4{font-family:"Noto Sans SC","Manrope",sans-serif;line-height:1.5;font
       <img src="assets/img/logo-gold.svg" alt="Siam Elite Consulting logo">
       <span class="bt"><strong>Siam Elite</strong><small>Consulting Co., Ltd.</small></span>
     </a>
-    <nav class="nav">
+    <nav class="nav" id="nav">
       <a href="#services">服务项目</a>
       <a href="properties.html">精选房源</a>
       <a href="#contact" class="btn btn-gold sm">免费咨询</a>
@@ -77,6 +76,7 @@ h1,h2,h3,h4{font-family:"Noto Sans SC","Manrope",sans-serif;line-height:1.5;font
         <a href="index.html" onclick="try{localStorage.setItem('se_lang','en')}catch(e){}">EN</a>
         <button class="active" type="button">中文</button>
       </div>
+      <button class="burger" id="burger" aria-label="菜单"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
@@ -198,6 +198,14 @@ h1,h2,h3,h4{font-family:"Noto Sans SC","Manrope",sans-serif;line-height:1.5;font
   </div>
 </footer>
 
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<script>
+  document.getElementById('year').textContent=new Date().getFullYear();
+  // mobile nav toggle (matches main site .nav.open behaviour in styles.css)
+  var zb=document.getElementById('burger'), zn=document.getElementById('nav');
+  if(zb&&zn){
+    zb.addEventListener('click',function(){zn.classList.toggle('open');});
+    zn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){zn.classList.remove('open');});});
+  }
+</script>
 </body>
 </html>

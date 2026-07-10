@@ -149,6 +149,8 @@ body.en .lang-th{display:none}
 }
 .lang-switch button:hover{opacity:1}
 .lang-switch button.active{color:var(--navy-ink);border-color:transparent;background:var(--gold-400);opacity:1}
+.lang-switch a{color:#e7ecf5;opacity:.7;font-size:.78rem;font-weight:700;padding:5px 12px;border-radius:999px;transition:.2s;line-height:1.5}
+.lang-switch a:hover{opacity:1}
 .burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
 .burger span{width:26px;height:2px;background:var(--gold-400);display:block;transition:.3s;border-radius:2px}
 @media(max-width:960px){

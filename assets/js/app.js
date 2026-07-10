@@ -503,11 +503,18 @@
     el.type = "application/ld+json";
     el.textContent = JSON.stringify(schema);
     document.head.appendChild(el);
-    // update social meta for this property
+    // update social + canonical meta for this property (Google executes JS and will pick these up)
+    var propUrl = ORIGIN + "property.html?ref=" + encodeURIComponent(item.code);
     var og = document.querySelector('meta[property="og:title"]');
     if (og) og.setAttribute("content", item.title_en + " — Siam Elite Consulting");
     var ogImg = document.querySelector('meta[property="og:image"]');
     if (ogImg) ogImg.setAttribute("content", ORIGIN + gallery[0]);
+    var ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute("content", propUrl);
+    var canon = document.querySelector('link[rel="canonical"]');
+    if (canon) canon.setAttribute("href", propUrl);
+    var metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute("content", (item.desc_en || "").slice(0, 155));
   }
 
   function renderSimilar(item, listings) {

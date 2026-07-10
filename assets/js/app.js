@@ -75,16 +75,36 @@
   var body = document.body;
   var langButtons = document.querySelectorAll("#langSwitch [data-lang]");
   var supportedLangs = (body.dataset.langs || "th,en").split(",");
-  function setLang(lang) {
+  /* Where an index.html link should point when the user is browsing in Chinese —
+     keeps Chinese visitors inside the Chinese world (zh.html) instead of dropping
+     them onto the Thai/English home. */
+  function zhHref(h) {
+    if (!h) return h;
+    if (h === "index.html#visa") return "zh.html#services";
+    if (h === "index.html#property") return "properties.html";
+    if (h === "index.html#contact") return "zh.html#contact";
+    if (h.indexOf("index.html") === 0) return "zh.html";
+    return h;
+  }
+  function setLang(lang, remember) {
+    var requested = lang;
     if (supportedLangs.indexOf(lang) === -1) lang = supportedLangs.indexOf("en") !== -1 ? "en" : supportedLangs[0];
     body.classList.toggle("en", lang === "en");
     body.classList.toggle("zh", lang === "zh");
     document.documentElement.lang = lang === "zh" ? "zh-Hans" : lang;
     langButtons.forEach(function (b) { b.classList.toggle("active", b.dataset.lang === lang); });
-    try { localStorage.setItem("se_lang", lang); } catch (e) {}
+    document.querySelectorAll('a[href^="index.html"]').forEach(function (a) {
+      if (a.dataset.baseHref === undefined) a.dataset.baseHref = a.getAttribute("href");
+      a.setAttribute("href", lang === "zh" ? zhHref(a.dataset.baseHref) : a.dataset.baseHref);
+    });
+    /* persist ONLY an explicit, supported choice — a fallback must never overwrite
+       a valid stored preference (e.g. a zh user briefly hitting a TH/EN-only page). */
+    if (remember && supportedLangs.indexOf(requested) !== -1) {
+      try { localStorage.setItem("se_lang", requested); } catch (e) {}
+    }
   }
   langButtons.forEach(function (b) {
-    b.addEventListener("click", function () { setLang(b.dataset.lang); });
+    b.addEventListener("click", function () { setLang(b.dataset.lang, true); });
   });
 
   /* On trilingual pages, auto-build a Chinese span next to every English span
@@ -145,7 +165,7 @@
 
   var saved = "th";
   try { saved = localStorage.getItem("se_lang") || "th"; } catch (e) {}
-  setLang(saved);
+  setLang(saved, false);
   function currentLang() { return body.classList.contains("zh") ? "zh" : body.classList.contains("en") ? "en" : "th"; }
 
   /* ---------- Mobile nav ---------- */

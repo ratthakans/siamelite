@@ -76,7 +76,8 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.22;letter-spa
    line-height — that was inflating every heading and button on the page */
 h1 .lang-th,h1 .lang-en,h2 .lang-th,h2 .lang-en,h3 .lang-th,h3 .lang-en,
 h4 .lang-th,h4 .lang-en,h5 .lang-th,h5 .lang-en{line-height:inherit}
-.btn .lang-th,.btn .lang-en,.tag .lang-th,.tag .lang-en,.eyebrow .lang-th,.eyebrow .lang-en{line-height:1.5}
+.btn .lang-th,.btn .lang-en,.tag .lang-th,.tag .lang-en,.eyebrow .lang-th,.eyebrow .lang-en,
+.hero-badge .lang-th,.hero-badge .lang-en{line-height:1.4}
 .container{max-width:var(--maxw);margin:0 auto;padding:0 32px}
 .narrow{max-width:760px;margin-left:auto;margin-right:auto}
 
@@ -142,15 +143,15 @@ body.en .lang-th{display:none}
 .nav a{color:#e7ecf5;font-size:.94rem;font-weight:500;transition:.2s}
 .nav a:hover{color:var(--gold-400)}
 .nav-cta{display:flex;align-items:center;gap:16px}
-.lang-switch{display:flex;gap:4px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:3px}
-.lang-switch button{
+.lang-switch{display:flex;gap:3px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:3px;flex:none}
+/* buttons (TH/EN toggle) and links (中文 → zh.html) share ONE identical style so the pill stays even */
+.lang-switch button,.lang-switch a{
   background:none;border:1px solid transparent;color:#e7ecf5;cursor:pointer;opacity:.7;
-  font-size:.78rem;font-weight:700;padding:5px 12px;border-radius:999px;font-family:var(--sans);transition:.2s
+  font-size:.78rem;font-weight:700;padding:5px 11px;border-radius:999px;font-family:var(--sans);transition:.2s;
+  line-height:1;white-space:nowrap;display:inline-flex;align-items:center;text-decoration:none
 }
-.lang-switch button:hover{opacity:1}
-.lang-switch button.active{color:var(--navy-ink);border-color:transparent;background:var(--gold-400);opacity:1}
-.lang-switch a{color:#e7ecf5;opacity:.7;font-size:.78rem;font-weight:700;padding:5px 12px;border-radius:999px;transition:.2s;line-height:1.5}
-.lang-switch a:hover{opacity:1}
+.lang-switch button:hover,.lang-switch a:hover{opacity:1}
+.lang-switch button.active,.lang-switch a.active{color:var(--navy-ink);border-color:transparent;background:var(--gold-400);opacity:1}
 .burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
 .burger span{width:26px;height:2px;background:var(--gold-400);display:block;transition:.3s;border-radius:2px}
 @media(max-width:960px){
@@ -173,6 +174,17 @@ body.en .lang-th{display:none}
 .hero h1 em{font-style:normal;color:var(--gold-400)}
 .hero .lead{color:#cdd7ea;font-size:var(--fs-lede);margin:22px 0 32px;max-width:500px;line-height:1.8}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+/* Hero real-image panel — clean framed photo + one floating trust badge */
+.hero-media{position:relative;max-width:520px;margin-left:auto;width:100%}
+.hero-photo{margin:0;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 34px 80px -34px rgba(0,0,0,.7);aspect-ratio:1/1}
+.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-badge{position:absolute;left:-20px;bottom:26px;display:flex;align-items:center;gap:13px;
+  background:var(--glass-light-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);
+  border:1px solid var(--glass-light-border);border-radius:16px;padding:13px 20px;box-shadow:var(--shadow)}
+.hero-badge .svic{width:26px;height:26px;color:var(--gold-600);flex:none}
+.hero-badge b{display:block;font-family:var(--serif);font-size:1rem;color:var(--navy-ink);line-height:1.25}
+.hero-badge small{display:block;font-size:.75rem;color:var(--muted);line-height:1.35}
 .hero-card{
   background:var(--glass-light-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);
   border:1px solid var(--glass-light-border);border-radius:20px;padding:30px;
@@ -188,7 +200,8 @@ body.en .lang-th{display:none}
 }
 .pillrow .pill:hover{border-color:var(--gold);background:rgba(255,255,255,.8)}
 .pillrow .pill .ic{width:40px;height:40px;border-radius:11px;background:var(--gold-soft);display:grid;place-items:center;color:var(--gold-600);flex:none}
-@media(max-width:960px){.hero{padding:56px 0 64px}.hero .container{grid-template-columns:1fr;gap:36px;align-items:start}.hero-card{max-width:520px}}
+@media(max-width:960px){.hero{padding:56px 0 64px}.hero .container{grid-template-columns:1fr;gap:40px;align-items:start}.hero-card,.hero-media{max-width:520px;margin:0}}
+@media(max-width:560px){.hero-badge{left:12px;bottom:12px;padding:11px 16px;gap:11px}.hero-badge .svic{width:22px;height:22px}}
 
 /* ---------- Page intro band (dedicated sub-pages, e.g. properties.html) ---------- */
 .page-hero{
@@ -536,8 +549,12 @@ body.en .lang-th{display:none}
   .section-head{margin-bottom:40px}
   .container{padding:0 22px}
   .brand .bt small{display:none}
-  .brand img{height:36px;width:36px}
-  .brand .bt strong{font-size:1.05rem}
+  .brand img{height:34px;width:34px}
+  .brand .bt strong{font-size:1rem;white-space:nowrap}
+  .header .container{gap:10px}
+  .nav-cta{gap:8px}
+  .lang-switch{gap:2px;padding:2px}
+  .lang-switch button,.lang-switch a{padding:5px 8px;font-size:.72rem}
 }
 
 /* reveal */

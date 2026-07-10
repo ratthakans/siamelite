@@ -275,6 +275,7 @@
     a.dataset.location = item.location;
     a.dataset.beds = item.beds;
     a.dataset.tier = item.tier;
+    a.dataset.price = (String(item.price_en || "").match(/[\d,]+/) || ["0"])[0].replace(/,/g, "");
 
     var st = labelBi("status", item.status);
     var ty = labelBi("type", item.type);
@@ -307,16 +308,30 @@
 
   function initPropertyFilters() {
     var cards = Array.prototype.slice.call(propGrid.querySelectorAll(".prop-card"));
+    var originalOrder = cards.slice();
     var fStatus = document.getElementById("fStatus");
     var fType = document.getElementById("fType");
     var fLocation = document.getElementById("fLocation");
     var fBeds = document.getElementById("fBeds");
     var fTier = document.getElementById("fTier");
+    var fSort = document.getElementById("fSort");
     var fKeyword = document.getElementById("fKeyword");
     var fReset = document.getElementById("fReset");
     var propCount = document.getElementById("propCount");
     var propEmpty = document.getElementById("propEmpty");
     if (!fStatus) return;
+
+    function applySort() {
+      var v = fSort ? fSort.value : "default";
+      var order = originalOrder;
+      if (v === "price-asc" || v === "price-desc") {
+        order = cards.slice().sort(function (a, b) {
+          var pa = parseInt(a.dataset.price, 10) || 0, pb = parseInt(b.dataset.price, 10) || 0;
+          return v === "price-asc" ? pa - pb : pb - pa;
+        });
+      }
+      order.forEach(function (c) { propGrid.appendChild(c); });
+    }
 
     function applyFilters() {
       var kw = (fKeyword.value || "").trim().toLowerCase();
@@ -342,6 +357,7 @@
     [fStatus, fType, fLocation, fBeds, fTier].forEach(function (sel) {
       sel.addEventListener("change", applyFilters);
     });
+    if (fSort) fSort.addEventListener("change", function () { applySort(); applyFilters(); });
     fKeyword.addEventListener("input", applyFilters);
     fReset.addEventListener("click", function () {
       fStatus.value = "all";
@@ -349,7 +365,9 @@
       fLocation.value = "all";
       fBeds.value = "0";
       fTier.value = "all";
+      if (fSort) fSort.value = "default";
       fKeyword.value = "";
+      applySort();
       applyFilters();
     });
     applyFilters();

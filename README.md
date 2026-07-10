@@ -1,8 +1,10 @@
-# Siam Elite Consulting — Website
+# Siam Elite Consulting — Website · v1.0.0
 
-เว็บไซต์ 2 ภาษา (ไทย/อังกฤษ) สำหรับ Siam Elite Consulting
-โทนน้ำเงินเข้ม + ทอง สไตล์ **startup / liquid glass** — พื้นหลัง gradient mesh ต่อเนื่องทั้งหน้า
-การ์ด/แถบต่างๆ ใช้เอฟเฟกต์กระจกฝ้า (`backdrop-filter: blur()` + พื้นโปร่งแสง) ลอยอยู่ด้านบน
+เว็บไซต์ **3 ภาษา** (ไทย เป็นค่าเริ่มต้น · อังกฤษ สลับในหน้า · จีน หน้า `zh.html`) สำหรับ Siam Elite Consulting
+ดีไซน์ **premium minimal** โทนกรมท่า + ทอง — type scale เดียวทั้งเว็บ, ฟอนต์ IBM Plex Sans Thai / Noto Sans SC,
+ไอคอนเส้นสะอาด, hero เป็น split ภาพจริง
+
+> ประวัติการเปลี่ยนแปลง: [CHANGELOG.md](CHANGELOG.md) · เวอร์ชันปัจจุบัน: [VERSION](VERSION) = 1.0.0
 
 ## เปิดดูเว็บ
 เว็บนี้เป็น **static site** (ไม่มี build step) แต่ตอนนี้ property listings โหลดจากไฟล์ JSON ผ่าน

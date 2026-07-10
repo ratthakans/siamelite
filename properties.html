@@ -17,6 +17,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://siamelite.vercel.app/assets/img/og-cover.jpg">
 <link rel="icon" href="assets/img/logo-gold.svg">
+<meta name="theme-color" content="#0b1836">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -71,7 +73,7 @@
         <label><span class="lang-th">ประเภท</span><span class="lang-en">Status</span></label>
         <select id="fStatus">
           <option value="all">ทุกประเภท / All</option>
-          <option value="sale">ซื้อ / Buy</option>
+          <!-- เปิดใช้เมื่อมีทรัพย์ขายเข้าพอร์ต: <option value="sale">ซื้อ / Buy</option> -->
           <option value="rent">เช่า / Rent</option>
         </select>
       </div>
@@ -120,6 +122,11 @@
     </div>
     <div class="filters-search reveal">
       <input type="text" id="fKeyword" placeholder="ค้นหาชื่อทรัพย์หรือทำเล / Search by name or area">
+      <select id="fSort" aria-label="เรียงลำดับ / Sort">
+        <option value="default">แนะนำ / Recommended</option>
+        <option value="price-asc">ราคา: น้อย → มาก / Price: low → high</option>
+        <option value="price-desc">ราคา: มาก → น้อย / Price: high → low</option>
+      </select>
       <button type="button" class="btn btn-outline sm" id="fReset"><span class="lang-th">รีเซ็ตตัวกรอง</span><span class="lang-en">Reset Filters</span></button>
     </div>
     <div class="prop-meta reveal"><span id="propCount"></span></div>

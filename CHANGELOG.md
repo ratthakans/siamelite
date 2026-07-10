@@ -2,6 +2,29 @@
 
 All notable changes to the Siam Elite Consulting website.
 
+## [1.2.0] — 2026-07-11
+
+Coherence & performance pass — audited the whole site for redundancy, contradictions
+and inconsistency, then simplified.
+
+### Changed
+- **One consistent language system.** Every page now toggles Thai / English / 中文 inline
+  with the same 3-button control. The whole marketing home (hero, visa, process, about,
+  FAQ) is fully translated to Chinese via the runtime dictionary.
+- **Removed the separate `zh.html` Chinese home** (it duplicated the homepage in a second
+  form). `/zh.html` now 301-redirects to `/`.
+- **Simplified the homepage** — removed the full filter panel (it duplicated the property
+  page and only filtered featured items); the home now shows a tight 6-property curated
+  showcase with a "view all" CTA. Filtering/sorting lives on the property page.
+
+### Fixed
+- Language switch dropped Chinese users onto the English home when navigating; and a
+  fallback could overwrite a saved language preference. Both fixed (nav stays in-language;
+  a fallback never clobbers an explicit choice).
+- **Performance:** re-optimized all property/lifestyle images (68 MB → 31 MB; ~1100px,
+  q60) with no visible quality loss — pages load roughly twice as fast.
+- Chinese filter/sort dropdown options (were still Thai/English).
+
 ## [1.1.0] — 2026-07-11
 
 ### Added

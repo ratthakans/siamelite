@@ -9,7 +9,7 @@
       "location_th": "สันทราย / แม่โจ้",
       "location_en": "Sansai / Mae Jo",
       "title_th": "BELIVE สันทราย - แม่โจ้",
-      "title_en": "House for Rent· Sansai / Mae Jo",
+      "title_en": "BELIVE Sansai – Mae Jo",
       "desc_th": "BELIVE สันทราย - แม่โจ้ บ้านเดี่ยวหลังใหม่ให้เช่า โซนสันทราย ตรงข้ามมหาวิทยาลัยแม่โจ้ บ้านสวย บรรยากาศดี วิวภูเขา เงียบสงบ แต่เดินทางสะดวก 3 ห้องนอน | 3 ห้องน้ำ 1 ห้องครัว | 1 ห้องรับแขก สนามหญ้าส่วนตัว พื้นที่ใช้สอยกว้าง ถนนเข้า–ออกกว้าง ปลอดภัย อยู่สบาย ฟรี! ส่วนกลางครบ ClubHouse ไม่ต้องจ่ายเพิ่ม ‍ สระว่ายน้ำ ฟิตเนส Wi-Fi ทีวี 55 นิ้ว เครื่องใช้ไฟฟ้า - ตู้เย็น - เครื่องซักผ้า - เครื่องปรับอากาศ - ไมโครเวฟ มีให้ครบ หิ้วกระเป๋าพร้อมเข้าอยู่",
       "desc_en": "House for Rent at BELIVE Sansai – Maejo Prime location in Sansai, directly opposite Maejo University Beautiful mountain views Peaceful atmosphere with convenient access to the city and local amenities Property Features▪ 3 Bedrooms▪ 3 Bathrooms▪ 1 Kitchen▪ 1 Living Room▪ Private Lawn Garden▪ Spacious Living Area▪ Wide Internal Roads, Safe and Comfortable Environment Free Access to Full Clubhouse Facilities‍ Swimming Pool Fitness Center",
       "beds": 3,
@@ -34,17 +34,23 @@
       "features": [
         {
           "th": "สระว่ายน้ำ",
-          "en": "Swimming pool"
+          "en": "Swimming pool",
+          "zh": "游泳池"
         },
         {
           "th": "ฟิตเนส",
-          "en": "Fitness centre"
+          "en": "Fitness centre",
+          "zh": "健身房"
         },
         {
           "th": "มีสวน",
-          "en": "Garden"
+          "en": "Garden",
+          "zh": "花园"
         }
-      ]
+      ],
+      "title_zh": "BELIVE Sansai – Mae Jo",
+      "location_zh": "清迈 San Sai",
+      "desc_zh": "位于清迈 San Sai的住宅，出租，3室3卫，使用面积约 150 平方米，家具齐全。配套设施包括游泳池、健身房、花园。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R02",
@@ -80,21 +86,28 @@
       "features": [
         {
           "th": "สระว่ายน้ำ",
-          "en": "Swimming pool"
+          "en": "Swimming pool",
+          "zh": "游泳池"
         },
         {
           "th": "ฟิตเนส",
-          "en": "Fitness centre"
+          "en": "Fitness centre",
+          "zh": "健身房"
         },
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "มีสวน",
-          "en": "Garden"
+          "en": "Garden",
+          "zh": "花园"
         }
-      ]
+      ],
+      "title_zh": "Phufah Garden Home 4",
+      "location_zh": "清迈周边",
+      "desc_zh": "位于清迈周边的住宅，出租，3室3卫，使用面积约 140 平方米，家具齐全。配套设施包括游泳池、健身房、24小时保安、花园。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R03",
@@ -105,7 +118,7 @@
       "location_th": "สันทราย / แม่โจ้",
       "location_en": "Sansai / Mae Jo",
       "title_th": "Sansaran",
-      "title_en": "House for Rent· Sansai / Mae Jo",
+      "title_en": "Sansaran",
       "desc_th": "Bella 22 บ้านเดี่ยวสไตล์โมเดิร์นให้เช่า ราคาเช่า 30,000 – 35,000 บาท/เดือน บ้านเดี่ยวชั้นเดียว โครงการ Bella 22 by Sansaranพร้อมเข้าอยู่ทันที! บ้านขนาดกว้างขวาง 3 ห้องนอน พร้อมสวนส่วนตัว เหมาะสำหรับการอยู่อาศัยอย่างสะดวกสบาย ตั้งอยู่ในโครงการส่วนตัวที่เงียบสงบ มีบ้านเพียงประมาณ 30 หลัง เหมาะสำหรับผู้ที่ชื่นชอบความเป็นส่วนตัวและบรรยากาศสงบ ห่างไกลจากความวุ่นวาย รายละเอียดบ้าน ขนาดที่ดิน 90 ตารางวา พื้นที่ใช้สอย 123 ตารางเมตร",
       "desc_en": "A 3-bedroom home for rent in Sansai / Mae Jo, Chiang Mai. Fully furnished and ready to move in.",
       "beds": 3,
@@ -130,25 +143,33 @@
       "features": [
         {
           "th": "สระว่ายน้ำ",
-          "en": "Swimming pool"
+          "en": "Swimming pool",
+          "zh": "游泳池"
         },
         {
           "th": "ฟิตเนส",
-          "en": "Fitness centre"
+          "en": "Fitness centre",
+          "zh": "健身房"
         },
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "เลี้ยงสัตว์ได้",
-          "en": "Pet friendly"
+          "en": "Pet friendly",
+          "zh": "Pet friendly"
         },
         {
           "th": "มีสวน",
-          "en": "Garden"
+          "en": "Garden",
+          "zh": "花园"
         }
-      ]
+      ],
+      "title_zh": "Sansaran",
+      "location_zh": "清迈 San Sai",
+      "desc_zh": "位于清迈 San Sai的住宅，出租，3室2卫，使用面积约 123 平方米，家具齐全。配套设施包括游泳池、健身房、24小时保安、Pet friendly。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R04",
@@ -159,7 +180,7 @@
       "location_th": "เชียงใหม่",
       "location_en": "Chiang Mai",
       "title_th": "Supalai Monte Biz",
-      "title_en": "House for Rent· Chiang Mai",
+      "title_en": "Supalai Monte Biz",
       "desc_th": "ให้เช่าทาวน์โฮมระดับพรีเมียม ทำเลศักยภาพ ใกล้เซ็นทรัลเฟสติวัล เชียงใหม่ (Supalai Monte Biz) ทาวน์โฮม 3 ชั้น การันตีห้องสวยตรงปก ได้รับเฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าทุกชิ้นตามรูปภาพ 100% พื้นที่ใช้สอย: 130 ตร.ม. จัดวางและกั้นห้องเป็นสัดส่วนอย่างลงตัว ฟังก์ชัน: 4 ห้องนอน | 3 ห้องน้ำ สิทธิพิเศษ: ฟรี Wi-Fi ความเร็วสูง 1000/500 Mbps และรวมค่าส่วนกลางเรียบร้อยแล้ว ทำเลทอง: ใกล้เซ็นทรัลเฟสติวัล เชียงใหม่, โรงเรียนนานาชาติ และโรงพยาบาลกรุงเทพเชียงใหม่",
       "desc_en": "A 4-bedroom home for rent in Chiang Mai, Chiang Mai. Fully furnished and ready to move in.",
       "beds": 4,
@@ -184,17 +205,23 @@
       "features": [
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "ใกล้โรงเรียนนานาชาติ",
-          "en": "Near international school"
+          "en": "Near international school",
+          "zh": "Near international school"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "Supalai Monte Biz",
+      "location_zh": "清迈周边",
+      "desc_zh": "位于清迈周边的住宅，出租，4室3卫，使用面积约 130 平方米，家具齐全。配套设施包括24小时保安、Near international school、Near shopping。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R05",
@@ -205,7 +232,7 @@
       "location_th": "เชียงใหม่",
       "location_en": "Chiang Mai",
       "title_th": "Urbana 5",
-      "title_en": "House for Rent· Chiang Mai",
+      "title_en": "Urbana 5",
       "desc_th": "清迈 Urbana 5 独栋别墅出租｜靠近国际学校 Urbana 5 Chiang Mai 租金：24,000 泰铢/月 1年合同 土地面积 56 平方哇 3 间卧室 3 间浴室 1 间客厅 1 间厨房 室内停车位 2 个 家具家电齐全，拎包入住 冰箱 洗衣机 热水器 沙发 餐桌椅 全套家具及装饰 社区配套设施 公共泳池 健身房 24小时安保 优越地段，距离多所国际学校仅约5分钟 Unity Concord International School ACIS ABS Americana Chinese International School Varee Chiangmai School Big C Don Chan 入住费用 押金2个月 预付租金1个月 合计 72,000 泰铢 不允许饲养宠物 室内禁止吸烟 不接受4岁以下儿童",
       "desc_en": "House for Rent – Urbana 5 Chiang Mai Urbana 5 Chiang Mai Rent: 24,000 THB/month 1-Year Contract Land Area: 56 sq.wah 3 Bedrooms 3 Bathrooms 1 Living Room 1 Kitchen Covered Parking for 2 Cars Fully Furnished & Ready to Move In Refrigerator Washing Machine Water Heater Sofa Dining Table Set Complete Furniture Package Facilities Swimming Pool Fitness Center 24-Hour Security Excellent Location – Only 5 Minutes from Leading International Schools Unity Concord I",
       "beds": 3,
@@ -230,25 +257,33 @@
       "features": [
         {
           "th": "สระว่ายน้ำ",
-          "en": "Swimming pool"
+          "en": "Swimming pool",
+          "zh": "游泳池"
         },
         {
           "th": "ฟิตเนส",
-          "en": "Fitness centre"
+          "en": "Fitness centre",
+          "zh": "健身房"
         },
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "ใกล้โรงเรียนนานาชาติ",
-          "en": "Near international school"
+          "en": "Near international school",
+          "zh": "Near international school"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "Urbana 5",
+      "location_zh": "清迈周边",
+      "desc_zh": "位于清迈周边的住宅，出租，3室3卫，使用面积约 224 平方米，家具齐全。配套设施包括游泳池、健身房、24小时保安、Near international school。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R06",
@@ -258,8 +293,8 @@
       "location": "saraphi",
       "location_th": "สารภี",
       "location_en": "Saraphi",
-      "title_th": "บ้านให้เช่าโซนสารภี ขัวมุง เชียงใหม่",
-      "title_en": "House for Rent· Saraphi",
+      "title_th": "บ้านให้เช่าโซนสารภี ขัวมุง",
+      "title_en": "House in Saraphi (Khua Mung)",
       "desc_th": "บ้านให้เช่าโซนสารภี / ขัวมุง เชียงใหม่ บ้านนอกโครงการ บรรยากาศเงียบสงบ เป็นส่วนตัว พื้นที่ปลอดภัย น้ำไม่ท่วม • 3 ห้องนอน • 2 ห้องน้ำ บ้านว่างพร้อมเข้าอยู่ วันที่ 1 สิงหาคม 2569 ราคาเช่าเพียง 16,000 บาท/เดือน ฟรีแม่บ้านเดือนละ 1 ครั้ง จุดเด่นของบ้าน เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ โลเคชั่นดี เดินทางสะดวก เข้าเมืองง่าย ใกล้ 7-Eleven ร้านกาแฟ และตลาดสดหลายแห่ง ใกล้ร้านขายของชำและสิ่งอำนวยความสะดวกครบครัน",
       "desc_en": "A 3-bedroom home for rent in Saraphi, Chiang Mai. Fully furnished and ready to move in.",
       "beds": 3,
@@ -284,13 +319,18 @@
       "features": [
         {
           "th": "ใกล้โรงเรียนนานาชาติ",
-          "en": "Near international school"
+          "en": "Near international school",
+          "zh": "Near international school"
         },
         {
           "th": "เดินทางเข้าเมืองสะดวก",
-          "en": "Close to the city"
+          "en": "Close to the city",
+          "zh": "Close to the city"
         }
-      ]
+      ],
+      "title_zh": "House in Saraphi (Khua Mung)",
+      "location_zh": "清迈 Saraphi",
+      "desc_zh": "位于清迈 Saraphi的住宅，出租，3室2卫，使用面积约 150 平方米，家具齐全。配套设施包括Near international school、Close to the city。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R07",
@@ -301,7 +341,7 @@
       "location_th": "หางดง",
       "location_en": "Hang Dong",
       "title_th": "กุลพันธ์วิลล์ 9 หางดง เชียงใหม่",
-      "title_en": "House for Rent· Hang Dong",
+      "title_en": "Kulpan Ville 9, Hang Dong",
       "desc_th": "บ้านว่างให้เช่า กุลพันธ์วิลล์ 9 หางดง เชียงใหม่ บ้านเดี่ยว 2 ชั้น ขนาด 64.5 ตรว. พื้นที่ใช้สอย 180 ตรม. 3ห้องนอน 3ห้องน้ำ 1ห้องโถง 1ห้องครัว จอดรถได้ 2 คัน สัญญาเช่า 1 ปี 27,000 บาท/เดือน ประกัน 2 เดือน จ่ายล่วงหน้า 1 เดือน พื้นที่ใช้สอย 180 ตรม. แอร์ทุกห้องนอน แอร์ห้องรับแขก เครื่องทำน้ำอุ่น เครื่องใช้ไฟฟ้า ทีวี ตู้เย็น เครื่องซักผ้า เตาแก๊ส เครื่องดูดควัน โซฟา โต๊ะทานข้าว แท็งค์น้ำขนาด 2000 ลิตร น้ำประปา + ไฟฟ้าคิดตามมิเตอร์",
       "desc_en": "House for Rent – Kulaphan Ville 9, Hang Dong, Chiang Mai Rental Price: THB 27,000/month Minimum Lease Term: 1 Year Security Deposit: 2 Months Advance Rent: 1 Month Property Details Land Size: 64.5 sq.wah (approximately 258 sq.m.) 2-storey detached house 3 Bedrooms 3 Bathrooms 1 Living Room 1 Kitchen Parking for 2 cars Usable Area: 180 sq.m. Fully Furnished & Equipped Air conditioners in every bedroom Air conditioner in the living room Water heater",
       "beds": 3,
@@ -326,25 +366,33 @@
       "features": [
         {
           "th": "สระว่ายน้ำ",
-          "en": "Swimming pool"
+          "en": "Swimming pool",
+          "zh": "游泳池"
         },
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "ใกล้โรงเรียนนานาชาติ",
-          "en": "Near international school"
+          "en": "Near international school",
+          "zh": "Near international school"
         },
         {
           "th": "มีสวน",
-          "en": "Garden"
+          "en": "Garden",
+          "zh": "花园"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "Kulpan Ville 9, Hang Dong",
+      "location_zh": "清迈 Hang Dong",
+      "desc_zh": "位于清迈 Hang Dong的住宅，出租，3室3卫，使用面积约 180 平方米，家具齐全。配套设施包括游泳池、24小时保安、Near international school、花园。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R08",
@@ -355,7 +403,7 @@
       "location_th": "สารภี",
       "location_en": "Saraphi",
       "title_th": "บ้าน 2 ชั้น โซนสารภี",
-      "title_en": "House for Rent· Saraphi",
+      "title_en": "2-Storey House, Saraphi",
       "desc_th": "สามารถเข้าอยู่ได้ในเดือนสิงหาคม 2569 Zone นี้ น้ำไม่เคยท่วมค่ะ บ้านไม่เคยถูกน้ำท่วมเลยสักครั้งค่ะ สร้างจากอิฐมอญแดง ทนต่อแผ่นดินไหวค่ะ บ้านเดี่ยวยกสูงจากพื้น 1 เมตรค่ะ..ลูกค้าท่านไหนต้องการย้ายออกจากคอนโด มีบ้าน ให้เช่าค่ะ รับนายหน้าด้วยนะคะ บ้าน 2 ชั้น โซนสารภี 3 นอน 3 น้ำ พื้นที่ 52.5 ตรว. พื้นที่ใช้สอย 146 ตรม. (เข้าอยู่ 1 สิงหาคม 2569) ค่าประกัน 2 เดือน จ่ายล่วงหน้า 1 เดือน สัญญา 1 ปี หน้าบ้านเป็นสนามหญ้า. ใกล้โรงเรียนนานาชาติยูนิตี้ Unity Concord International School 7 กม.",
       "desc_en": "House for Rent – Saraphi, Chiang Mai Available from August 2026 This area has never experienced flooding, and the house has never been affected by floods. The house is built with solid red clay bricks, providing excellent durability and enhanced earthquake resistance. The house is elevated 1 meter above ground level, making it ideal for those looking to move from a condominium to a spacious private home. Co-agents / Real estate agents are welcome. Pr",
       "beds": 3,
@@ -380,17 +428,23 @@
       "features": [
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "ใกล้โรงเรียนนานาชาติ",
-          "en": "Near international school"
+          "en": "Near international school",
+          "zh": "Near international school"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "2-Storey House, Saraphi",
+      "location_zh": "清迈 Saraphi",
+      "desc_zh": "位于清迈 Saraphi的住宅，出租，3室2卫，使用面积约 146 平方米，家具齐全。配套设施包括24小时保安、Near international school、Near shopping。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R09",
@@ -401,7 +455,7 @@
       "location_th": "เชียงใหม่",
       "location_en": "Chiang Mai",
       "title_th": "บ้านพี่ทิตย์",
-      "title_en": "House for Rent· Chiang Mai",
+      "title_en": "Baan Phi Thit",
       "desc_th": "บ้านเช่า โซนแม่เหี๊ยะ บ้านตกแต่งสวย ยกกระเป๋าเข้าอยู่ได้เลย! 2 ห้องนอน | 3 ห้องน้ำ | ที่จอดรถ 2 คัน ฟังก์ชันครบครัน ห้องครัวพร้อมฮู้ดดูดควัน เครื่องใช้ไฟฟ้าครบ •ทีวี•โซฟา • ตู้เย็น • เครื่องซักผ้า • หม้อหุงข้าว • แอร์ 2 ตัว • ไมโครเวฟ • WiFi ราคาและเงื่อนไข ค่าเช่า 20,000 บาท / เดือน สัญญา 1 ปี | ประกัน 2 เดือน + ล่วงหน้า 1 เดือน ทำเลดี 4 แยกแม่เหี๊ยะ 1 กม. | สนามบิน 3 กม. | Central Airport 2 กม. | IKEA 3.8 กม. | BigC & HomePro 1 กม.",
       "desc_en": "House for Rent | Mae Hia Area, Chiang Mai Beautifully furnished home, move-in ready! Property Details 2 Bedrooms 3 Bathrooms Parking for 2 Cars Fully Equipped Kitchen with cooker hood Electrical appliances included: TV Sofa Refrigerator Washing Machine Rice Cooker 2 Air Conditioners Microwave Wi-Fi Rental Price & Terms Rent: THB 20,000/month 1-Year Contract 2-Month Security Deposit + 1-Month Advance Rent Prime Location 1 km from Mae Hia Intersect",
       "beds": 2,
@@ -426,13 +480,18 @@
       "features": [
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "Baan Phi Thit",
+      "location_zh": "清迈周边",
+      "desc_zh": "位于清迈周边的住宅，出租，2室3卫，使用面积约 150 平方米，家具齐全。配套设施包括24小时保安、Near shopping。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R10",
@@ -443,7 +502,7 @@
       "location_th": "ในเมือง / รอบเมือง",
       "location_en": "Mueang (city area)",
       "title_th": "บ้านเดี่ยว 2 บ้าน ท่าเกวียน ตำบลหนอง",
-      "title_en": "House for Rent· Mueang (city area)",
+      "title_en": "Detached House, Tha Kwian",
       "desc_th": "บ้านเดี่ยว 2 ชั้น สงบ เหมาะมากสำหรับคนที่ชอบความสงบและเป็นส่วนตัว ที่สำคัญน้ำไม่ท่วม พิกัด บ้าน ท่าเกวียน ตำบลหนอง จ๊อม อำเภอสันทราย จังหวัด เชียงใหม่ บนที่ดิน 60 ตรว. พื้นที่ ใช้สอย - ตรม.148 ตรม. - 3 ห้องนอน - 3 ห้องน้ำ - 1 ห้องนั่งเล่น+ทานข้าว - 1 ห้องครัว - 2 ที่จอดรถ -สนามหญ้าหน้าบ้าน -สวนหินหลังบ้าน เงื่อนไขการเช่า ราคาเช่าใหม่ 25,000บาท/เดือน ล่วงหน้า 1 เดือน ประกัน 2 เดือน สัญญา 1 ปี สิ่งอำนวยความสะดวก - โซฟา",
       "desc_en": "House for Rent – Peaceful & Private | Flood-Free Area A quiet and private 2-storey detached house, perfect for those who enjoy a peaceful living environment. Located in a flood-free area. Location: Tha Kwian, Nong Chom Subdistrict, San Sai District, Chiang Mai Land size: 60 sq.wah Usable area: 148 sq.m. 3 Bedrooms 3 Bathrooms 1 Living & Dining Area 1 Kitchen 2 Parking Spaces Front lawn Rear rock garden Rental Terms Rent: 25,000 THB/month 1 month advanc",
       "beds": 3,
@@ -468,21 +527,28 @@
       "features": [
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "ใกล้โรงเรียนนานาชาติ",
-          "en": "Near international school"
+          "en": "Near international school",
+          "zh": "Near international school"
         },
         {
           "th": "มีสวน",
-          "en": "Garden"
+          "en": "Garden",
+          "zh": "花园"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "Detached House, Tha Kwian",
+      "location_zh": "清迈市区",
+      "desc_zh": "位于清迈市区的住宅，出租，3室3卫，使用面积约 148 平方米，家具齐全。配套设施包括24小时保安、Near international school、花园、Near shopping。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R11",
@@ -493,7 +559,7 @@
       "location_th": "ในเมือง / รอบเมือง",
       "location_en": "Mueang (city area)",
       "title_th": "บ้านแถวหนองหอย",
-      "title_en": "House for Rent· Mueang (city area)",
+      "title_en": "House in Nong Hoi",
       "desc_th": "บ้านให้เช่าพร้อมเข้าอยู่ แปลงหัวมุม มีความเป็นส่วนตัวสูง พื้นที่ 66 ตรว. พื้นที่ใช้สอย 230 ตรม. 3ห้องนอน 3ห้องน้ำ เฟอร์นิเจอร์เครื่องใช้ไฟฟ้าครบ - แอร์4ตัว - ทีวี 55นิ้ว - เครื่องทำน้ำอุ่น2 ฝักบัวrain shower - เครื่องซักผ้า1 - ตู้เย็น1 - ไมรโครเวฟ1 เตาแก๊สพร้อมฮูดดูดควัน ใกล้สิ่งอำนวยความสะดวกมากมาย - เซเว่นอยู่เยื้องหน้าโครงการ - ไปเชียงใหม่ 89 เดินทางเพียง2-3นาที - โรงเรียนวารีเดินทางไม่ถึง5นาที - เข้าเมืองสะดวกมาก - จอดรถยนต์ภายในบ้านได้2-3คัน",
       "desc_en": "House for Rent – Ready to Move In Corner Plot | High Privacy | Convenient Location Location: Nong Hoi Subdistrict, Mueang Chiang Mai District, Chiang Mai Land Area: 66 sq.wah (264 sq.m.) Usable Area: 230 sq.m. 3 Bedrooms 3 Bathrooms Fully Furnished & Equipped with Appliances: 4 Air Conditioners 55” TV 2 Water Heaters with Rain Shower Washing Machine Refrigerator Microwave Gas Stove with Range Hood Parking for 2–3 Cars Inside the Property",
       "beds": 3,
@@ -518,13 +584,18 @@
       "features": [
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "เดินทางเข้าเมืองสะดวก",
-          "en": "Close to the city"
+          "en": "Close to the city",
+          "zh": "Close to the city"
         }
-      ]
+      ],
+      "title_zh": "House in Nong Hoi",
+      "location_zh": "清迈市区",
+      "desc_zh": "位于清迈市区的住宅，出租，3室3卫，使用面积约 230 平方米，家具齐全。配套设施包括24小时保安、Close to the city。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R12",
@@ -535,7 +606,7 @@
       "location_th": "เชียงใหม่",
       "location_en": "Chiang Mai",
       "title_th": "บ้านโครงการใจแก้วเอราวัณ 28",
-      "title_en": "House for Rent· Chiang Mai",
+      "title_en": "Jai Kaew Erawan 28",
       "desc_th": "ปล่อยเช่า บ้านโครงการใจแก้วเอราวัณ 28 ทำเล ใกล้เชียงใหม่89 พลาซ่า ราคา 33,000 บาทต่อเดือน ลากกระเป๋าเข้าอยู่ได้เลยคะ มีเฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ บานเหล็กกันขโมยและกันยุงรอบบ้าน ประตูรีโมท บ้านในโครงการเล็กๆ ไม่มีค่าส่วนกลาง รายละเอียดบ้าน ตัวบ้านขนาด 144 ตารางเมตร ที่ดิน 50 ตารางวา -4 ห้องนอน 3 ห้องน้ำ -1 ห้องโต๊ะทำงาน -1 ห้องนั่งเล่น / ห้องรับแขก -1 ห้องครัว -2 ที่จอดรถ รายละเอียดเฟอร์นิเจอร์และเครื่องใช้ไฟฟ้า",
       "desc_en": "House for Rent – Kai Kaew Erawan 28 Project (Chiang Mai) Location: Near Chiang Mai 89 Plaza Rent: 33,000 THB/month Ready to move in – fully furnished with complete electrical appliances Features: Anti-theft steel doors + mosquito protection around the house Remote control gate Small private housing project No common area fee Property Details: Usable area: 144 sq.m. Land size: 50 sq.wah 4 Bedrooms, 3 Bathrooms 1 Office / Working room 1 Living / Recep",
       "beds": 4,
@@ -560,17 +631,23 @@
       "features": [
         {
           "th": "ใกล้โรงเรียนนานาชาติ",
-          "en": "Near international school"
+          "en": "Near international school",
+          "zh": "Near international school"
         },
         {
           "th": "มีสวน",
-          "en": "Garden"
+          "en": "Garden",
+          "zh": "花园"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "Jai Kaew Erawan 28",
+      "location_zh": "清迈周边",
+      "desc_zh": "位于清迈周边的住宅，出租，4室3卫，使用面积约 144 平方米，家具齐全。配套设施包括Near international school、花园、Near shopping。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R13",
@@ -581,7 +658,7 @@
       "location_th": "ในเมือง / รอบเมือง",
       "location_en": "Mueang (city area)",
       "title_th": "บ้านโซนฟ้าฮ่าม",
-      "title_en": "House for Rent· Mueang (city area)",
+      "title_en": "House in Fa Ham",
       "desc_th": "มองหาบ้านเช่าโซนฟ้าฮ่าม Looking for a House for Rent in Faham Area 寻找清迈 Fa Ham 区域出租房吗 บรรยากาศเงียบสงบ เป็นส่วนตัวสุดๆ ต้องบ้านเดี่ยวทำเลฟ้าฮ่ามหลังนี้ ขนาด 65 ตร.ว. 3 ห้องนอน 2 ห้องน้ำ ตกแต่งครบ พร้อมเข้าอยู่ มีสวนและพื้นที่สีเขียวรอบบ้าน น้ำไม่ท่วม ช่วยประหยัดเวลาและค่าน้ำมันในการเดินทาง ค่าเช่า 35,000 บาท/เดือน เงื่อนไขการเช่า * ประกัน 2 เดือน * ค่าเช่าล่วงหน้า 1 เดือน * สัญญา 1 ปี ทำเลสะดวกมาก * ใกล้เซ็นทรัลเฟสติวัล เชียงใหม่",
       "desc_en": "House for Rent in Faham Area 寻找清迈 Fa Ham 区域出租房吗 บรรยากาศเงียบสงบ เป็นส่วนตัวสุดๆ ต้องบ้านเดี่ยวทำเลฟ้าฮ่ามหลังนี้ ขนาด 65 ตร.ว. 3 ห้องนอน 2 ห้องน้ำ ตกแต่งครบ พร้อมเข้าอยู่ มีสวนและพื้นที่สีเขียวรอบบ้าน น้ำไม่ท่วม ช่วยประหยัดเวลาและค่าน้ำมันในการเดินทาง ค่าเช่า 35,000 บาท/เดือน เงื่อนไขการเช่า * ประกัน 2 เดือน * ค่าเช่าล่วงหน้า 1 เดือน * สัญญา 1 ปี ทำเลสะดวกมาก * ใกล้เซ็นทรัลเฟสติวัล เชียงใหม่ * ใกล้ตลาดจริงใจ * ใกล้ตลาดวโรส ใกล้แหล่งงานและสิ่งอำนวยความสะดว",
       "beds": 3,
@@ -606,13 +683,18 @@
       "features": [
         {
           "th": "มีสวน",
-          "en": "Garden"
+          "en": "Garden",
+          "zh": "花园"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "House in Fa Ham",
+      "location_zh": "清迈市区",
+      "desc_zh": "位于清迈市区的住宅，出租，3室2卫，使用面积约 260 平方米，家具齐全。配套设施包括花园、Near shopping。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R14",
@@ -622,8 +704,8 @@
       "location": "mueang",
       "location_th": "ในเมือง / รอบเมือง",
       "location_en": "Mueang (city area)",
-      "title_th": "บ้านใกล้ CMIS แห่งใหม่ หลังพายัพค่ะ",
-      "title_en": "House for Rent· Mueang (city area)",
+      "title_th": "บ้านใกล้ CMIS แห่งใหม่",
+      "title_en": "House near CMIS (new campus)",
       "desc_th": "ยินดีรับนายหน้า และเอเจ้นทุกท่านค่ะ ค่าเช่า 20,000 บาท มัดจำ 2 เดือน ล่วงหน้า 1 เดือน ไม่รับสัตว์เลี้ยงค่ะ บ้านใกล้ CMIS แห่งใหม่ หลังพายัพค่ะ ใกล้เมือง ใกล้เซ็นทรัล กรุงศุลอเมริกา และ รร อีกหลายแห่งค่ะ รายละเอียด ห้อง 3 ห้องนอน 3 ห้องน้ำ วอลเปเปอร์และเฟอนิเจอร์บิ้วอินทั้งหลัง พื้นที่ใช้สอยขนาดใหญ่เท่าบ้านเดี่ยวอยู่สบายมาก ห้องน้ำในตัว พร้อม rain shower 2 ห้อง จอดรถได้ 2 คัน หน้ากว้าง 6.5 เมตร เครื่องใช้ไฟฟ้าเฟอนิเจอร์ของใหม่หมดค่ะ",
       "desc_en": "A 3-bedroom home for rent in Mueang (city area), Chiang Mai. Fully furnished and ready to move in.",
       "beds": 3,
@@ -648,13 +730,18 @@
       "features": [
         {
           "th": "เดินทางเข้าเมืองสะดวก",
-          "en": "Close to the city"
+          "en": "Close to the city",
+          "zh": "Close to the city"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "House near CMIS (new campus)",
+      "location_zh": "清迈市区",
+      "desc_zh": "位于清迈市区的住宅，出租，3室3卫，使用面积约 180 平方米，家具齐全。配套设施包括Close to the city、Near shopping。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R15",
@@ -665,7 +752,7 @@
       "location_th": "แม่ริม / สะเมิง",
       "location_en": "Mae Rim / Samoeng",
       "title_th": "บ้านใกล้แยกสะเมิง",
-      "title_en": "House for Rent· Mae Rim / Samoeng",
+      "title_en": "House near Samoeng Junction",
       "desc_th": "บ้านสวยว่างให้เช่า ใกล้แยกสะเมิง 4 กม. บ้าน 3 นอน 2 ห้องน้ำ ให้เช่า 20,000 บาท / เดือน ( สัญญา1ปี ) เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ - WIFI - ชุดเตียงนอน - โซฟา,โต๊ะรับเเขก - โต๊ะทานอาหาร - ทีวี - เเอร์ 3 เครื่อง - พัดลม - ตู้เย็น - เครื่องซักผ้า - ไมโครเวฟ - โต๊ะทำงาน+เก้าอี้ - เตาเเก๊ส+ฮูดดูดควัน - กล้องวงจรปิด(ภายนอก) สถานที่ใกล้เคียง - กาดผักหวาน 3 กม. - แยกสะเมิง 4 กม. - บิ๊กซี, แม็คโครแม่เหียะ 6-7กม. - เซ็นทรัลเชียงใหม่แอร์พอร์ต 10 กม.",
       "desc_en": "House for Rent – Only 4 km from Samoeng Intersection, Chiang Mai Rental Price: 20,000 THB/month 1-Year Lease Contract Property Details 3 Bedrooms 2 Bathrooms Fully Furnished & Equipped Wi-Fi Internet Bed Sets Sofa & Coffee Table Dining Table Set TV 3 Air Conditioners Fans Refrigerator Washing Machine Microwave Oven Work Desk & Chair Gas Stove & Range Hood Outdoor CCTV Security Cameras Ready to move in – just bring your luggage! Nearby",
       "beds": 3,
@@ -690,13 +777,18 @@
       "features": [
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "House near Samoeng Junction",
+      "location_zh": "清迈 Hang Dong",
+      "desc_zh": "位于清迈 Hang Dong的住宅，出租，3室2卫，使用面积约 150 平方米，家具齐全。配套设施包括24小时保安、Near shopping。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R16",
@@ -707,7 +799,7 @@
       "location_th": "สารภี",
       "location_en": "Saraphi",
       "title_th": "บ้านให้เช่าโซน สารภี เชียงใหม่",
-      "title_en": "House for Rent· Saraphi",
+      "title_en": "House in Saraphi",
       "desc_th": "บ้านว่างแล้วนะคะ รับนายหน้าด่วนๆ บ้านให้เช่าโซน สารภี เชียงใหม่ พร้อมถือกระเป๋าเข้าอยู่ได้เลย พื้นที่บริเวณบ้านกว้าง 132 ตรว. พื้นที่ใช้สอยในตัวบ้านกว้างขวาง 190 ตรม. 3 ห้องนอน 2 ห้องน้ำ 1 ห้องครัว 1 ห้องรับประทานอาหาร 1 ห้องเก็บของ 1 ห้องทำงาน ห้องน้ำมีฝักบัวอ่างล้างหน้ามีระบบน้ำร้อนน้ำเย็น แบ่งโซนอาบน้ำ บริเวณด้านหน้าบ้านสามารถจอดรถได้ 4- 6 คัน ส่วนบริเวณด้านหลังบ้านมีสวนผลไม้ ปลูกต้นมะม่วง ต้นกล้วย สามารถปลูกเพิ่มเติมได้ สามารถเลี้ยงสัตว์เลี้ยงได้",
       "desc_en": "A 3-bedroom home for rent in Saraphi, Chiang Mai. Fully furnished and ready to move in.",
       "beds": 3,
@@ -732,13 +824,18 @@
       "features": [
         {
           "th": "เลี้ยงสัตว์ได้",
-          "en": "Pet friendly"
+          "en": "Pet friendly",
+          "zh": "Pet friendly"
         },
         {
           "th": "มีสวน",
-          "en": "Garden"
+          "en": "Garden",
+          "zh": "花园"
         }
-      ]
+      ],
+      "title_zh": "House in Saraphi",
+      "location_zh": "清迈 Saraphi",
+      "desc_zh": "位于清迈 Saraphi的住宅，出租，3室2卫，使用面积约 190 平方米，家具齐全。配套设施包括Pet friendly、花园。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R17",
@@ -749,7 +846,7 @@
       "location_th": "สันทราย / แม่โจ้",
       "location_en": "Sansai / Mae Jo",
       "title_th": "พิมุกต์ 1 เชียงใหม่ (นอกโครงการ)",
-      "title_en": "House for Rent· Sansai / Mae Jo",
+      "title_en": "Phimook 1 Chiang Mai",
       "desc_th": "บ้านสวยพร้อมอยู่! โซนรวมโชค – พิมุกต์ 1 เชียงใหม่ (นอกโครงการ) ใครกำลังหาบ้านเช่าที่ “อยู่สบาย + พื้นที่กว้าง + เงียบเป็นส่วนตัว” ต้องดูหลังนี้เลยค่ะ โลเคชั่นรวมโชค ใกล้ตลาดรวมโชค, มีโชคพลาซ่า, ร้านอาหาร คาเฟ่ ครบ เดินทางสะดวก ค่าเช่าเพียง 29,000 บาท/เดือน (บ้านขนาดใหญ่ + สวน + บริการดูแลสวน ในราคานี้ “คุ้มมาก” ในโซนนี้) บรรยากาศเงียบ เป็นส่วนตัว เหมาะกับคนที่อยากได้ “พื้นที่ใช้ชีวิตจริง ๆ” จุดเด่นที่หายากมาก! – บ้านเดี่ยว 2 ชั้น พื้นที่กว้าง ขนาด 131 ตร.วา",
       "desc_en": "House for Rent – Ruamchok Area, Pimuk 1, Chiang Mai (Outside Gated Community) Looking for a spacious, peaceful, and comfortable home? This is the perfect choice! Prime Location – Ruamchok AreaConveniently located near Ruamchok Market, Meechok Plaza, supermarkets, restaurants, cafés, and many local amenities with easy access to the city. Special Rental Price 1-Year Contract: THB 29,000/month 2-Year Contract: THB 27,000/month A fantastic value for a",
       "beds": 4,
@@ -774,21 +871,28 @@
       "features": [
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "ใกล้โรงเรียนนานาชาติ",
-          "en": "Near international school"
+          "en": "Near international school",
+          "zh": "Near international school"
         },
         {
           "th": "มีสวน",
-          "en": "Garden"
+          "en": "Garden",
+          "zh": "花园"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "Phimook 1 Chiang Mai",
+      "location_zh": "清迈 San Sai",
+      "desc_zh": "位于清迈 San Sai的住宅，出租，4室3卫，使用面积约 524 平方米，家具齐全。配套设施包括24小时保安、Near international school、花园、Near shopping。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R18",
@@ -799,7 +903,7 @@
       "location_th": "เชียงใหม่",
       "location_en": "Chiang Mai",
       "title_th": "ศิริพรการ์เด้นท์โฮม 9",
-      "title_en": "House for Rent· Chiang Mai",
+      "title_en": "Siriporn Garden Home 9",
       "desc_th": "บ้านเดี่ยว 2 ชั้นให้เช่า โซนสันทราย ทำเลดี ใกล้เมือง!ศิริพรการ์เด้นท์โฮม 9 ต.สันนาเม็ง อ.สันทราย จ.เชียงใหม่ น้ำไม่ท่วม เดินทางสะดวก ใกล้ตลาดและแหล่งชุมชน บ้านขนาดกำลังดี พื้นที่ใช้สอยกว้าง เหมาะสำหรับครอบครัว หรือทำโฮมออฟฟิศ รายละเอียดบ้าน▪ ที่ดิน 54 ตร.วา▪ พื้นที่ใช้สอย 170 ตร.ม.▪ 4 ห้องนอน (มีห้องนอนชั้นล่าง)▪ 3 ห้องน้ำ▪ 1 ห้องนอนพร้อมห้องน้ำในตัว▪ 1 ห้องทำงานขนาดใหญ่ 28 ตร.ม. สามารถปรับเป็นห้องนอนเพิ่ม หรือห้องรับแขกได้▪ 1 ห้องครัว▪ 1 ที่จอดรถ",
       "desc_en": "House for Rent in Sansai, Chiang Mai Siriporn Garden Home 9, San Na Meng, Sansai, Chiang Mai Flood-free area Convenient location close to town, markets, and community facilities Property Details▪ Land Area: 54 sq.wah (216 sq.m.)▪ Living Area: 170 sq.m.▪ 4 Bedrooms (including one on the ground floor)▪ 3 Bathrooms▪ 1 Master Bedroom with En-suite Bathroom▪ 1 Office Room (28 sq.m.), suitable as a home office, extra bedroom, or guest lounge▪ 1 Kitch",
       "beds": 4,
@@ -824,21 +928,28 @@
       "features": [
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "มีสวน",
-          "en": "Garden"
+          "en": "Garden",
+          "zh": "花园"
         },
         {
           "th": "เดินทางเข้าเมืองสะดวก",
-          "en": "Close to the city"
+          "en": "Close to the city",
+          "zh": "Close to the city"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "Siriporn Garden Home 9",
+      "location_zh": "清迈周边",
+      "desc_zh": "位于清迈周边的住宅，出租，4室3卫，使用面积约 170 平方米，家具齐全。配套设施包括24小时保安、花园、Close to the city、Near shopping。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R19",
@@ -849,7 +960,7 @@
       "location_th": "เชียงใหม่",
       "location_en": "Chiang Mai",
       "title_th": "ศุภาลัย มอนเต้2",
-      "title_en": "House for Rent· Chiang Mai",
+      "title_en": "Supalai Monte 2",
       "desc_th": "ให้เช่า ศุภาลัย มอนเต้2 ชั้น 22 ขนาด 33 ตรม. เพียงเดือนละ 12,000 บาทเท่านั้น!! ( free wifi ) คอนโดตกแต่งครบพร้อมอยู่ ศุภาลัยมอนเต้2 ศุภาลัย มอนเต้2 วิวชั้น 22 ห้องสวย โปร่ง มีระเบียง ตกแต่สไตล์มูจิ ใช่เฟอร์นิเจอร์อย่างดี เครื่องใช้ไฟฟ้าครบครัน หิ้วกระเป๋าพร้อมเข้าอยู่ได้เลยค่ะ - ชั้น 22 - ห้องกว้าง 33 ตรม. - มีระเบียง - ประตูดิจิตอล รายละเอียดการตกแต่ง: - ชุดเตียง 5 ฟุต + เครื่องนอนครบชุด - ตู้เสื้อผ้า - ชุดโซฟาและโต๊ะกลาง",
       "desc_en": "A 3-bedroom home for rent in Chiang Mai, Chiang Mai. Fully furnished and ready to move in.",
       "beds": 3,
@@ -874,21 +985,28 @@
       "features": [
         {
           "th": "สระว่ายน้ำ",
-          "en": "Swimming pool"
+          "en": "Swimming pool",
+          "zh": "游泳池"
         },
         {
           "th": "ฟิตเนส",
-          "en": "Fitness centre"
+          "en": "Fitness centre",
+          "zh": "健身房"
         },
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "Supalai Monte 2",
+      "location_zh": "清迈周边",
+      "desc_zh": "位于清迈周边的公寓，出租，3室2卫，使用面积约 33 平方米，家具齐全。配套设施包括游泳池、健身房、24小时保安、Near shopping。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R20",
@@ -899,7 +1017,7 @@
       "location_th": "สันทราย / แม่โจ้",
       "location_en": "Sansai / Mae Jo",
       "title_th": "สันนาเม็ง สันทราย เชียงใหม่",
-      "title_en": "House for Rent· Sansai / Mae Jo",
+      "title_en": "San Na Meng, Sansai",
       "desc_th": "ให้เช่าบ้านเดี่ยวใหม่ ไม่เคยเข้าอยู่ สันนาเม็ง สันทราย เชียงใหม่ ค่าเช่าเพียง 20,000 บาท/เดือน บ้านใหม่เอี่ยม พร้อมเข้าอยู่ บนพื้นที่กว้างขวาง 150 ตารางวา เหมาะสำหรับอยู่อาศัยเป็นครอบครัว บรรยากาศเงียบสงบ เดินทางสะดวก ตำบลสันนาเม็ง อำเภอสันทราย จังหวัดเชียงใหม่ รายละเอียดบ้าน • 3 ห้องนอน • 2 ห้องน้ำ • 1 ห้องครัว • มีโรงจอดรถ • จอดรถได้สูงสุด 4 คัน • บ้านใหม่ ไม่เคยมีผู้พักอาศัย ไม่รับสัตว์เลี้ยง สถานที่ใกล้เคียง • เซ็นทรัลเฟสติวัล เชียงใหม่ 15 นาที",
       "desc_en": "House for Rent – San Na Meng, San Sai, Chiang MaiRent: 20,000 THB/month A brand-new house that has never been occupied, ready to move in. Situated on a spacious 150 sq.wah plot, ideal for family living in a peaceful environment with convenient access to nearby amenities. Location: San Na Meng Subdistrict, San Sai District, Chiang Mai, Thailand Property Details 3 Bedrooms 2 Bathrooms 1 Kitchen Covered parking area Parking space for up to 4 cars Brand-new",
       "beds": 3,
@@ -924,13 +1042,18 @@
       "features": [
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "San Na Meng, Sansai",
+      "location_zh": "清迈 San Sai",
+      "desc_zh": "位于清迈 San Sai的住宅，出租，3室2卫，使用面积约 600 平方米，家具齐全。配套设施包括24小时保安、Near shopping。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R21",
@@ -941,7 +1064,7 @@
       "location_th": "หางดง",
       "location_en": "Hang Dong",
       "title_th": "สันผักหวาน หางดง",
-      "title_en": "House for Rent· Hang Dong",
+      "title_en": "San Phak Wan, Hang Dong",
       "desc_th": "เช่า 19,500 บ/ดี สันผักหวาน- หางดง #English and Chinese Version Below บ้านตกแต่งสวย ยกกระเป๋าเข้าอยู่ได้เลย! 2 ห้องนอน | 2 ห้องน้ำ | ที่จอดรถ 2 คัน ฟังก์ชันครบครัน ห้องครัวพร้อมฮู้ดดูดควัน • ห้องเก็บของใต้บันได • ห้องเอนกประสงค์ข้างบ้าน เครื่องใช้ไฟฟ้าครบ ทีวี • ตู้เย็น • เครื่องซักผ้า • หม้อหุงข้าว • แอร์ 3 ตัว • เตาแก๊สไฟฟ้า 2 หัว • ไมโครเวฟ • WiFi ฟรี ราคาและเงื่อนไข ค่าเช่า 19,500 บาท/เดือน | สัญญา 1 ปี | ประกัน 2 เดือน + ล่วงหน้า 1 เดือน",
       "desc_en": "House for Rent — Move In Ready! 2 Bedrooms | 2 Bathrooms | 2 Parking Spaces Full Features Kitchen with range hood • Storage room under stairs • Multipurpose room beside house Appliances Included TV • Refrigerator • Washing Machine • Rice Cooker • 3 Air Conditioners • 2-Burner Electric Stove • Microwave • Free WiFi Rental Terms 19,500 THB/month | 1-Year Contract | 2 Months Deposit + 1 Month Advance Great Location — San Phak Wan 1 km from Samoeng Intersectio",
       "beds": 2,
@@ -966,13 +1089,18 @@
       "features": [
         {
           "th": "ใกล้โรงเรียนนานาชาติ",
-          "en": "Near international school"
+          "en": "Near international school",
+          "zh": "Near international school"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "San Phak Wan, Hang Dong",
+      "location_zh": "清迈 Hang Dong",
+      "desc_zh": "位于清迈 Hang Dong的住宅，出租，2室2卫，使用面积约 150 平方米，家具齐全。配套设施包括Near international school、Near shopping。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R22",
@@ -983,7 +1111,7 @@
       "location_th": "สันทราย / แม่โจ้",
       "location_en": "Sansai / Mae Jo",
       "title_th": "พิมมดา",
-      "title_en": "House for Rent· Sansai / Mae Jo",
+      "title_en": "Phimmada",
       "desc_th": "หมู่บ้านพิมมดา บ้านเลขที่ 202 / 30 ตั้งอยู่ในซอยข้างโฮมโปรสาขาสันทราย เชียงใหม่ ปล่อยเช่าเดือนละ 16,000.- สัญญาเช่า 1 ปี ประกัน 2 เดือน(หากมีสัตว์เลี้ยงประกัน4เดือน) ค่าเช่าชำระล่วงหน้า 1 เดือน 2 ห้องนอนใหญ่ 3 ห้องน้ำ (มีเครื่องทำน้ำอุ่น2ห้อง) 1 ห้องนั่งเล่น 1 โต๊ะอาหาร 1 ห้องครัว 1 ที่จอดรถด้านนอก จอดได้ 1 คัน พร้อมรั้วรีโมท โซนซักล้าง อุปกรณ์อำนวยความสะดวก โซฟานั่งเล่น แอร์ 3 เครื่อง (ชั้นบน+ล่าง) ตู้เย็น",
       "desc_en": "House for Rent – Pimmoda Village, Chiang Mai House No. 202/30, Pimmoda VillageLocated in the alley next to HomePro Sansai, Chiang Mai Rental Price: 16,000 THB/month 1-year lease contract Security Deposit: 2 months' rent (4 months for tenants with pets) Advance Rent: 1 month Property Details 2 spacious bedrooms 3 bathrooms (2 bathrooms equipped with water heaters) 1 living room 1 dining area 1 kitchen 1 parking space with remote-controlled gat",
       "beds": 2,
@@ -1008,17 +1136,23 @@
       "features": [
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "เดินทางเข้าเมืองสะดวก",
-          "en": "Close to the city"
+          "en": "Close to the city",
+          "zh": "Close to the city"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "Phimmada",
+      "location_zh": "清迈 San Sai",
+      "desc_zh": "位于清迈 San Sai的住宅，出租，2室3卫，使用面积约 150 平方米，家具齐全。配套设施包括24小时保安、Close to the city、Near shopping。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R23",
@@ -1029,7 +1163,7 @@
       "location_th": "เชียงใหม่",
       "location_en": "Chiang Mai",
       "title_th": "เซนธารา ธาราศิริเชียงใหม่ (Zentara by Tarasiri)",
-      "title_en": "House for Rent· Chiang Mai",
+      "title_en": "Zentara Tharasiri Chiang Mai",
       "desc_th": "New Semi-Detached House for Rent Rent: 27,000 THB / month Zentara Tarasiri Village, Chiang Mai San Sai Luang, San Sai District Location",
       "desc_en": "House for Rent Rent: 27,000 THB / month Zentara Tarasiri Village, Chiang Mai San Sai Luang, San Sai District Location [https://maps.app.goo.gl/g1sgJxLmmcnwPm3G8?g_st=ic](https://maps.app.goo.gl/g1sgJxLmmcnwPm3G8?g_st=ic) North-facing house with garden view • Semi-detached design with separate walls (not connected) — no shared wall noise concerns • 3 Bedrooms • 3 Bathrooms • 150 sq.m. living area • Open kitchen • Fully furnished Electrical Appliances Includ",
       "beds": 3,
@@ -1054,21 +1188,28 @@
       "features": [
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "ใกล้โรงเรียนนานาชาติ",
-          "en": "Near international school"
+          "en": "Near international school",
+          "zh": "Near international school"
         },
         {
           "th": "มีสวน",
-          "en": "Garden"
+          "en": "Garden",
+          "zh": "花园"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "Zentara Tharasiri Chiang Mai",
+      "location_zh": "清迈周边",
+      "desc_zh": "位于清迈周边的住宅，出租，3室3卫，使用面积约 150 平方米，家具齐全。配套设施包括24小时保安、Near international school、花园、Near shopping。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R24",
@@ -1078,8 +1219,8 @@
       "location": "airport",
       "location_th": "โซนสนามบิน",
       "location_en": "Airport zone",
-      "title_th": "เชียงใหม่ล้านนาวิลเลจ เฟส 7 (บ้านเจ้าคุณ)",
-      "title_en": "House for Rent· Airport zone",
+      "title_th": "เชียงใหม่ ล้านนาวิลเลจ เฟส 7",
+      "title_en": "Chiang Mai Lanna Village Phase 7",
       "desc_th": "บ้านให้เช่า ใกล้สนามบินเชียงใหม่ | โซนป่าแดด-แม่เหียะ บ้านรีโนเวทใหม่ เฟอร์ฯ ครบ บรรยากาศเงียบสงบ ปลอดภัย รปภ. 24 ชม. มีสวนส่วนกลางขนาดใหญ่และลู่วิ่ง บรรยากาศร่มรื่น เหมาะแก่การวิ่งออกกำลังกายยามเช้า-เย็น โครงการ เชียงใหม่ล้านนาวิลเลจ เฟส 7 (บ้านเจ้าคุณ) รายละเอียดบ้าน • 3 ห้องนอน | 3 ห้องน้ำ • 1 ห้องนั่งเล่น | 1 ห้องครัว • เนื้อที่ 50 ตร.วา (พื้นที่โปร่ง โล่ง อยู่สบาย ไม่อึดอัด) • ที่จอดรถยนต์ 2-3 คัน • ตกแต่งไม้ระแนงรอบบ้าน เพิ่มความเป็นส่วนตัวและดีไซน์ที่ลงตัว",
       "desc_en": "House for Rent Near Chiang Mai Airport | Pa Daet - Mae Hia Zone Newly renovated, fully furnished, and located in a peaceful and secure neighborhood. Features a massive common park with a jogging track—perfect for your morning and evening workouts. Location: Chiang Mai Lanna Village Phase 7 (Baan Chao Khun) Property Details: -3 Bedrooms | 3 Bathrooms -1 Living Room | 1 Kitchen -Land Area: 50 sq. wah (Spacious, airy, and comfortable layout) -2-3 Parking Spac",
       "beds": 3,
@@ -1104,25 +1245,33 @@
       "features": [
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "ใกล้โรงเรียนนานาชาติ",
-          "en": "Near international school"
+          "en": "Near international school",
+          "zh": "Near international school"
         },
         {
           "th": "มีสวน",
-          "en": "Garden"
+          "en": "Garden",
+          "zh": "花园"
         },
         {
           "th": "เดินทางเข้าเมืองสะดวก",
-          "en": "Close to the city"
+          "en": "Close to the city",
+          "zh": "Close to the city"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "Chiang Mai Lanna Village Phase 7",
+      "location_zh": "清迈机场周边",
+      "desc_zh": "位于清迈机场周边的住宅，出租，3室3卫，使用面积约 200 平方米，家具齐全。配套设施包括24小时保安、Near international school、花园、Close to the city。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R25",
@@ -1133,7 +1282,7 @@
       "location_th": "โซนสนามบิน",
       "location_en": "Airport zone",
       "title_th": "กาญจน์ทาวน์ 5 แถวแอร์พอร์ต",
-      "title_en": "House for Rent· Airport zone",
+      "title_en": "Kan Town 5 (Airport)",
       "desc_th": "ให้เช่าบ้านแฝด โครงการกาญจน์กนกทาวน์ 5 เฟอร์ใหม่ครบ พร้อมอยู่ บ้าน 2 ชั้น สไตล์โมเดิร์น ทำเลดีมาก เดินทางสะดวก ใกล้สนามบิน เหมาะสำหรับอยู่อาศัยหรือทำโฮมออฟฟิศ โครงการกาญจน์ทาวน์ 5 แถวแอร์พอร์ต ใกล้สนามบินนานาชาติเชียงใหม่ เดินทางแค่5นาที รายละเอียดบ้าน 3 ห้องนอน 2 ห้องน้ำ เครื่องทำน้ำอุ่น2 ที่จอดรถ 2 คัน เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ มีแอร์ 4ตัว และพื้นที่ใช้สอยกว้าง มีกล้องวงจรปิด มีTV มีตู้เย็น มีเครื่องซักผ้า บรรยากาศเงียบสงบ น่าอยู่ เป็นส่วนตัว",
       "desc_en": "House for Rent at Karnkanok Town 5 Fully Furnished | Ready to Move In A modern 2-storey semi-detached home in a prime location with convenient access to Chiang Mai International Airport. Perfect for residential living or a home office. Karnkanok Town 5 – Airport AreaOnly 5 minutes from Chiang Mai International Airport. Property Details 3 Bedrooms 2 Bathrooms 2 Water Heaters Parking for 2 Cars Fully Furnished 4 Air Conditioners Spacious Living Area CCTV S",
       "beds": 3,
@@ -1158,9 +1307,13 @@
       "features": [
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         }
-      ]
+      ],
+      "title_zh": "Kan Town 5 (Airport)",
+      "location_zh": "清迈机场周边",
+      "desc_zh": "位于清迈机场周边的住宅，出租，3室2卫，使用面积约 150 平方米，家具齐全。配套设施包括24小时保安。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R26",
@@ -1171,7 +1324,7 @@
       "location_th": "สันกำแพง",
       "location_en": "San Kamphaeng",
       "title_th": "ซีรีนพาร์ค สันกำแพง เชียงใหม่",
-      "title_en": "House for Rent· San Kamphaeng",
+      "title_en": "Serene Park, San Kamphaeng",
       "desc_th": "บ้านเดี่ยวให้เช่า | โครงการซีรีนพาร์ค สันกำแพง เชียงใหม่ ค่าเช่า 21,000 บาท/เดือน (รวมค่าส่วนกลาง) ต.ต้นเปา อ.สันกำแพง จ.เชียงใหม่ เฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าครบ พร้อมเข้าอยู่ทันที ใกล้โรงเรียนนานาชาติ UCIS / ABS / ACIS จุดเด่น บ้านเดี่ยว 2 ชั้น พื้นที่ใช้สอย 165 ตร.ม. 3 ห้องนอน 3 ห้องน้ำ ห้องนั่งเล่นกว้าง โปร่ง โล่ง สบาย จอดรถได้ 2 คัน แอร์ 4 เครื่อง เฟอร์นิเจอร์ครบ พร้อมเข้าอยู่ ระบบรักษาความปลอดภัย 24 ชั่วโมง รายละเอียดบ้าน",
       "desc_en": "House for Rent | Serene Park Village, San Kamphaeng, Chiang Mai Rental Price: 21,000 THB/month (including common area fee) Ton Pao, San Kamphaeng, Chiang Mai Fully furnished and ready to move in Close to UCIS, ABS, and ACIS International Schools Highlights 2-storey detached house Usable area: 165 sq.m. Land size: 50.70 sq.wah 3 Bedrooms, 3 Bathrooms Spacious and bright living room Parking for 2 cars 4 Air conditioners Fully furnished 24-hour security Prope",
       "beds": 3,
@@ -1196,17 +1349,23 @@
       "features": [
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "ใกล้โรงเรียนนานาชาติ",
-          "en": "Near international school"
+          "en": "Near international school",
+          "zh": "Near international school"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "Serene Park, San Kamphaeng",
+      "location_zh": "清迈 San Kamphaeng",
+      "desc_zh": "位于清迈 San Kamphaeng的住宅，出租，3室3卫，使用面积约 165 平方米，家具齐全。配套设施包括24小时保安、Near international school、Near shopping。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R27",
@@ -1217,7 +1376,7 @@
       "location_th": "โซนสนามบิน",
       "location_en": "Airport zone",
       "title_th": "บ้านกาญจน์กนก 21",
-      "title_en": "House for Rent· Airport zone",
+      "title_en": "Kankanok 21",
       "desc_th": "บ้าน 2 ชั้นให้เช่า ในโครงการบ้านกาญจน์กนก 21 ทำเลศักยภาพ ย่านแม่เหียะ ใกล้สนามบินและโรงเรียนนานาชาติ พร้อมเข้าอยู่ กำลังมองหาบ้านที่ตอบโจทย์ทั้งการอยู่อาศัยและการเดินทางอยู่หรือไม่?บ้านหลังนี้ตั้งอยู่ในโครงการคุณภาพ บรรยากาศเงียบสงบ เป็นส่วนตัว เดินทางสะดวก ใกล้สิ่งอำนวยความสะดวกครบครัน ค่าเช่า 25,000 บาท / เดือน สัญญา 1 ปี ประกัน 2 เดือน ล่วงหน้า 1 เดือน รายละเอียดบ้าน• บ้าน 2 ชั้น แปลงหัวมุม โปร่ง โล่ง เป็นส่วนตัว• 3 ห้องนอน• 3 ห้องน้ำ• พื้นที่ใช้สอยกว้างขวาง เหมาะสำหรับครอบครัว",
       "desc_en": "House for Rent in Kanjanakorn 21 Village Prime Mae Hia Location | Close to International Schools & Chiang Mai Airport Looking for a spacious and comfortable home in a convenient location? This beautiful corner house offers privacy, a peaceful atmosphere, and easy access to all major destinations. Rental Price: THB 25,000/month Lease Term: 1-year contract Move-in Terms: 2 months security deposit + 1 month rent in advance Property Features• 2-storey",
       "beds": 3,
@@ -1242,17 +1401,23 @@
       "features": [
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "ใกล้โรงเรียนนานาชาติ",
-          "en": "Near international school"
+          "en": "Near international school",
+          "zh": "Near international school"
         },
         {
           "th": "ใกล้ห้าง/แหล่งช้อปปิ้ง",
-          "en": "Near shopping"
+          "en": "Near shopping",
+          "zh": "Near shopping"
         }
-      ]
+      ],
+      "title_zh": "Kankanok 21",
+      "location_zh": "清迈机场周边",
+      "desc_zh": "位于清迈机场周边的住宅，出租，3室3卫，使用面积约 150 平方米，家具齐全。配套设施包括24小时保安、Near international school、Near shopping。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-R28",
@@ -1262,8 +1427,8 @@
       "location": "other",
       "location_th": "เชียงใหม่",
       "location_en": "Chiang Mai",
-      "title_th": "𝑻𝒐𝒘𝒏𝑯𝒐𝒎𝒆 ท้าวผายู",
-      "title_en": "House for Rent· Chiang Mai",
+      "title_th": "ทาวน์โฮม ท้าวผายู",
+      "title_en": "TownHome Thao Payu",
       "desc_th": "𝑻𝒐𝒘𝒏𝑯𝒐𝒎𝒆 เฟอร์ครบ พร้อมอยู่ ท้าวผายู สันผักหวาน หางดง ให้เช่า 18,000 สัญญารายปี และ ขาย 2.3 ล้าน (ฟรีโอน) 2 ห้องนอน 1 ห้องน้ำ 1 จอดรถ พื้นที่ใช้สอย 132 ตร.ม. ที่ดิน 33 ตรว. Townhome for Rent or Sale – Fully Furnished & Move-in Ready, Thaopayu, San Phak Wan, Hang Dong, Chiang Mai For Rent: THB 18,000/month (1-year contract) For Sale: THB 2.3 Million (Free Transfer Fees) Property Details: 2 Bedrooms",
       "desc_en": "A 2-bedroom home for rent in Chiang Mai, Chiang Mai. Fully furnished and ready to move in.",
       "beds": 2,
@@ -1285,7 +1450,10 @@
         "assets/img/properties/r28-4.jpg",
         "assets/img/properties/r28-5.jpg"
       ],
-      "features": []
+      "features": [],
+      "title_zh": "TownHome Thao Payu",
+      "location_zh": "清迈周边",
+      "desc_zh": "位于清迈周边的住宅，出租，2室1卫，使用面积约 132 平方米，家具齐全。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-C01",
@@ -1321,17 +1489,23 @@
       "features": [
         {
           "th": "สระว่ายน้ำ",
-          "en": "Swimming pool"
+          "en": "Swimming pool",
+          "zh": "游泳池"
         },
         {
           "th": "ฟิตเนส",
-          "en": "Fitness centre"
+          "en": "Fitness centre",
+          "zh": "健身房"
         },
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         }
-      ]
+      ],
+      "title_zh": "ASTRA Condo1",
+      "location_zh": "清迈市区",
+      "desc_zh": "位于清迈市区的公寓，出租，1室1卫，使用面积约 46 平方米，家具齐全，9楼。配套设施包括游泳池、健身房、24小时保安。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-C02",
@@ -1367,25 +1541,33 @@
       "features": [
         {
           "th": "สระว่ายน้ำ",
-          "en": "Swimming pool"
+          "en": "Swimming pool",
+          "zh": "游泳池"
         },
         {
           "th": "ฟิตเนส",
-          "en": "Fitness centre"
+          "en": "Fitness centre",
+          "zh": "健身房"
         },
         {
           "th": "Co-working space",
-          "en": "Co-working space"
+          "en": "Co-working space",
+          "zh": "共享办公空间"
         },
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "ใกล้ ม.เชียงใหม่",
-          "en": "Near CMU"
+          "en": "Near CMU",
+          "zh": "临近清迈大学"
         }
-      ]
+      ],
+      "title_zh": "Arise Condo 1",
+      "location_zh": "清迈市区",
+      "desc_zh": "位于清迈市区的公寓，出租，1室1卫，使用面积约 27 平方米，家具齐全，5楼。配套设施包括游泳池、健身房、共享办公空间、24小时保安。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-C03",
@@ -1421,17 +1603,23 @@
       "features": [
         {
           "th": "สระว่ายน้ำ",
-          "en": "Swimming pool"
+          "en": "Swimming pool",
+          "zh": "游泳池"
         },
         {
           "th": "ฟิตเนส",
-          "en": "Fitness centre"
+          "en": "Fitness centre",
+          "zh": "健身房"
         },
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         }
-      ]
+      ],
+      "title_zh": "Arise Condo 2",
+      "location_zh": "清迈市区",
+      "desc_zh": "位于清迈市区的公寓，出租，1室1卫，使用面积约 62 平方米，家具齐全，1楼。配套设施包括游泳池、健身房、24小时保安。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-C04",
@@ -1467,13 +1655,18 @@
       "features": [
         {
           "th": "ฟิตเนส",
-          "en": "Fitness centre"
+          "en": "Fitness centre",
+          "zh": "健身房"
         },
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         }
-      ]
+      ],
+      "title_zh": "B Home Townhome",
+      "location_zh": "清迈市区",
+      "desc_zh": "位于清迈市区的住宅，出租，3室2卫，使用面积约 100 平方米，家具齐全。配套设施包括健身房、24小时保安。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-C05",
@@ -1509,17 +1702,23 @@
       "features": [
         {
           "th": "สระว่ายน้ำ",
-          "en": "Swimming pool"
+          "en": "Swimming pool",
+          "zh": "游泳池"
         },
         {
           "th": "ฟิตเนส",
-          "en": "Fitness centre"
+          "en": "Fitness centre",
+          "zh": "健身房"
         },
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         }
-      ]
+      ],
+      "title_zh": "Diamant Condominium",
+      "location_zh": "清迈市区",
+      "desc_zh": "位于清迈市区的公寓，出租，1室1卫，使用面积约 35 平方米，家具齐全，5楼。配套设施包括游泳池、健身房、24小时保安。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-C06",
@@ -1555,21 +1754,28 @@
       "features": [
         {
           "th": "สระว่ายน้ำ",
-          "en": "Swimming pool"
+          "en": "Swimming pool",
+          "zh": "游泳池"
         },
         {
           "th": "ฟิตเนส",
-          "en": "Fitness centre"
+          "en": "Fitness centre",
+          "zh": "健身房"
         },
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "ใจกลางย่านนิมมาน",
-          "en": "Heart of Nimman"
+          "en": "Heart of Nimman",
+          "zh": "宁曼路核心地段"
         }
-      ]
+      ],
+      "title_zh": "Kanava Condo (Ruamchok Market)",
+      "location_zh": "清迈宁曼路",
+      "desc_zh": "位于清迈宁曼路的公寓，出租，1室1卫，使用面积约 38 平方米，家具齐全，7楼。配套设施包括游泳池、健身房、24小时保安、宁曼路核心地段。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-C07",
@@ -1605,21 +1811,28 @@
       "features": [
         {
           "th": "สระว่ายน้ำ",
-          "en": "Swimming pool"
+          "en": "Swimming pool",
+          "zh": "游泳池"
         },
         {
           "th": "ฟิตเนส",
-          "en": "Fitness centre"
+          "en": "Fitness centre",
+          "zh": "健身房"
         },
         {
           "th": "Co-working space",
-          "en": "Co-working space"
+          "en": "Co-working space",
+          "zh": "共享办公空间"
         },
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         }
-      ]
+      ],
+      "title_zh": "Mekin Haus",
+      "location_zh": "清迈市区",
+      "desc_zh": "位于清迈市区的公寓，出租，1室1卫，使用面积约 43 平方米，家具齐全，4楼。配套设施包括游泳池、健身房、共享办公空间、24小时保安。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-C08",
@@ -1655,21 +1868,28 @@
       "features": [
         {
           "th": "สระว่ายน้ำ",
-          "en": "Swimming pool"
+          "en": "Swimming pool",
+          "zh": "游泳池"
         },
         {
           "th": "ฟิตเนส",
-          "en": "Fitness centre"
+          "en": "Fitness centre",
+          "zh": "健身房"
         },
         {
           "th": "Co-working space",
-          "en": "Co-working space"
+          "en": "Co-working space",
+          "zh": "共享办公空间"
         },
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         }
-      ]
+      ],
+      "title_zh": "The Base Height Chiangmai",
+      "location_zh": "清迈市区",
+      "desc_zh": "位于清迈市区的公寓，出租，1室1卫，使用面积约 29 平方米，家具齐全，12楼。配套设施包括游泳池、健身房、共享办公空间、24小时保安。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-C09",
@@ -1705,25 +1925,33 @@
       "features": [
         {
           "th": "สระว่ายน้ำ",
-          "en": "Swimming pool"
+          "en": "Swimming pool",
+          "zh": "游泳池"
         },
         {
           "th": "ฟิตเนส",
-          "en": "Fitness centre"
+          "en": "Fitness centre",
+          "zh": "健身房"
         },
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "ใจกลางย่านนิมมาน",
-          "en": "Heart of Nimman"
+          "en": "Heart of Nimman",
+          "zh": "宁曼路核心地段"
         },
         {
           "th": "ใกล้ ม.เชียงใหม่",
-          "en": "Near CMU"
+          "en": "Near CMU",
+          "zh": "临近清迈大学"
         }
-      ]
+      ],
+      "title_zh": "One Plus Klong Chon 2",
+      "location_zh": "清迈宁曼路",
+      "desc_zh": "位于清迈宁曼路的公寓，出租，1室1卫，使用面积约 38 平方米，家具齐全，4楼。配套设施包括游泳池、健身房、24小时保安、宁曼路核心地段。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-C10",
@@ -1759,17 +1987,23 @@
       "features": [
         {
           "th": "สระว่ายน้ำ",
-          "en": "Swimming pool"
+          "en": "Swimming pool",
+          "zh": "游泳池"
         },
         {
           "th": "ฟิตเนส",
-          "en": "Fitness centre"
+          "en": "Fitness centre",
+          "zh": "健身房"
         },
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         }
-      ]
+      ],
+      "title_zh": "Supalai monte2",
+      "location_zh": "清迈市区",
+      "desc_zh": "位于清迈市区的公寓，出租，2室1卫，使用面积约 62 平方米，家具齐全，8楼。配套设施包括游泳池、健身房、24小时保安。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-C11",
@@ -1805,21 +2039,28 @@
       "features": [
         {
           "th": "Co-working space",
-          "en": "Co-working space"
+          "en": "Co-working space",
+          "zh": "共享办公空间"
         },
         {
           "th": "ใจกลางย่านนิมมาน",
-          "en": "Heart of Nimman"
+          "en": "Heart of Nimman",
+          "zh": "宁曼路核心地段"
         },
         {
           "th": "ใกล้ ม.เชียงใหม่",
-          "en": "Near CMU"
+          "en": "Near CMU",
+          "zh": "临近清迈大学"
         },
         {
           "th": "เหมาะกับชาวต่างชาติ / Digital Nomad",
-          "en": "Great for expats & nomads"
+          "en": "Great for expats & nomads",
+          "zh": "适合外籍人士 / 数字游民"
         }
-      ]
+      ],
+      "title_zh": "The nimmana condo",
+      "location_zh": "清迈宁曼路",
+      "desc_zh": "位于清迈宁曼路的公寓，出租，1室1卫，使用面积约 40 平方米，家具齐全，1楼。配套设施包括共享办公空间、宁曼路核心地段、临近清迈大学、适合外籍人士 / 数字游民。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-C12",
@@ -1855,9 +2096,13 @@
       "features": [
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         }
-      ]
+      ],
+      "title_zh": "D'Rin Condo (near Central Festival)",
+      "location_zh": "清迈市区",
+      "desc_zh": "位于清迈市区的公寓，出租，1室1卫，使用面积约 30 平方米，家具齐全，7楼。配套设施包括24小时保安。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-C13",
@@ -1893,9 +2138,13 @@
       "features": [
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         }
-      ]
+      ],
+      "title_zh": "D'Vieng Santitham Condo",
+      "location_zh": "清迈宁曼路",
+      "desc_zh": "位于清迈宁曼路的公寓，出租，1室1卫，使用面积约 30 平方米，家具齐全，2楼。配套设施包括24小时保安。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-C14",
@@ -1931,25 +2180,33 @@
       "features": [
         {
           "th": "สระว่ายน้ำ",
-          "en": "Swimming pool"
+          "en": "Swimming pool",
+          "zh": "游泳池"
         },
         {
           "th": "ฟิตเนส",
-          "en": "Fitness centre"
+          "en": "Fitness centre",
+          "zh": "健身房"
         },
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         },
         {
           "th": "ใจกลางย่านนิมมาน",
-          "en": "Heart of Nimman"
+          "en": "Heart of Nimman",
+          "zh": "宁曼路核心地段"
         },
         {
           "th": "ใกล้ ม.เชียงใหม่",
-          "en": "Near CMU"
+          "en": "Near CMU",
+          "zh": "临近清迈大学"
         }
-      ]
+      ],
+      "title_zh": "Hillside 4 Condo (3rd floor)",
+      "location_zh": "清迈宁曼路",
+      "desc_zh": "位于清迈宁曼路的公寓，出租，1室1卫，使用面积约 35 平方米，家具齐全，3楼。配套设施包括游泳池、健身房、24小时保安、宁曼路核心地段。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-C15",
@@ -1985,17 +2242,23 @@
       "features": [
         {
           "th": "สระว่ายน้ำ",
-          "en": "Swimming pool"
+          "en": "Swimming pool",
+          "zh": "游泳池"
         },
         {
           "th": "ฟิตเนส",
-          "en": "Fitness centre"
+          "en": "Fitness centre",
+          "zh": "健身房"
         },
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         }
-      ]
+      ],
+      "title_zh": "The Issara Condo",
+      "location_zh": "清迈市区",
+      "desc_zh": "位于清迈市区的公寓，出租，1室1卫，使用面积约 35 平方米，家具齐全，5楼。配套设施包括游泳池、健身房、24小时保安。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-C16",
@@ -2031,9 +2294,13 @@
       "features": [
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         }
-      ]
+      ],
+      "title_zh": "Trams Condo Jed Yod",
+      "location_zh": "清迈市区",
+      "desc_zh": "位于清迈市区的公寓，出租，1室1卫，使用面积约 39 平方米，家具齐全，4楼。配套设施包括24小时保安。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     },
     {
       "code": "SE-C17",
@@ -2069,17 +2336,23 @@
       "features": [
         {
           "th": "สระว่ายน้ำ",
-          "en": "Swimming pool"
+          "en": "Swimming pool",
+          "zh": "游泳池"
         },
         {
           "th": "ฟิตเนส",
-          "en": "Fitness centre"
+          "en": "Fitness centre",
+          "zh": "健身房"
         },
         {
           "th": "รปภ. 24 ชม.",
-          "en": "24h security"
+          "en": "24h security",
+          "zh": "24小时保安"
         }
-      ]
+      ],
+      "title_zh": "Supalai Monte 2 (14th floor)",
+      "location_zh": "清迈市区",
+      "desc_zh": "位于清迈市区的公寓，出租，1室1卫，使用面积约 41 平方米，家具齐全，14楼。配套设施包括游泳池、健身房、24小时保安。我们提供全程中文看房、合同审核与外国人产权合规咨询，30分钟内回复。"
     }
   ]
 }

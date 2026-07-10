@@ -81,14 +81,23 @@ h4 .lang-th,h4 .lang-en,h5 .lang-th,h5 .lang-en{line-height:inherit}
 .container{max-width:var(--maxw);margin:0 auto;padding:0 32px}
 .narrow{max-width:760px;margin-left:auto;margin-right:auto}
 
-/* Thai-first: Thai visible by default, English shown when body.en */
-.lang-en{display:none}
+/* Thai-first: Thai visible by default, English on body.en, Chinese on body.zh */
+.lang-en,.lang-zh{display:none}
 .lang-th{display:inline}
 .lang-th.block{display:block}
 body.en .lang-en{display:inline}
 body.en .lang-en.block{display:block}
 body.en .lang-th{display:none}
+body.zh .lang-zh{display:inline}
+body.zh .lang-zh.block{display:block}
+body.zh .lang-th,body.zh .lang-en{display:none}
 :lang(th),.lang-th{line-height:1.9}
+/* Chinese: Noto Sans SC, comfortable line-height (loaded on trilingual pages) */
+body.zh{font-family:"Noto Sans SC","Inter","IBM Plex Sans Thai",system-ui,sans-serif}
+body.zh h1,body.zh h2,body.zh h3,body.zh h4,body.zh h5{font-family:"Noto Sans SC","Manrope",sans-serif;line-height:1.5}
+body.zh .lang-zh{line-height:1.85}
+h1 .lang-zh,h2 .lang-zh,h3 .lang-zh,h4 .lang-zh,h5 .lang-zh{line-height:inherit}
+.btn .lang-zh,.tag .lang-zh,.eyebrow .lang-zh{line-height:1.4}
 
 .eyebrow{
   font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;

@@ -2,6 +2,24 @@
 
 All notable changes to the Siam Elite Consulting website.
 
+## [1.1.0] — 2026-07-11
+
+### Added
+- **Full Chinese (中文) support on the property pages.** `properties.html` and
+  `property.html` are now trilingual — the 中文 toggle switches the whole page
+  (filters, headings, form, footer, and every listing card/detail) in place, so
+  Chinese buyers coming from `zh.html → 精选房源` get a fully Chinese experience.
+  - Chinese titles, locations, spec labels, furnishing/ownership terms, and
+    templated Chinese descriptions for all 45 listings (mirrored to Supabase).
+  - Foreign-ownership advisory translated to Chinese (key for overseas buyers).
+  - A page declares its languages via `<body data-langs>`; a persisted language a
+    page doesn't support falls back safely, so a zh preference never blanks a page.
+
+### Fixed
+- **27 of 28 house listings had a generic English/Chinese title** ("House for
+  Rent · <zone>") while only the Thai held the real project name. All now carry
+  proper names (BELIVE Sansai, Supalai Monte Biz, Urbana 5, Zentara Tharasiri, …).
+
 ## [1.0.0] — 2026-07-11
 
 First official public release.

@@ -68,21 +68,85 @@
     });
   }
 
-  /* ---------- Language toggle (EN / TH) ---------- */
+  /* ---------- Language toggle (TH / EN / ZH) ----------
+     Each page declares which languages it supports via <body data-langs="th,en,zh">.
+     A persisted lang that a page doesn't support falls back safely (so e.g. a
+     zh preference never blanks out a TH/EN-only page). */
   var body = document.body;
-  var langButtons = document.querySelectorAll("#langSwitch button");
+  var langButtons = document.querySelectorAll("#langSwitch [data-lang]");
+  var supportedLangs = (body.dataset.langs || "th,en").split(",");
   function setLang(lang) {
-    if (lang === "en") { body.classList.add("en"); document.documentElement.lang = "en"; }
-    else { body.classList.remove("en"); document.documentElement.lang = "th"; }
+    if (supportedLangs.indexOf(lang) === -1) lang = supportedLangs.indexOf("en") !== -1 ? "en" : supportedLangs[0];
+    body.classList.toggle("en", lang === "en");
+    body.classList.toggle("zh", lang === "zh");
+    document.documentElement.lang = lang === "zh" ? "zh-Hans" : lang;
     langButtons.forEach(function (b) { b.classList.toggle("active", b.dataset.lang === lang); });
     try { localStorage.setItem("se_lang", lang); } catch (e) {}
   }
   langButtons.forEach(function (b) {
     b.addEventListener("click", function () { setLang(b.dataset.lang); });
   });
+
+  /* On trilingual pages, auto-build a Chinese span next to every English span
+     from the dictionary below. Anything not in the dictionary falls back to the
+     English markup, so a zh view can never render blank. Dynamic property content
+     already ships its own .lang-zh (via bi()), so those are skipped. */
+  var ZH = {
+    "Home": "首页", "Property": "房产", "Full Portfolio": "全部房源",
+    "Find Your PerfectChiang Mai Home": "寻找您理想的<br>清迈之家",
+    "Filter by type, location, bedrooms and budget. Found one you like? Submit your interest — our team replies within 30 minutes.": "按类型、地区、卧室和预算筛选。找到心仪房源？立即提交意向——我们的团队将在30分钟内回复。",
+    "Status": "状态", "Property Type": "房产类型", "Location": "地区", "Bedrooms": "卧室", "Budget": "预算",
+    "Reset Filters": "重置筛选",
+    "No properties match your filters. Try adjusting them.": "没有符合筛选条件的房源，请调整后重试。",
+    "Similar Properties": "相似房源",
+    "Professional Maid Service — included in your Elite living": "专业家政服务 — 尊享 Elite 生活的一部分",
+    "Vetted, trained housekeepers to care for your home throughout your stay. One point of contact for everything.": "经过审核与培训的家政人员，在您入住期间全程照料您的家。一个联系人，搞定所有事务。",
+    "Add Maid Service": "增加家政服务",
+    "Visa": "签证", "About": "关于我们", "Free Consultation": "免费咨询",
+    "Interested in this property?": "对此房源感兴趣？",
+    "Submit Interest, Get a Special Offer": "提交意向，获取<span class=\"gold-text\">专属优惠</span>",
+    "Answer three quick questions and our team will contact you personally — usually within 30 minutes during office hours.": "回答三个简短问题，我们的团队将亲自与您联系——营业时间内通常30分钟回复。",
+    "Real viewings, no obligation": "真实看房，无任何义务",
+    "Advice on foreign ownership structures": "外国人产权结构咨询",
+    "Reply on your channel: Line · WhatsApp · WeChat": "通过您常用的方式回复：Line · WhatsApp · WeChat",
+    "What can we help with?": "我们能帮您什么？", "Select one to get started.": "选择一项开始",
+    "Maid Service": "家政服务", "Continue": "继续", "Back": "返回",
+    "Your budget / timeframe?": "您的预算 / 时间安排？",
+    "This helps us tailor the right options.": "这有助于我们为您匹配合适的选择。",
+    "Just exploring for now": "目前只是了解", "Ready within 3 months": "3个月内准备就绪", "As soon as possible": "尽快",
+    "Where should we reach you?": "我们该如何联系您？",
+    "We'll send your tailored plan & special offer.": "我们将发送您的专属方案与优惠。",
+    "Name": "姓名", "Phone / WhatsApp / Line": "电话 / WhatsApp / Line", "Preferred channel": "首选联系方式",
+    "I agree that Siam Elite may store and use my details to contact me, per the Privacy Policy.": "我同意 Siam Elite 依据<a href=\"privacy.html\" target=\"_blank\">隐私政策</a>存储并使用我的信息以便联系我。",
+    "Get My Free Plan": "获取我的免费方案", "Submit My Interest": "提交我的意向",
+    "Thank you!": "谢谢您！",
+    "Our team has received your request and will contact you shortly. For an instant reply, tap a button below.": "我们已收到您的请求，将尽快与您联系。如需即时回复，请点击下方按钮。",
+    "Services": "服务", "Visa Services": "签证服务", "Maid Services": "家政服务",
+    "Company": "公司", "About Us": "关于我们", "Contact": "联系", "Book a Consult": "预约咨询",
+    "Get in Touch": "联系我们", "All rights reserved.": "版权所有",
+    "Your trusted one-stop partner for elite living, investment and immigration in Chiang Mai, Thailand.": "您在泰国清迈值得信赖的一站式合作伙伴，涵盖高端生活、投资与移民。",
+    "Call us": "致电我们", "Call": "致电"
+  };
+  function localizeZh() {
+    if (supportedLangs.indexOf("zh") === -1) return;
+    document.querySelectorAll(".lang-en").forEach(function (en) {
+      var parent = en.parentNode;
+      if (!parent) return;
+      var sib = en.nextElementSibling;
+      if (sib && sib.classList && sib.classList.contains("lang-zh")) return;
+      var zh = document.createElement("span");
+      zh.className = en.className.replace("lang-en", "lang-zh");
+      var key = en.textContent.trim();
+      zh.innerHTML = Object.prototype.hasOwnProperty.call(ZH, key) ? ZH[key] : en.innerHTML;
+      parent.insertBefore(zh, en.nextSibling);
+    });
+  }
+  localizeZh();
+
   var saved = "th";
   try { saved = localStorage.getItem("se_lang") || "th"; } catch (e) {}
   setLang(saved);
+  function currentLang() { return body.classList.contains("zh") ? "zh" : body.classList.contains("en") ? "en" : "th"; }
 
   /* ---------- Mobile nav ---------- */
   var burger = document.getElementById("burger");
@@ -199,8 +263,10 @@
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
     });
   }
-  function bi(th, en) {
-    return '<span class="lang-th">' + esc(th) + '</span><span class="lang-en">' + esc(en) + '</span>';
+  function bi(th, en, zh) {
+    return '<span class="lang-th">' + esc(th) + '</span>' +
+           '<span class="lang-en">' + esc(en) + '</span>' +
+           '<span class="lang-zh">' + esc(zh == null ? en : zh) + '</span>';
   }
 
   /* ---------- Line-icon set (thin, monochrome — replaces emoji) ---------- */
@@ -219,28 +285,28 @@
     return '<svg viewBox="0 0 24 24" class="svic' + (cls ? " " + cls : "") + '" aria-hidden="true">' + (ICON_PATHS[name] || "") + '</svg>';
   }
   var LABELS = {
-    status: { sale: { th: "ขาย", en: "For Sale" }, rent: { th: "เช่า", en: "For Rent" } },
+    status: { sale: { th: "ขาย", en: "For Sale", zh: "出售" }, rent: { th: "เช่า", en: "For Rent", zh: "出租" } },
     type: {
-      villa: { th: "วิลล่า", en: "Villa" },
-      condo: { th: "คอนโด", en: "Condo" },
-      house: { th: "บ้าน", en: "House" }
+      villa: { th: "วิลล่า", en: "Villa", zh: "别墅" },
+      condo: { th: "คอนโด", en: "Condo", zh: "公寓" },
+      house: { th: "บ้าน", en: "House", zh: "住宅" }
     },
     furnished: {
-      full: { th: "ครบครัน", en: "Fully furnished" },
-      partial: { th: "บางส่วน", en: "Partly furnished" },
-      unfurnished: { th: "ไม่มีเฟอร์นิเจอร์", en: "Unfurnished" }
+      full: { th: "ครบครัน", en: "Fully furnished", zh: "家具齐全" },
+      partial: { th: "บางส่วน", en: "Partly furnished", zh: "部分家具" },
+      unfurnished: { th: "ไม่มีเฟอร์นิเจอร์", en: "Unfurnished", zh: "无家具" }
     },
     ownership: {
-      "freehold": { th: "กรรมสิทธิ์สมบูรณ์", en: "Freehold" },
-      "leasehold": { th: "สิทธิการเช่าระยะยาว", en: "Leasehold" },
-      "foreign-quota": { th: "โควตาต่างชาติ (ถือครองได้)", en: "Foreign freehold quota" },
-      "thai-company": { th: "ถือครองผ่านนิติบุคคล", en: "Thai company structure" },
-      "rental": { th: "สำหรับเช่า", en: "Rental only" }
+      "freehold": { th: "กรรมสิทธิ์สมบูรณ์", en: "Freehold", zh: "永久产权" },
+      "leasehold": { th: "สิทธิการเช่าระยะยาว", en: "Leasehold", zh: "长期租赁权" },
+      "foreign-quota": { th: "โควตาต่างชาติ (ถือครองได้)", en: "Foreign freehold quota", zh: "外国人产权配额" },
+      "thai-company": { th: "ถือครองผ่านนิติบุคคล", en: "Thai company structure", zh: "泰国公司持有" },
+      "rental": { th: "สำหรับเช่า", en: "Rental only", zh: "仅供出租" }
     }
   };
   function labelBi(group, key) {
     var g = LABELS[group] || {};
-    return g[key] || { th: key || "-", en: key || "-" };
+    return g[key] || { th: key || "-", en: key || "-", zh: key || "-" };
   }
 
   /* ---------- Property listings — data-driven from assets/data/properties.json
@@ -279,29 +345,28 @@
 
     var st = labelBi("status", item.status);
     var ty = labelBi("type", item.type);
-    var areaUnit = item.type === "condo" ? "" : "";
 
     a.innerHTML =
       '<div class="prop-img">' +
         '<img src="' + esc(item.image) + '" alt="' + esc(item.title_en) + '" loading="lazy">' +
-        '<span class="tag tag-' + esc(item.status) + '">' + bi(st.th, st.en) + '</span>' +
+        '<span class="tag tag-' + esc(item.status) + '">' + bi(st.th, st.en, st.zh) + '</span>' +
       '</div>' +
       '<div class="prop-body">' +
         '<div class="prop-top">' +
-          '<div class="prop-price">' + bi(item.price_th, item.price_en) + '</div>' +
+          '<div class="prop-price">' + bi(item.price_th, item.price_en, item.price_en) + '</div>' +
           '<span class="prop-code">' + esc(item.code || "") + '</span>' +
         '</div>' +
-        '<h4>' + bi(item.title_th, item.title_en) + '</h4>' +
+        '<h4>' + bi(item.title_th, item.title_en, item.title_zh || item.title_en) + '</h4>' +
         '<div class="loc">' +
           '<svg viewBox="0 0 24 24" class="pin"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>' +
-          bi(item.location_th, item.location_en) + ' · ' + bi(ty.th, ty.en) +
+          bi(item.location_th, item.location_en, item.location_zh || item.location_en) + ' · ' + bi(ty.th, ty.en, ty.zh) +
         '</div>' +
         '<div class="prop-specs">' +
-          '<span><b>' + esc(item.beds) + '</b> ' + bi("นอน", "bed") + '</span>' +
-          '<span><b>' + esc(item.baths) + '</b> ' + bi("น้ำ", "bath") + '</span>' +
-          '<span><b>' + esc(item.sqm) + '</b> ' + bi("ตร.ม.", "m²") + '</span>' +
+          '<span><b>' + esc(item.beds) + '</b> ' + bi("นอน", "bed", "室") + '</span>' +
+          '<span><b>' + esc(item.baths) + '</b> ' + bi("น้ำ", "bath", "卫") + '</span>' +
+          '<span><b>' + esc(item.sqm) + '</b> ' + bi("ตร.ม.", "m²", "㎡") + '</span>' +
         '</div>' +
-        '<div class="prop-view">' + bi("ดูรายละเอียด", "View details") + ' →</div>' +
+        '<div class="prop-view">' + bi("ดูรายละเอียด", "View details", "查看详情") + ' →</div>' +
       '</div>';
     return a;
   }
@@ -349,7 +414,8 @@
       });
       propCount.innerHTML =
         '<span class="lang-th">แสดง ' + visible + " จาก " + cards.length + ' รายการ</span>' +
-        '<span class="lang-en">Showing ' + visible + " of " + cards.length + " listings</span>";
+        '<span class="lang-en">Showing ' + visible + " of " + cards.length + " listings</span>" +
+        '<span class="lang-zh">显示 ' + visible + " / " + cards.length + " 套房源</span>";
       propEmpty.hidden = visible !== 0;
       propGrid.style.display = visible === 0 ? "none" : "";
     }
@@ -384,19 +450,20 @@
         var item = listings.filter(function (p) { return p.code === ref; })[0];
         if (!item) {
           propDetail.innerHTML =
-            '<div class="pd-missing">' + bi("ไม่พบทรัพย์ที่คุณเลือก", "Property not found") +
-            ' — <a href="properties.html">' + bi("ดูอสังหาฯ ทั้งหมด", "browse all properties") + '</a></div>';
+            '<div class="pd-missing">' + bi("ไม่พบทรัพย์ที่คุณเลือก", "Property not found", "未找到该房源") +
+            ' — <a href="properties.html">' + bi("ดูอสังหาฯ ทั้งหมด", "browse all properties", "查看全部房源") + '</a></div>';
           return;
         }
         renderPropertyDetail(item);
         renderSimilar(item, listings);
-        setLang(document.body.classList.contains("en") ? "en" : "th");
+        setLang(currentLang());
       })
       .catch(function (err) { console.error("Failed to load property", err); });
   }
 
   function renderPropertyDetail(item) {
-    document.title = (document.body.classList.contains("en") ? item.title_en : item.title_th) + " — Siam Elite Consulting";
+    var cl = currentLang();
+    document.title = (cl === "zh" ? (item.title_zh || item.title_en) : cl === "en" ? item.title_en : item.title_th) + " — Siam Elite Consulting";
     injectListingSchema(item);
     var st = labelBi("status", item.status);
     var ty = labelBi("type", item.type);
@@ -406,7 +473,7 @@
 
     // breadcrumb
     var crumb = document.getElementById("pdCrumb");
-    if (crumb) crumb.innerHTML = bi(item.title_th, item.title_en);
+    if (crumb) crumb.innerHTML = bi(item.title_th, item.title_en, item.title_zh || item.title_en);
 
     // gallery
     var thumbs = gallery.map(function (src, i) {
@@ -414,34 +481,34 @@
     }).join("");
 
     // spec tiles
-    function tile(icon, val, th, en) {
-      return '<div class="pd-spec"><span class="pd-spec-ic">' + icon + '</span><b>' + esc(val) + '</b><span class="pd-lbl">' + bi(th, en) + '</span></div>';
+    function tile(icon, val, th, en, zh) {
+      return '<div class="pd-spec"><span class="pd-spec-ic">' + icon + '</span><b>' + esc(val) + '</b><span class="pd-lbl">' + bi(th, en, zh) + '</span></div>';
     }
-    function tileBi(icon, valTh, valEn, th, en) {
-      return '<div class="pd-spec"><span class="pd-spec-ic">' + icon + '</span><b class="pd-spec-bi">' + bi(valTh, valEn) + '</b><span class="pd-lbl">' + bi(th, en) + '</span></div>';
+    function tileBi(icon, valTh, valEn, th, en, zh, valZh) {
+      return '<div class="pd-spec"><span class="pd-spec-ic">' + icon + '</span><b class="pd-spec-bi">' + bi(valTh, valEn, valZh == null ? valEn : valZh) + '</b><span class="pd-lbl">' + bi(th, en, zh) + '</span></div>';
     }
     var specs = "";
-    specs += tile(svic("bed"), item.beds, "ห้องนอน", "Bedrooms");
-    specs += tile(svic("bath"), item.baths, "ห้องน้ำ", "Bathrooms");
-    specs += tileBi(svic("area"), item.sqm + " ตร.ม.", item.sqm + " m²", "พื้นที่ใช้สอย", "Interior");
-    if (item.land_sqm) specs += tileBi(svic("land"), item.land_sqm + " ตร.ม.", item.land_sqm + " m²", "ที่ดิน", "Land");
-    if (item.floor) specs += tile(svic("floor"), item.floor, "ชั้น", "Floor");
-    specs += tile(svic("parking"), item.parking, "ที่จอดรถ", "Parking");
-    specs += tileBi(svic("sofa"), fu.th, fu.en, "เฟอร์นิเจอร์", "Furnishing");
+    specs += tile(svic("bed"), item.beds, "ห้องนอน", "Bedrooms", "卧室");
+    specs += tile(svic("bath"), item.baths, "ห้องน้ำ", "Bathrooms", "卫浴");
+    specs += tileBi(svic("area"), item.sqm + " ตร.ม.", item.sqm + " m²", "พื้นที่ใช้สอย", "Interior", "使用面积", item.sqm + " ㎡");
+    if (item.land_sqm) specs += tileBi(svic("land"), item.land_sqm + " ตร.ม.", item.land_sqm + " m²", "ที่ดิน", "Land", "土地面积", item.land_sqm + " ㎡");
+    if (item.floor) specs += tile(svic("floor"), item.floor, "ชั้น", "Floor", "楼层");
+    specs += tile(svic("parking"), item.parking, "ที่จอดรถ", "Parking", "停车位");
+    specs += tileBi(svic("sofa"), fu.th, fu.en, "เฟอร์นิเจอร์", "Furnishing", "家具", fu.zh);
 
     var features = (item.features || []).map(function (f) {
-      return '<li>' + svic("check", "sm") + '<span>' + bi(f.th, f.en) + '</span></li>';
+      return '<li>' + svic("check", "sm") + '<span>' + bi(f.th, f.en, f.zh || f.en) + '</span></li>';
     }).join("");
 
     // ownership advisory (consulting differentiator)
     var notes = {
-      "foreign-quota": { th: "คอนโดนี้อยู่ในโควตาต่างชาติ ชาวต่างชาติสามารถถือครองกรรมสิทธิ์ได้เต็มรูปแบบตามกฎหมาย — เราช่วยตรวจสอบเอกสารและดำเนินการโอนให้ถูกต้อง", en: "This unit sits within the foreign ownership quota, so foreigners may hold full freehold title. We verify the paperwork and handle the transfer correctly." },
-      "leasehold": { th: "ตามกฎหมายไทย ชาวต่างชาติถือครองที่ดินในนามตนเองไม่ได้ ทรัพย์นี้เสนอในรูปแบบสิทธิการเช่าระยะยาว (ปกติ 30 ปี ต่ออายุได้) — เราให้คำปรึกษาโครงสร้างที่ปลอดภัยและถูกกฎหมาย", en: "Under Thai law foreigners cannot own land in their own name. This property is offered on a long leasehold (typically 30 years, renewable). We advise on a safe, fully legal structure." },
-      "thai-company": { th: "ทรัพย์นี้ถือครองผ่านโครงสร้างนิติบุคคลไทย — เราช่วยตรวจสอบและวางโครงสร้างให้ถูกต้องตามกฎหมาย พร้อมทนายความประจำ", en: "Held through a Thai company structure. We review and set this up correctly and legally, with our in-house legal partners." },
-      "rental": { th: "สอบถามเงื่อนไขการเช่า ระยะสัญญา และเงินประกันได้กับทีมงาน เราช่วยตรวจสัญญาเช่าให้เป็นธรรมก่อนเซ็น", en: "Ask our team about lease terms, contract length and deposits. We review the tenancy agreement to keep it fair before you sign." }
+      "foreign-quota": { th: "คอนโดนี้อยู่ในโควตาต่างชาติ ชาวต่างชาติสามารถถือครองกรรมสิทธิ์ได้เต็มรูปแบบตามกฎหมาย — เราช่วยตรวจสอบเอกสารและดำเนินการโอนให้ถูกต้อง", en: "This unit sits within the foreign ownership quota, so foreigners may hold full freehold title. We verify the paperwork and handle the transfer correctly.", zh: "该单位属于外国人产权配额，外国人可依法拥有完整永久产权。我们协助核查文件并办理合法过户手续。" },
+      "leasehold": { th: "ตามกฎหมายไทย ชาวต่างชาติถือครองที่ดินในนามตนเองไม่ได้ ทรัพย์นี้เสนอในรูปแบบสิทธิการเช่าระยะยาว (ปกติ 30 ปี ต่ออายุได้) — เราให้คำปรึกษาโครงสร้างที่ปลอดภัยและถูกกฎหมาย", en: "Under Thai law foreigners cannot own land in their own name. This property is offered on a long leasehold (typically 30 years, renewable). We advise on a safe, fully legal structure.", zh: "根据泰国法律，外国人不能以个人名义持有土地。本房产以长期租赁权形式提供（通常30年，可续期）——我们为您提供安全合法的持有方案咨询。" },
+      "thai-company": { th: "ทรัพย์นี้ถือครองผ่านโครงสร้างนิติบุคคลไทย — เราช่วยตรวจสอบและวางโครงสร้างให้ถูกต้องตามกฎหมาย พร้อมทนายความประจำ", en: "Held through a Thai company structure. We review and set this up correctly and legally, with our in-house legal partners.", zh: "本房产通过泰国公司架构持有——我们协助核查并合法搭建架构，配备专属律师。" },
+      "rental": { th: "สอบถามเงื่อนไขการเช่า ระยะสัญญา และเงินประกันได้กับทีมงาน เราช่วยตรวจสัญญาเช่าให้เป็นธรรมก่อนเซ็น", en: "Ask our team about lease terms, contract length and deposits. We review the tenancy agreement to keep it fair before you sign.", zh: "欢迎向我们咨询租赁条件、合约期限与押金。签约前我们会协助审核租约，确保条款公平。" }
     };
     var note = notes[item.ownership];
-    var noteHtml = note ? '<div class="pd-note"><span class="pd-note-ic">' + svic("shield", "lg") + '</span><div><b>' + bi("การถือครองสำหรับชาวต่างชาติ", "Ownership for foreigners") + '</b><p>' + bi(note.th, note.en) + '</p></div></div>' : "";
+    var noteHtml = note ? '<div class="pd-note"><span class="pd-note-ic">' + svic("shield", "lg") + '</span><div><b>' + bi("การถือครองสำหรับชาวต่างชาติ", "Ownership for foreigners", "外国人产权说明") + '</b><p>' + bi(note.th, note.en, note.zh) + '</p></div></div>' : "";
 
     // WhatsApp deep link with property context
     var waText = encodeURIComponent("สนใจทรัพย์ " + item.code + " — " + item.title_th + " (" + item.price_th + ")");
@@ -453,22 +520,22 @@
       '</div>' +
       '<div class="pd-layout">' +
         '<div class="pd-info">' +
-          '<div class="pd-badges"><span class="tag tag-' + esc(item.status) + '">' + bi(st.th, st.en) + '</span><span class="pd-type">' + bi(ty.th, ty.en) + '</span></div>' +
-          '<h1>' + bi(item.title_th, item.title_en) + '</h1>' +
-          '<div class="pd-loc"><svg viewBox="0 0 24 24" class="pin"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>' + bi(item.location_th, item.location_en) + ' · ' + esc(item.code) + '</div>' +
+          '<div class="pd-badges"><span class="tag tag-' + esc(item.status) + '">' + bi(st.th, st.en, st.zh) + '</span><span class="pd-type">' + bi(ty.th, ty.en, ty.zh) + '</span></div>' +
+          '<h1>' + bi(item.title_th, item.title_en, item.title_zh || item.title_en) + '</h1>' +
+          '<div class="pd-loc"><svg viewBox="0 0 24 24" class="pin"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>' + bi(item.location_th, item.location_en, item.location_zh || item.location_en) + ' · ' + esc(item.code) + '</div>' +
           '<div class="pd-specs">' + specs + '</div>' +
-          '<div class="pd-section"><h3>' + bi("รายละเอียด", "Description") + '</h3><p>' + bi(item.desc_th, item.desc_en) + '</p></div>' +
-          (features ? '<div class="pd-section"><h3>' + bi("จุดเด่นของทรัพย์", "Property highlights") + '</h3><ul class="pd-features">' + features + '</ul></div>' : "") +
+          '<div class="pd-section"><h3>' + bi("รายละเอียด", "Description", "详情") + '</h3><p>' + bi(item.desc_th, item.desc_en, item.desc_zh || item.desc_en) + '</p></div>' +
+          (features ? '<div class="pd-section"><h3>' + bi("จุดเด่นของทรัพย์", "Property highlights", "房产亮点") + '</h3><ul class="pd-features">' + features + '</ul></div>' : "") +
           noteHtml +
-          '<p class="pd-disclaimer">' + bi("* ที่อยู่และพิกัดที่แน่นอนเปิดเผยเฉพาะผู้สนใจจริงหลังติดต่อทีมงาน", "* Exact address and location shared with serious enquiries after you contact our team.") + '</p>' +
+          '<p class="pd-disclaimer">' + bi("* ที่อยู่และพิกัดที่แน่นอนเปิดเผยเฉพาะผู้สนใจจริงหลังติดต่อทีมงาน", "* Exact address and location shared with serious enquiries after you contact our team.", "* 确切地址与位置将在您联系团队后向诚意客户提供。") + '</p>' +
         '</div>' +
         '<aside class="pd-enquire">' +
-          '<div class="pd-e-price">' + bi(item.price_th, item.price_en) + '</div>' +
-          '<div class="pd-e-own">' + bi(ow.th, ow.en) + '</div>' +
-          '<p>' + bi("สนใจทรัพย์นี้? ทีมงานพร้อมพาชมและให้คำปรึกษาฟรี ตอบกลับใน 30 นาที", "Interested? Our team arranges viewings and free advice — reply within 30 minutes.") + '</p>' +
-          '<a class="btn btn-gold" href="#contact" data-enquire>' + bi("ส่งความสนใจ", "Submit interest") + '</a>' +
-          '<a class="btn btn-outline" href="https://wa.me/66947755746?text=' + waText + '" target="_blank" rel="noopener">' + bi("แชท WhatsApp", "Chat on WhatsApp") + '</a>' +
-          '<div class="pd-e-meta">' + bi("รหัสทรัพย์", "Ref") + ': ' + esc(item.code) + '</div>' +
+          '<div class="pd-e-price">' + bi(item.price_th, item.price_en, item.price_en) + '</div>' +
+          '<div class="pd-e-own">' + bi(ow.th, ow.en, ow.zh) + '</div>' +
+          '<p>' + bi("สนใจทรัพย์นี้? ทีมงานพร้อมพาชมและให้คำปรึกษาฟรี ตอบกลับใน 30 นาที", "Interested? Our team arranges viewings and free advice — reply within 30 minutes.", "对此房产感兴趣？我们的团队安排看房并提供免费咨询——30分钟内回复。") + '</p>' +
+          '<a class="btn btn-gold" href="#contact" data-enquire>' + bi("ส่งความสนใจ", "Submit interest", "提交意向") + '</a>' +
+          '<a class="btn btn-outline" href="https://wa.me/66947755746?text=' + waText + '" target="_blank" rel="noopener">' + bi("แชท WhatsApp", "Chat on WhatsApp", "WhatsApp 咨询") + '</a>' +
+          '<div class="pd-e-meta">' + bi("รหัสทรัพย์", "Ref", "房源编号") + ': ' + esc(item.code) + '</div>' +
         '</aside>' +
       '</div>';
 
@@ -492,7 +559,8 @@
     var refSlot = document.getElementById("leadPropRef");
     if (refSlot) {
       refSlot.hidden = false;
-      refSlot.innerHTML = bi("สนใจทรัพย์: ", "Enquiring about: ") + "<b>" + esc(item.code) + " · " + (document.body.classList.contains("en") ? esc(item.title_en) : esc(item.title_th)) + "</b>";
+      var titleForLang = cl === "zh" ? (item.title_zh || item.title_en) : cl === "en" ? item.title_en : item.title_th;
+      refSlot.innerHTML = bi("สนใจทรัพย์: ", "Enquiring about: ", "咨询房源：") + "<b>" + esc(item.code) + " · " + esc(titleForLang) + "</b>";
     }
   }
 

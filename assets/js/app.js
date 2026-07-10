@@ -75,17 +75,6 @@
   var body = document.body;
   var langButtons = document.querySelectorAll("#langSwitch [data-lang]");
   var supportedLangs = (body.dataset.langs || "th,en").split(",");
-  /* Where an index.html link should point when the user is browsing in Chinese —
-     keeps Chinese visitors inside the Chinese world (zh.html) instead of dropping
-     them onto the Thai/English home. */
-  function zhHref(h) {
-    if (!h) return h;
-    if (h === "index.html#visa") return "zh.html#services";
-    if (h === "index.html#property") return "properties.html";
-    if (h === "index.html#contact") return "zh.html#contact";
-    if (h.indexOf("index.html") === 0) return "zh.html";
-    return h;
-  }
   /* filter/sort <option> labels can't use language spans, so swap their text directly */
   var OPT_ZH = {
     fStatus: { all: "全部", rent: "出租", sale: "出售" },
@@ -114,10 +103,6 @@
     document.documentElement.lang = lang === "zh" ? "zh-Hans" : lang;
     langButtons.forEach(function (b) { b.classList.toggle("active", b.dataset.lang === lang); });
     localizeOptions(lang);
-    document.querySelectorAll('a[href^="index.html"]').forEach(function (a) {
-      if (a.dataset.baseHref === undefined) a.dataset.baseHref = a.getAttribute("href");
-      a.setAttribute("href", lang === "zh" ? zhHref(a.dataset.baseHref) : a.dataset.baseHref);
-    });
     /* persist ONLY an explicit, supported choice — a fallback must never overwrite
        a valid stored preference (e.g. a zh user briefly hitting a TH/EN-only page). */
     if (remember && supportedLangs.indexOf(requested) !== -1) {
@@ -133,6 +118,69 @@
      English markup, so a zh view can never render blank. Dynamic property content
      already ships its own .lang-zh (via bi()), so those are skipped. */
   var ZH = {
+    /* ---- hero ---- */
+    "Elite Living in Chiang Mai": "清迈高端生活",
+    "Your Life in Thailand,Handled with Elite Care": "您在泰国的一切事务<br><em>由 Elite 专业团队悉心打理</em>",
+    "From your visa to your dream home and everything in between — Siam Elite Consulting is your trusted one-stop partner in Chiang Mai. Discreet, professional, and built for people who value their time.": "从签证到理想住所，以及之间的每一件事——Siam Elite Consulting 是您在清迈值得信赖的一站式合作伙伴。私密、专业，为珍惜时间的您而打造。",
+    "Book a Free Consultation": "预约免费咨询",
+    "Explore Services": "了解服务",
+    "Reply within 30 min": "30分钟内回复", "Free consult, no obligation": "免费咨询 · 无任何义务",
+    /* ---- trust bar ---- */
+    "Registered Thai Company": "正规注册泰国公司", "Registered Thai company": "正规注册泰国公司",
+    "Office in Chiang Mai": "清迈实体办公室", "Replies in 30 min": "30分钟内回复",
+    /* ---- property showcase ---- */
+    "Property & Maid Services": "房产与家政服务",
+    "Find Your Perfect Chiang Mai Home": "寻找您在<span class=\"gold-text\">清迈的理想之家</span>",
+    "A selection of curated villas, condos and homes in the city's most sought-after areas — browse the full list with filters on the property page.": "精选热门地段的别墅、公寓与住宅 — 在房产页面可浏览全部房源并使用完整筛选。",
+    "View All Properties": "查看全部房源",
+    "Exact addresses shared with serious enquiries only — contact us to arrange a private viewing.": "确切地址仅向诚意客户提供 — 请联系我们安排私人看房。",
+    /* ---- visa ---- */
+    "Visa Services": "签证服务",
+    "The Right Visa, Without the Headache": "选对签证，<span class=\"gold-text\">省心无忧</span>",
+    "Thai immigration rules change constantly and one wrong document can cost you months. We assess your situation, recommend the best route, and handle the paperwork end-to-end.": "泰国移民法规不断变化，一份错误的文件可能耽误您数月。我们评估您的情况，推荐最合适的路径，并全程代办所有文件。",
+    "Not sure which visa fits you?": "不确定哪种签证适合您？",
+    "Take a free eligibility check. A specialist will review your case personally — no obligation.": "免费评估签证资格。专家将亲自审核您的情况——无任何义务。",
+    "Check My Eligibility — Free": "免费评估我的资格",
+    "Visa Type": "签证类型", "Best For": "适合人群", "Stay": "居留期限",
+    "Wealthy pros & retirees": "高收入专业人士与退休人士", "10 years": "10年",
+    "Investors & experts": "投资者与专业人才", "Up to 4 years": "最长4年",
+    "Age 50+": "50岁以上", "1 year, renewable": "1年，可续签",
+    "Spouse of Thai national": "泰国公民配偶", "VIP long-stay": "VIP 长期居留", "5–20 years": "5–20年",
+    "Retirement Visa": "退休签证", "Marriage Visa": "结婚签证",
+    "* Conditions are simplified. Exact eligibility depends on your profile — let us confirm for you.": "* 以上条件为简要说明，实际资格取决于您的个人情况——让我们为您确认。",
+    /* ---- process ---- */
+    "How It Works": "服务流程", "Simple, Fast, Personal": "简单、快速、<span class=\"gold-text\">专属</span>",
+    "Reach Out": "联系我们", "Tell us what you need via the form, Line or WhatsApp.": "通过表单、Line 或 WhatsApp 告诉我们您的需求。",
+    "Free Consult": "免费咨询", "A specialist replies in under 30 minutes with a tailored plan.": "专家将在30分钟内回复，并提供为您量身定制的方案。",
+    "We Handle It": "我们来处理", "Paperwork, viewings, transfers — we do the heavy lifting.": "文件、看房、过户——繁重的工作由我们完成。",
+    "Enjoy Thailand": "享受泰国生活", "You relax. We stay by your side for whatever comes next.": "您安心放松，接下来的每一步我们都陪伴在您身边。",
+    /* ---- about ---- */
+    "A Real Company You Can Walk Into": "真实存在的公司，<span class=\"gold-text\">随时欢迎到访</span>",
+    "Physical office": "实体办公室",
+    "308/3 Manee Nopparat Rd, Si Phum, Mueang, Chiang Mai (near the Old City) — visit us anytime.": "清迈市孟区 Si Phum，Manee Nopparat 路 308/3 号（临近古城）——随时欢迎到访。",
+    "SIAM ELITE CONSULTING CO., LTD. · Reg. No. 0505569010721": "SIAM ELITE CONSULTING CO., LTD. · 注册号 0505569010721",
+    "Multilingual team": "多语言团队",
+    "Chiang Mai — our home, and yours": "清迈 — 我们的家，也是您的家",
+    "Live the Chiang Mai life you came for": "过上您向往的清迈生活",
+    /* ---- FAQ ---- */
+    "Frequently Asked": "常见问题",
+    "What People Ask Us Before Starting": "开始前，<span class=\"gold-text\">大家常问的问题</span>",
+    "Can foreigners buy a house or land in Chiang Mai?": "外国人可以在清迈购买房屋或土地吗？",
+    "Under Thai law foreigners cannot own land in their own name, but they can own a condo under the foreign quota with full freehold title, or hold a house/villa via a long leasehold or a legal company structure. We advise on and set up the safest structure for your situation.": "根据泰国法律，外国人不能以个人名义持有土地，但可在外国人配额内拥有拥有完整永久产权的公寓，或通过长期租赁权、合法公司架构持有别墅/住宅。我们会为您的情况提供咨询并搭建最安全的持有方案。",
+    "How does Siam Elite charge for its services?": "Siam Elite 的服务如何收费？",
+    "Your first consultation and initial assessment are always free. Fees depend on the service (visa / property / maid) and the complexity of your case. We quote everything clearly and in writing before any work begins — no hidden costs.": "首次咨询与初步评估始终免费。费用取决于服务类型（签证／房产／家政）及案件的复杂程度。在开始任何工作前，我们都会以书面形式清晰报价——绝无隐藏费用。",
+    "Which visa type is right for me?": "哪种签证最适合我？",
+    "It depends on your age, income, purpose and how long you want to stay — e.g. LTR for high earners, the Retirement visa for over-50s, or the Elite visa for convenience. Take our free eligibility check and a specialist will recommend the best route for you.": "这取决于您的年龄、收入、目的以及计划居留的时长——例如高收入者适合 LTR，50岁以上适合退休签证，追求便捷则可选 Elite 签证。做一次免费资格评估，专家会为您推荐最合适的路径。",
+    "Can you work with clients who are still overseas?": "可以为仍在海外的客户提供服务吗？",
+    "Absolutely — many of our clients start before they arrive. We consult over Zoom / Line / WhatsApp, run video property viewings, and prepare your paperwork in advance so everything is ready when you land.": "当然可以——我们许多客户在抵达前就已开始。我们通过 Zoom／Line／WhatsApp 咨询，进行视频看房，并提前准备好您的文件，让一切在您落地时就绪。",
+    "Is Siam Elite a properly registered company?": "Siam Elite 是正规注册的公司吗？",
+    "Yes. Siam Elite Consulting Co., Ltd. is a fully registered Chiang Mai company with a physical office you can visit, working alongside licensed lawyers and accountants. Transparency and full legal compliance come first.": "是的。Siam Elite Consulting Co., Ltd. 是在清迈正规注册的公司，拥有可供到访的实体办公室，并与持牌律师及会计师合作。透明与完全合法合规是我们的首要原则。",
+    /* ---- lead form ---- */
+    "Let's Talk": "联系我们",
+    "Get a Tailored Plan & a Special Offer": "获取专属方案与<span class=\"gold-text\">特别优惠</span>",
+    "No obligation, 100% confidential": "无任何义务，100% 保密",
+    "Real specialists, not a call centre": "真正的专家，而非呼叫中心",
+    /* ---- existing (properties/property + shared chrome) ---- */
     "Home": "首页", "Property": "房产", "Full Portfolio": "全部房源",
     "Find Your PerfectChiang Mai Home": "寻找您理想的<br>清迈之家",
     "Filter by type, location, bedrooms and budget. Found one you like? Submit your interest — our team replies within 30 minutes.": "按类型、地区、卧室和预算筛选。找到心仪房源？立即提交意向——我们的团队将在30分钟内回复。",

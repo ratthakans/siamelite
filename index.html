@@ -128,70 +128,10 @@
     <div class="section-head reveal">
       <span class="eyebrow"><span class="lang-th">อสังหาริมทรัพย์ & จัดหาแม่บ้าน</span><span class="lang-en">Property & Maid Services</span></span>
       <h2><span class="lang-th">ค้นหา <span class="gold-text">บ้านในเชียงใหม่</span> ที่ใช่สำหรับคุณ</span><span class="lang-en">Find Your <span class="gold-text">Perfect Chiang Mai Home</span></span></h2>
-      <p><span class="lang-th">วิลล่า คอนโด และบ้านคัดสรรในทำเลที่เป็นที่ต้องการที่สุดของเมือง — กรองตามที่คุณต้องการได้ทันที</span><span class="lang-en">Curated villas, condos and homes in the city's most sought-after neighbourhoods — filter instantly to find the right fit.</span></p>
+      <p><span class="lang-th">ตัวอย่างวิลล่า คอนโด และบ้านคัดสรรในทำเลยอดนิยม — ดูทั้งหมดพร้อมตัวกรองครบที่หน้าอสังหาฯ</span><span class="lang-en">A selection of curated villas, condos and homes in the city's most sought-after areas — browse the full list with filters on the property page.</span></p>
     </div>
 
-    <div class="filters reveal" id="propFilters">
-      <div class="f">
-        <label><span class="lang-th">ประเภท</span><span class="lang-en">Status</span></label>
-        <select id="fStatus">
-          <option value="all">ทุกประเภท / All</option>
-          <!-- เปิดใช้เมื่อมีทรัพย์ขายเข้าพอร์ต: <option value="sale">ซื้อ / Buy</option> -->
-          <option value="rent">เช่า / Rent</option>
-        </select>
-      </div>
-      <div class="f">
-        <label><span class="lang-th">ชนิดทรัพย์</span><span class="lang-en">Property Type</span></label>
-        <select id="fType">
-          <option value="all">ทุกชนิด / All Types</option>
-          <option value="villa">วิลล่า / Villa</option>
-          <option value="condo">คอนโด / Condo</option>
-          <option value="house">บ้าน / House</option>
-        </select>
-      </div>
-      <div class="f">
-        <label><span class="lang-th">ทำเล</span><span class="lang-en">Location</span></label>
-        <select id="fLocation">
-          <option value="all">ทุกทำเล / All Areas</option>
-          <option value="nimman">นิมมาน / Nimman</option>
-          <option value="sansai">สันทราย / แม่โจ้</option>
-          <option value="saraphi">สารภี / Saraphi</option>
-          <option value="hangdong">หางดง / Hang Dong</option>
-          <option value="sankamphaeng">สันกำแพง / San Kamphaeng</option>
-          <option value="mueang">ในเมือง / รอบเมือง</option>
-          <option value="airport">โซนสนามบิน / Airport</option>
-          <option value="other">อื่นๆ / Other</option>
-        </select>
-      </div>
-      <div class="f">
-        <label><span class="lang-th">ห้องนอน</span><span class="lang-en">Bedrooms</span></label>
-        <select id="fBeds">
-          <option value="0">ทั้งหมด / Any</option>
-          <option value="2">2+</option>
-          <option value="3">3+</option>
-          <option value="4">4+</option>
-          <option value="5">5+</option>
-        </select>
-      </div>
-      <div class="f">
-        <label><span class="lang-th">งบประมาณ</span><span class="lang-en">Budget</span></label>
-        <select id="fTier">
-          <option value="all">ทุกงบประมาณ / Any</option>
-          <option value="a">&lt; ฿20,000 / เดือน</option>
-          <option value="b">฿20,000–30,000 / เดือน</option>
-          <option value="c">฿30,000+ / เดือน</option>
-        </select>
-      </div>
-    </div>
-    <div class="filters-search reveal">
-      <input type="text" id="fKeyword" placeholder="ค้นหาชื่อทรัพย์หรือทำเล / Search by name or area">
-      <button type="button" class="btn btn-outline sm" id="fReset"><span class="lang-th">รีเซ็ตตัวกรอง</span><span class="lang-en">Reset Filters</span></button>
-    </div>
-    <div class="prop-meta reveal"><span id="propCount"></span></div>
-
-    <div class="prop-grid" id="propGrid" data-scope="featured" data-cta-th="ดูรายละเอียด" data-cta-en="View details"></div>
-
-    <p class="prop-empty" id="propEmpty" hidden><span class="lang-th">ไม่พบทรัพย์ที่ตรงกับตัวกรอง ลองปรับตัวกรองใหม่ดูนะครับ</span><span class="lang-en">No properties match your filters. Try adjusting them.</span></p>
+    <div class="prop-grid" id="propGrid" data-scope="featured"></div>
 
     <div style="text-align:center;margin-top:44px" class="reveal">
       <a href="properties.html" class="btn btn-outline"><span class="lang-th">ดูอสังหาฯ ทั้งหมด</span><span class="lang-en">View All Properties</span> →</a>

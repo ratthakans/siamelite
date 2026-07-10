@@ -361,7 +361,7 @@
       .then(function (data) {
         var listings = data.listings || [];
         if (scope === "featured") {
-          listings = listings.filter(function (item) { return item.featured; });
+          listings = listings.filter(function (item) { return item.featured; }).slice(0, 6);
         }
         listings.forEach(function (item) {
           propGrid.appendChild(renderPropertyCard(item));

@@ -75,7 +75,7 @@
        2. They email you an "Access Key" (a UUID). No account/password needed.
        3. Paste that key between the quotes below. Done — leads now arrive by email.
      While the key is empty, this simply does nothing (leads still save to Supabase). */
-  var EMAIL_NOTIFY_KEY = ""; // ← paste your Web3Forms access key here
+  var EMAIL_NOTIFY_KEY = "78333a1e-428e-4ae1-beaa-1ea99cad7ffc"; // Web3Forms → siameliteconsulting@gmail.com
   function notifyByEmail(payload) {
     if (!EMAIL_NOTIFY_KEY) return;
     var ref = "";
@@ -235,7 +235,7 @@
     "Just exploring for now": "目前只是了解", "Ready within 3 months": "3个月内准备就绪", "As soon as possible": "尽快",
     "Where should we reach you?": "我们该如何联系您？",
     "We'll send your tailored plan & special offer.": "我们将发送您的专属方案与优惠。",
-    "Name": "姓名", "Phone / WhatsApp / Line": "电话 / WhatsApp / Line", "Preferred channel": "首选联系方式",
+    "Name": "姓名", "Phone / WhatsApp / Line / Email": "电话 / WhatsApp / Line / Email", "Preferred channel": "首选联系方式",
     "I agree that Siam Elite may store and use my details to contact me, per the Privacy Policy.": "我同意 Siam Elite 依据<a href=\"privacy.html\" target=\"_blank\">隐私政策</a>存储并使用我的信息以便联系我。",
     "Get My Free Plan": "获取我的免费方案", "Submit My Interest": "提交我的意向",
     "Thank you!": "谢谢您！",

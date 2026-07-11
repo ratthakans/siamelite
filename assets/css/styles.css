@@ -79,7 +79,6 @@ h4 .lang-th,h4 .lang-en,h5 .lang-th,h5 .lang-en{line-height:inherit}
 .btn .lang-th,.btn .lang-en,.tag .lang-th,.tag .lang-en,.eyebrow .lang-th,.eyebrow .lang-en,
 .hero-badge .lang-th,.hero-badge .lang-en{line-height:1.4}
 .container{max-width:var(--maxw);margin:0 auto;padding:0 32px}
-.narrow{max-width:760px;margin-left:auto;margin-right:auto}
 
 /* Thai-first: Thai visible by default, English on body.en, Chinese on body.zh */
 .lang-en,.lang-zh{display:none}
@@ -137,8 +136,6 @@ h1 .lang-zh,h2 .lang-zh,h3 .lang-zh,h4 .lang-zh,h5 .lang-zh{line-height:inherit}
 }
 .btn-outline-light:hover{background:rgba(255,255,255,.2);border-color:#fff}
 .btn.sm{padding:9px 18px;font-size:.875rem}
-.link-gold{color:var(--navy-800);font-weight:600;font-size:.96rem;display:inline-flex;gap:8px;align-items:center;transition:.2s}
-.link-gold:hover{color:var(--gold-600);gap:12px}
 
 /* ---------- Header ---------- */
 .header{position:sticky;top:0;z-index:60;background:rgba(11,24,54,.78);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border-bottom:1px solid rgba(212,166,60,.2);transition:.3s}
@@ -434,8 +431,6 @@ h1 .lang-zh,h2 .lang-zh,h3 .lang-zh,h4 .lang-zh,h5 .lang-zh{line-height:inherit}
 /* ---------- About ---------- */
 .about-media{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--line);min-height:300px;background:
   linear-gradient(160deg,var(--navy-700),var(--navy-900));position:relative}
-.about-media .map-pin{position:absolute;inset:0;display:grid;place-items:center;color:#fff;text-align:center;padding:24px}
-.about-media .map-pin .p{font-size:2.8rem;margin-bottom:6px}
 .about-facts{list-style:none;margin-top:30px;display:grid;gap:18px}
 .about-facts li{display:flex;gap:16px;align-items:flex-start;font-size:1rem}
 .about-facts .ic{width:44px;height:44px;border-radius:12px;background:var(--gold-soft);color:var(--gold-600);display:grid;place-items:center;flex:none;font-size:1.15rem}
@@ -452,11 +447,10 @@ h1 .lang-zh,h2 .lang-zh,h3 .lang-zh,h4 .lang-zh,h5 .lang-zh{line-height:inherit}
 }
 /* Brand seal as a subtle premium watermark */
 .lead-seal{position:absolute;left:-90px;bottom:-90px;width:360px;height:360px;opacity:.07;pointer-events:none;z-index:0}
-.lead-wrap{position:relative;z-index:1}
 @media(max-width:900px){.lead-seal{width:240px;height:240px;left:-70px;bottom:-70px}}
 #contact .eyebrow{color:var(--gold-400)}
 #contact .eyebrow::before{background:var(--gold-400)}
-.lead-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.lead-wrap{position:relative;z-index:1;display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
 .lead-copy h2{font-size:var(--fs-h2);color:#fff}
 .lead-copy p{color:#cdd7ea;margin:18px 0 26px;font-size:1rem}
 .lead-copy ul{list-style:none;display:grid;gap:16px}

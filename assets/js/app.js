@@ -430,7 +430,7 @@
   }
 
   /* ---------- Property listings — data-driven from assets/data/properties.json
-     (edit that file directly, or via the /admin CMS, to add/change listings) ---------- */
+     (edit that file directly to add/change listings) ---------- */
   var propGrid = document.getElementById("propGrid");
   if (propGrid) {
     var scope = propGrid.dataset.scope || "all";

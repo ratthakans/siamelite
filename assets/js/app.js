@@ -599,9 +599,6 @@
     var note = notes[item.ownership];
     var noteHtml = note ? '<div class="pd-note"><span class="pd-note-ic">' + svic("shield", "lg") + '</span><div><b>' + bi("การถือครองสำหรับชาวต่างชาติ", "Ownership for foreigners", "外国人产权说明") + '</b><p>' + bi(note.th, note.en, note.zh) + '</p></div></div>' : "";
 
-    // WhatsApp deep link with property context
-    var waText = encodeURIComponent("สนใจทรัพย์ " + item.code + " — " + item.title_th + " (" + item.price_th + ")");
-
     propDetail.innerHTML =
       '<div class="pd-gallery reveal in">' +
         '<div class="pd-main"><img id="pdMain" src="' + esc(gallery[0]) + '" alt="' + esc(item.title_en) + '"></div>' +
@@ -623,7 +620,7 @@
           '<div class="pd-e-own">' + bi(ow.th, ow.en, ow.zh) + '</div>' +
           '<p>' + bi("สนใจทรัพย์นี้? ทีมงานพร้อมพาชมและให้คำปรึกษาฟรี ตอบกลับใน 30 นาที", "Interested? Our team arranges viewings and free advice — reply within 30 minutes.", "对此房产感兴趣？我们的团队安排看房并提供免费咨询——30分钟内回复。") + '</p>' +
           '<a class="btn btn-gold" href="#contact" data-enquire>' + bi("ส่งความสนใจ", "Submit interest", "提交意向") + '</a>' +
-          '<a class="btn btn-outline" href="https://wa.me/66947755746?text=' + waText + '" target="_blank" rel="noopener">' + bi("แชท WhatsApp", "Chat on WhatsApp", "WhatsApp 咨询") + '</a>' +
+          '<a class="btn btn-outline" href="https://lin.ee/P4L8yIj" target="_blank" rel="noopener">' + bi("แชททาง LINE", "Chat on LINE", "LINE 咨询") + '</a>' +
           '<div class="pd-e-meta">' + bi("รหัสทรัพย์", "Ref", "房源编号") + ': ' + esc(item.code) + '</div>' +
         '</aside>' +
       '</div>';

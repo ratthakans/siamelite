@@ -68,6 +68,36 @@
     });
   }
 
+  /* ---------- Email notification (Web3Forms — free, no server/login needed) ----------
+     Every new lead is emailed to your inbox so you can reply within 30 minutes.
+     SETUP (2 min, one time):
+       1. Go to https://web3forms.com  →  enter  siameliteconsulting@gmail.com
+       2. They email you an "Access Key" (a UUID). No account/password needed.
+       3. Paste that key between the quotes below. Done — leads now arrive by email.
+     While the key is empty, this simply does nothing (leads still save to Supabase). */
+  var EMAIL_NOTIFY_KEY = ""; // ← paste your Web3Forms access key here
+  function notifyByEmail(payload) {
+    if (!EMAIL_NOTIFY_KEY) return;
+    var ref = "";
+    try { ref = new URLSearchParams(location.search).get("ref") || ""; } catch (e) {}
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        access_key: EMAIL_NOTIFY_KEY,
+        subject: "ลูกค้าใหม่จากเว็บไซต์ — Siam Elite" + (payload.service ? " (" + payload.service + ")" : ""),
+        from_name: "Siam Elite Website",
+        "บริการที่สนใจ": payload.service || "-",
+        "งบ / กรอบเวลา": payload.budget || "-",
+        "ชื่อ": payload.name || "-",
+        "เบอร์ / ติดต่อ": payload.contact || "-",
+        "ช่องทางสะดวก": payload.channel || "-",
+        "ทรัพย์ที่สนใจ": ref || "-",
+        "หน้าที่ส่งมาจาก": location.pathname
+      })
+    }).catch(function (err) { console.error("Email notify failed", err); });
+  }
+
   /* ---------- Language toggle (TH / EN / ZH) ----------
      Each page declares which languages it supports via <body data-langs="th,en,zh">.
      A persisted lang that a page doesn't support falls back safely (so e.g. a
@@ -338,6 +368,7 @@
       }
 
       saveLeadToSupabase(payload);
+      notifyByEmail(payload);
       trackLead();
 
       form.style.display = "none";

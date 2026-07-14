@@ -511,6 +511,7 @@ h1 .lang-zh,h2 .lang-zh,h3 .lang-zh,h4 .lang-zh,h5 .lang-zh{line-height:inherit}
 .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:28px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.84rem;color:#8394ab}
 .foot-bottom a{color:#8394ab}
 .foot-bottom a:hover{color:var(--gold-400)}
+.foot-staff{opacity:.6}
 @media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr;gap:36px}}
 @media(max-width:560px){.foot-grid{grid-template-columns:1fr}}
 

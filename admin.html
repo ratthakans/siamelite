@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>ระบบหลังบ้าน · Siam Elite</title>
+<link rel="icon" href="assets/img/logo-gold.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+
+<!-- ============ LOGIN GATE ============ -->
+<div id="loginView" class="login-wrap" hidden>
+  <form id="loginForm" class="login-card" autocomplete="on">
+    <img src="assets/img/logo-gold.svg" alt="Siam Elite" class="login-logo">
+    <h1>ระบบหลังบ้าน</h1>
+    <p class="login-sub">สำหรับเจ้าหน้าที่ Siam Elite เท่านั้น</p>
+    <label>อีเมล
+      <input type="email" id="loginEmail" required autocomplete="username" placeholder="you@siamelite.com">
+    </label>
+    <label>รหัสผ่าน
+      <input type="password" id="loginPassword" required autocomplete="current-password" placeholder="••••••••">
+    </label>
+    <button type="submit" id="loginBtn" class="btn btn-gold">เข้าสู่ระบบ</button>
+    <p id="loginError" class="form-error" hidden></p>
+  </form>
+</div>
+
+<!-- ============ APP ============ -->
+<div id="appView" hidden>
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/img/logo-gold.svg" alt="" class="topbar-logo">
+      <span>Siam Elite · หลังบ้าน</span>
+    </div>
+    <nav class="tabs">
+      <button class="tab is-active" data-tab="properties">สินทรัพย์</button>
+      <button class="tab" data-tab="leads">Leads</button>
+      <button class="tab" data-tab="documents">เอกสาร</button>
+    </nav>
+    <div class="topbar-right">
+      <span id="userEmail" class="user-email"></span>
+      <button id="logoutBtn" class="btn btn-ghost">ออกจากระบบ</button>
+    </div>
+  </header>
+
+  <main class="content">
+
+    <!-- ===== PROPERTIES ===== -->
+    <section id="tab-properties" class="tab-panel is-active">
+      <div class="panel-head">
+        <div>
+          <h2>สินทรัพย์ <span id="propCount" class="count-pill">0</span></h2>
+          <p class="panel-sub">เพิ่ม แก้ไข หรือลบรายการอสังหาฯ — บันทึกแล้วขึ้นเว็บทันที</p>
+        </div>
+        <div class="panel-actions">
+          <input type="search" id="propSearch" class="search-input" placeholder="ค้นหา code / ชื่อ / ทำเล…">
+          <button id="addPropBtn" class="btn btn-gold">+ เพิ่มสินทรัพย์</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="propTable">
+          <thead>
+            <tr>
+              <th>รูป</th><th>Code</th><th>ชื่อ (TH)</th><th>ทำเล</th>
+              <th>ประเภท</th><th>ราคา</th><th>สถานะ</th><th></th>
+            </tr>
+          </thead>
+          <tbody id="propBody"></tbody>
+        </table>
+        <p id="propEmpty" class="empty-state" hidden>ยังไม่มีสินทรัพย์</p>
+      </div>
+    </section>
+
+    <!-- ===== LEADS ===== -->
+    <section id="tab-leads" class="tab-panel">
+      <div class="panel-head">
+        <div>
+          <h2>Leads <span id="leadCount" class="count-pill">0</span></h2>
+          <p class="panel-sub">ลูกค้าที่ติดต่อผ่านเว็บไซต์</p>
+        </div>
+        <div class="panel-actions">
+          <select id="leadFilter" class="search-input">
+            <option value="">ทุกสถานะ</option>
+            <option value="new">ใหม่</option>
+            <option value="contacted">ติดต่อแล้ว</option>
+            <option value="won">ปิดการขาย</option>
+            <option value="lost">ไม่สำเร็จ</option>
+          </select>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="leadTable">
+          <thead>
+            <tr>
+              <th>วันที่</th><th>ชื่อ</th><th>ติดต่อ</th><th>บริการ</th>
+              <th>งบ/กรอบเวลา</th><th>ช่องทาง</th><th>จากหน้า</th><th>สถานะ</th><th>โน้ต</th>
+            </tr>
+          </thead>
+          <tbody id="leadBody"></tbody>
+        </table>
+        <p id="leadEmpty" class="empty-state" hidden>ยังไม่มี lead</p>
+      </div>
+    </section>
+
+    <!-- ===== DOCUMENTS ===== -->
+    <section id="tab-documents" class="tab-panel">
+      <div class="panel-head">
+        <div>
+          <h2>เอกสาร <span id="docCount" class="count-pill">0</span></h2>
+          <p class="panel-sub">เก็บสัญญา โบรชัวร์ เอกสารวีซ่า ฯลฯ ไว้ในระบบอย่างปลอดภัย</p>
+        </div>
+        <div class="panel-actions">
+          <button id="addDocBtn" class="btn btn-gold">+ อัปโหลดเอกสาร</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="docTable">
+          <thead>
+            <tr>
+              <th>วันที่</th><th>ชื่อเอกสาร</th><th>หมวด</th><th>ผูกกับสินทรัพย์</th><th>ขนาด</th><th></th>
+            </tr>
+          </thead>
+          <tbody id="docBody"></tbody>
+        </table>
+        <p id="docEmpty" class="empty-state" hidden>ยังไม่มีเอกสาร</p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ============ PROPERTY EDITOR MODAL ============ -->
+<div id="propModal" class="modal" hidden>
+  <div class="modal-card modal-lg">
+    <div class="modal-head">
+      <h3 id="propModalTitle">เพิ่มสินทรัพย์</h3>
+      <button class="modal-close" data-close-modal="propModal">&times;</button>
+    </div>
+    <form id="propForm" class="modal-body">
+      <input type="hidden" id="pf_id">
+      <div class="field-grid">
+        <label>Code *<input id="pf_code" required placeholder="SE-R46"></label>
+        <label>ลำดับแสดง<input id="pf_sort_order" type="number" value="0"></label>
+        <label>สถานะประกาศ
+          <select id="pf_status"><option value="rent">ให้เช่า (rent)</option><option value="sale">ขาย (sale)</option></select>
+        </label>
+        <label>ประเภท
+          <select id="pf_type"><option value="condo">คอนโด (condo)</option><option value="house">บ้าน (house)</option></select>
+        </label>
+        <label>ระดับ (tier)
+          <select id="pf_tier"><option value="a">A</option><option value="b">B</option><option value="c">C</option></select>
+        </label>
+        <label>ทำเล (slug)<input id="pf_location" placeholder="sansai / nimman / other"></label>
+        <label class="check-field"><input type="checkbox" id="pf_featured"> แนะนำ (featured)</label>
+        <label class="check-field"><input type="checkbox" id="pf_published" checked> เผยแพร่บนเว็บ (published)</label>
+      </div>
+
+      <div class="field-lang">
+        <h4>ชื่อประกาศ</h4>
+        <label>ไทย<input id="pf_title_th"></label>
+        <label>English<input id="pf_title_en"></label>
+        <label>中文<input id="pf_title_zh"></label>
+      </div>
+      <div class="field-lang">
+        <h4>ทำเล (แสดงผล)</h4>
+        <label>ไทย<input id="pf_location_th"></label>
+        <label>English<input id="pf_location_en"></label>
+        <label>中文<input id="pf_location_zh"></label>
+      </div>
+      <div class="field-lang">
+        <h4>รายละเอียด</h4>
+        <label>ไทย<textarea id="pf_desc_th" rows="4"></textarea></label>
+        <label>English<textarea id="pf_desc_en" rows="4"></textarea></label>
+        <label>中文<textarea id="pf_desc_zh" rows="4"></textarea></label>
+      </div>
+
+      <div class="field-grid">
+        <label>ห้องนอน<input id="pf_beds" type="number"></label>
+        <label>ห้องน้ำ<input id="pf_baths" type="number"></label>
+        <label>พื้นที่ใช้สอย (ตร.ม.)<input id="pf_sqm" type="number"></label>
+        <label>ที่ดิน (ตร.ม.)<input id="pf_land_sqm" type="number"></label>
+        <label>ที่จอดรถ<input id="pf_parking" type="number"></label>
+        <label>ชั้น<input id="pf_floor" type="number"></label>
+        <label>เฟอร์นิเจอร์
+          <select id="pf_furnished"><option value="full">ครบ</option><option value="partial">บางส่วน</option><option value="none">ไม่มี</option></select>
+        </label>
+        <label>กรรมสิทธิ์<input id="pf_ownership" placeholder="rental / freehold"></label>
+        <label>ราคา (ไทย)<input id="pf_price_th" placeholder="฿ 35,000 / เดือน"></label>
+        <label>ราคา (English)<input id="pf_price_en" placeholder="฿ 35,000 / mo"></label>
+      </div>
+
+      <div class="field-full">
+        <h4>สิ่งอำนวยความสะดวก (คั่นแต่ละรายการด้วยการขึ้นบรรทัดใหม่ · รูปแบบ <code>ไทย | English | 中文</code>)</h4>
+        <textarea id="pf_features" rows="4" placeholder="สระว่ายน้ำ | Swimming pool | 游泳池&#10;ฟิตเนส | Fitness centre | 健身房"></textarea>
+      </div>
+
+      <div class="field-full">
+        <h4>รูปภาพ</h4>
+        <div id="pf_gallery" class="gallery-grid"></div>
+        <label class="upload-btn">
+          <input type="file" id="pf_imageUpload" accept="image/*" multiple hidden>
+          <span>+ อัปโหลดรูป</span>
+        </label>
+        <p class="hint">รูปแรกคือรูปปก · ลากเพื่อจัดลำดับได้ · คลิก × เพื่อลบ</p>
+      </div>
+
+      <p id="propFormError" class="form-error" hidden></p>
+      <div class="modal-foot">
+        <button type="button" class="btn btn-ghost" data-close-modal="propModal">ยกเลิก</button>
+        <button type="submit" id="savePropBtn" class="btn btn-gold">บันทึก</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ============ DOCUMENT UPLOAD MODAL ============ -->
+<div id="docModal" class="modal" hidden>
+  <div class="modal-card">
+    <div class="modal-head">
+      <h3>อัปโหลดเอกสาร</h3>
+      <button class="modal-close" data-close-modal="docModal">&times;</button>
+    </div>
+    <form id="docForm" class="modal-body">
+      <label>ไฟล์ *
+        <input type="file" id="df_file" required>
+      </label>
+      <label>ชื่อเอกสาร *
+        <input id="df_title" required placeholder="สัญญาเช่า SE-R01">
+      </label>
+      <label>หมวด
+        <select id="df_category">
+          <option value="contract">สัญญา</option>
+          <option value="brochure">โบรชัวร์</option>
+          <option value="visa">เอกสารวีซ่า</option>
+          <option value="id">บัตร/พาสปอร์ต</option>
+          <option value="other">อื่นๆ</option>
+        </select>
+      </label>
+      <label>ผูกกับสินทรัพย์ (ไม่บังคับ)
+        <select id="df_property"><option value="">— ไม่ผูก —</option></select>
+      </label>
+      <label>โน้ต
+        <textarea id="df_note" rows="2"></textarea>
+      </label>
+      <p id="docFormError" class="form-error" hidden></p>
+      <div class="modal-foot">
+        <button type="button" class="btn btn-ghost" data-close-modal="docModal">ยกเลิก</button>
+        <button type="submit" id="saveDocBtn" class="btn btn-gold">อัปโหลด</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>

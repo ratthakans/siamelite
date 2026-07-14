@@ -429,14 +429,35 @@
     return g[key] || { th: key || "-", en: key || "-", zh: key || "-" };
   }
 
-  /* ---------- Property listings — data-driven from assets/data/properties.json
-     (edit that file directly to add/change listings) ---------- */
+  /* ---------- Load listings — Supabase first, static JSON fallback ----------
+     Staff manage listings from /admin (stored in Supabase). The bundled
+     assets/data/properties.json is kept only as an offline safety net that
+     kicks in if Supabase is unreachable or returns nothing. ---------- */
+  function loadListings() {
+    var restUrl = SUPABASE_URL +
+      "/rest/v1/properties?select=*&published=eq.true&order=sort_order.asc";
+    return fetch(restUrl, {
+      headers: { apikey: SUPABASE_ANON_KEY, Authorization: "Bearer " + SUPABASE_ANON_KEY }
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error("supabase " + res.status);
+        return res.json();
+      })
+      .then(function (rows) {
+        if (!Array.isArray(rows) || rows.length === 0) throw new Error("empty");
+        return { listings: rows };
+      })
+      .catch(function () {
+        return fetch("assets/data/properties.json").then(function (res) { return res.json(); });
+      });
+  }
+
+  /* ---------- Property listings grid ---------- */
   var propGrid = document.getElementById("propGrid");
   if (propGrid) {
     var scope = propGrid.dataset.scope || "all";
 
-    fetch("assets/data/properties.json")
-      .then(function (res) { return res.json(); })
+    loadListings()
       .then(function (data) {
         var listings = data.listings || [];
         if (scope === "featured") {
@@ -563,8 +584,7 @@
   var propDetail = document.getElementById("propDetail");
   if (propDetail) {
     var ref = new URLSearchParams(location.search).get("ref");
-    fetch("assets/data/properties.json")
-      .then(function (res) { return res.json(); })
+    loadListings()
       .then(function (data) {
         var listings = data.listings || [];
         var item = listings.filter(function (p) { return p.code === ref; })[0];

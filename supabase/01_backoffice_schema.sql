@@ -110,6 +110,28 @@ create policy "Staff delete properties" on properties
   for delete to authenticated using (true);
 
 -- ============================================================================
+-- 1b. LEADS TABLE — make sure it exists (the public lead form writes here).
+--     Safe no-op if it already exists. Defined before "documents" because
+--     documents has a foreign key that points at leads.
+-- ============================================================================
+create table if not exists leads (
+  id          uuid primary key default gen_random_uuid(),
+  created_at  timestamptz not null default now(),
+  service     text,
+  budget      text,
+  name        text not null,
+  contact     text not null,
+  channel     text,
+  source_page text
+);
+
+alter table leads enable row level security;
+
+drop policy if exists "Public can submit leads" on leads;
+create policy "Public can submit leads" on leads
+  for insert to anon with check (true);
+
+-- ============================================================================
 -- 2. DOCUMENTS  (metadata; the actual files live in the "documents" bucket)
 -- ============================================================================
 create table if not exists documents (

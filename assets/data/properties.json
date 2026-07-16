@@ -22,7 +22,7 @@
       "ownership": "rental",
       "price_th": "฿ 35,000 / เดือน",
       "price_en": "฿ 35,000 / mo",
-      "tier": "c",
+      "tier": "a",
       "image": "assets/img/properties/r01-1.jpg",
       "gallery": [
         "assets/img/properties/r01-1.jpg",
@@ -131,7 +131,7 @@
       "ownership": "rental",
       "price_th": "฿ 30,000 / เดือน",
       "price_en": "฿ 30,000 / mo",
-      "tier": "c",
+      "tier": "a",
       "image": "assets/img/properties/r03-1.jpg",
       "gallery": [
         "assets/img/properties/r03-1.jpg",
@@ -307,7 +307,7 @@
       "ownership": "rental",
       "price_th": "฿ 16,000 / เดือน",
       "price_en": "฿ 16,000 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/r06-1.jpg",
       "gallery": [
         "assets/img/properties/r06-1.jpg",
@@ -619,7 +619,7 @@
       "ownership": "rental",
       "price_th": "฿ 33,000 / เดือน",
       "price_en": "฿ 33,000 / mo",
-      "tier": "c",
+      "tier": "a",
       "image": "assets/img/properties/r12-1.jpg",
       "gallery": [
         "assets/img/properties/r12-1.jpg",
@@ -671,7 +671,7 @@
       "ownership": "rental",
       "price_th": "฿ 35,000 / เดือน",
       "price_en": "฿ 35,000 / mo",
-      "tier": "c",
+      "tier": "a",
       "image": "assets/img/properties/r13-1.jpg",
       "gallery": [
         "assets/img/properties/r13-1.jpg",
@@ -916,7 +916,7 @@
       "ownership": "rental",
       "price_th": "฿ 15,000 / เดือน",
       "price_en": "฿ 15,000 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/r18-1.jpg",
       "gallery": [
         "assets/img/properties/r18-1.jpg",
@@ -973,7 +973,7 @@
       "ownership": "rental",
       "price_th": "฿ 12,000 / เดือน",
       "price_en": "฿ 12,000 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/r19-1.jpg",
       "gallery": [
         "assets/img/properties/r19-1.jpg",
@@ -1077,7 +1077,7 @@
       "ownership": "rental",
       "price_th": "฿ 19,500 / เดือน",
       "price_en": "฿ 19,500 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/r21-1.jpg",
       "gallery": [
         "assets/img/properties/r21-1.jpg",
@@ -1124,7 +1124,7 @@
       "ownership": "rental",
       "price_th": "฿ 16,000 / เดือน",
       "price_en": "฿ 16,000 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/r22-1.jpg",
       "gallery": [
         "assets/img/properties/r22-1.jpg",
@@ -1441,7 +1441,7 @@
       "ownership": "rental",
       "price_th": "฿ 18,000 / เดือน",
       "price_en": "฿ 18,000 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/r28-1.jpg",
       "gallery": [
         "assets/img/properties/r28-1.jpg",
@@ -1529,7 +1529,7 @@
       "ownership": "rental",
       "price_th": "฿ 12,500 / เดือน",
       "price_en": "฿ 12,500 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/c02-1.jpg",
       "gallery": [
         "assets/img/properties/c02-1.jpg",
@@ -1591,7 +1591,7 @@
       "ownership": "rental",
       "price_th": "฿ 16,000 / เดือน",
       "price_en": "฿ 16,000 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/c03-1.jpg",
       "gallery": [
         "assets/img/properties/c03-1.jpg",
@@ -1643,7 +1643,7 @@
       "ownership": "rental",
       "price_th": "฿ 19,000 / เดือน",
       "price_en": "฿ 19,000 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/c04-1.jpg",
       "gallery": [
         "assets/img/properties/c04-1.jpg",
@@ -1690,7 +1690,7 @@
       "ownership": "rental",
       "price_th": "฿ 11,000 / เดือน",
       "price_en": "฿ 11,000 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/c05-1.jpg",
       "gallery": [
         "assets/img/properties/c05-1.jpg",
@@ -1742,7 +1742,7 @@
       "ownership": "rental",
       "price_th": "฿ 15,000 / เดือน",
       "price_en": "฿ 15,000 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/c06-1.jpg",
       "gallery": [
         "assets/img/properties/c06-1.jpg",
@@ -1856,7 +1856,7 @@
       "ownership": "rental",
       "price_th": "฿ 12,000 / เดือน",
       "price_en": "฿ 12,000 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/c08-1.jpg",
       "gallery": [
         "assets/img/properties/c08-1.jpg",
@@ -1913,7 +1913,7 @@
       "ownership": "rental",
       "price_th": "฿ 15,000 / เดือน",
       "price_en": "฿ 15,000 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/c09-1.jpg",
       "gallery": [
         "assets/img/properties/c09-1.jpg",
@@ -2027,7 +2027,7 @@
       "ownership": "rental",
       "price_th": "฿ 17,000 / เดือน",
       "price_en": "฿ 17,000 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/c11-1.jpg",
       "gallery": [
         "assets/img/properties/c11-1.jpg",
@@ -2084,7 +2084,7 @@
       "ownership": "rental",
       "price_th": "฿ 11,500 / เดือน",
       "price_en": "฿ 11,500 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/c12-1.jpg",
       "gallery": [
         "assets/img/properties/c12-1.jpg",
@@ -2126,7 +2126,7 @@
       "ownership": "rental",
       "price_th": "฿ 12,000 / เดือน",
       "price_en": "฿ 12,000 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/c13-1.jpg",
       "gallery": [
         "assets/img/properties/c13-1.jpg",
@@ -2168,7 +2168,7 @@
       "ownership": "rental",
       "price_th": "฿ 13,000 / เดือน",
       "price_en": "฿ 13,000 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/c14-1.jpg",
       "gallery": [
         "assets/img/properties/c14-1.jpg",
@@ -2230,7 +2230,7 @@
       "ownership": "rental",
       "price_th": "฿ 9,500 / เดือน",
       "price_en": "฿ 9,500 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/c15-1.jpg",
       "gallery": [
         "assets/img/properties/c15-1.jpg",
@@ -2282,7 +2282,7 @@
       "ownership": "rental",
       "price_th": "฿ 12,000 / เดือน",
       "price_en": "฿ 12,000 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/c16-1.jpg",
       "gallery": [
         "assets/img/properties/c16-1.jpg",
@@ -2324,7 +2324,7 @@
       "ownership": "rental",
       "price_th": "฿ 17,000 / เดือน",
       "price_en": "฿ 17,000 / mo",
-      "tier": "a",
+      "tier": "c",
       "image": "assets/img/properties/c17-1.jpg",
       "gallery": [
         "assets/img/properties/c17-1.jpg",

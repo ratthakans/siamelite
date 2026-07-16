@@ -152,8 +152,12 @@
         <label>ประเภท
           <select id="pf_type"><option value="condo">คอนโด (condo)</option><option value="house">บ้าน (house)</option></select>
         </label>
-        <label>ระดับ (tier)
-          <select id="pf_tier"><option value="a">A</option><option value="b">B</option><option value="c">C</option></select>
+        <label>ระดับ (tier) — ตามช่วงราคา
+          <select id="pf_tier">
+            <option value="a">A · พรีเมียม (฿30,000+)</option>
+            <option value="b">B · กลาง (฿20,000–30,000)</option>
+            <option value="c">C · ประหยัด (&lt;฿20,000)</option>
+          </select>
         </label>
         <label>ทำเล (slug)<input id="pf_location" placeholder="sansai / nimman / other"></label>
         <label class="check-field"><input type="checkbox" id="pf_featured"> แนะนำ (featured)</label>

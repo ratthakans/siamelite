@@ -111,7 +111,7 @@
     fType: { all: "全部类型", villa: "别墅", condo: "公寓", house: "住宅" },
     fLocation: { all: "全部地区", nimman: "宁曼路", sansai: "San Sai / Mae Jo", saraphi: "Saraphi", hangdong: "Hang Dong", sankamphaeng: "San Kamphaeng", mueang: "清迈市区", airport: "机场周边", other: "其他地区" },
     fBeds: { "0": "不限" },
-    fTier: { all: "不限预算", a: "< ฿20,000/月", b: "฿20,000–30,000/月", c: "฿30,000+/月" },
+    fTier: { all: "不限预算", a: "฿30,000+/月", b: "฿20,000–30,000/月", c: "< ฿20,000/月" },
     fSort: { "default": "推荐", "price-asc": "价格：低 → 高", "price-desc": "价格：高 → 低" }
   };
   function localizeOptions(lang) {
